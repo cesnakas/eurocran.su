@@ -65,13 +65,13 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     <div class="nav__menu">
                         <div class="menu-close"><span></span><span></span></div>
                         <ul>
-                            <li><a href="">Каталог</a></li>
-                            <li><a href="">Услуги</a></li>
-                            <li><a href="">О компании</a></li>
-                            <li><a href="">Объекты</a></li>
-                            <li><a href="">Цены</a></li>
-                            <li><a href="">Блог</a></li>
-                            <li><a href="">Контакты</a></li>
+                            <li><a href="<?=SITE_DIR?>">Каталог</a></li>
+                            <li><a href="<?=SITE_DIR?>">Услуги</a></li>
+                            <li><a href="<?=SITE_DIR?>">О компании</a></li>
+                            <li><a href="<?=SITE_DIR?>">Объекты</a></li>
+                            <li><a href="<?=SITE_DIR?>">Цены</a></li>
+                            <li><a href="<?=SITE_DIR?>">Блог</a></li>
+                            <li><a href="<?=SITE_DIR?>">Контакты</a></li>
                         </ul>
                     </div>
                     <div class="nav__search">

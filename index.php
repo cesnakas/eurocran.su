@@ -1,6 +1,6 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Title');
+$APPLICATION->SetTitle('Аренда автокранов и спецтехники в Москве | eurocran.su');
 ?>
 
 		<!--START PROMO-->
