@@ -1,20 +1,39 @@
-.htaccess
-/config.php
-admin/config.php
+# PHPStorm
+/.idea/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
 
-!index.html
+# Bitrix
+/bitrix/*
+!/bitrix/templates
+!/bitrix/components
+/bitrix/components/bitrix
+!/bitrix/gadgets
+/bitrix/gadgets/bitrix
+!/bitrix/php_interface/
+/bitrix/php_interface/dbconn.php
+/upload/
 
-download/
-image/data/
-image/cache/
-system/cache/
-system/logs/
+# Node
+node_modules/
+jspm_packages/
 
-system/storage/
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
 
-# vQmod log files
-vqmod/logs/*
-# vQmod cache files
-vqmod/vqcache/*
-vqmod/checked.cache
-vqmod/mods.cache
+# Other
+/cgi-bin/
+/awstats/
+/webstat/
+.DS_Store
+.AppleDouble
+.LSOverride
+.Trashes
+Thumbs.db
+ehthumbs.db
