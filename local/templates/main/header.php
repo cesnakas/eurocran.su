@@ -34,3 +34,57 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
     <?php echo'<div id="panel">'; $APPLICATION->ShowPanel(); echo'</div>';?>
 
+    <div class="wrapper">
+
+        <!--START HEADER-->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header__general">
+                        <div class="header__logo">
+                            <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo.svg"/></a>
+                        </div>
+                        <div class="header__slogan">Аренда спецтехники LIEBHERR c 2000 года</div>
+                    </div>
+                    <div class="header__info">
+                        <div class="header__schedule"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/clock.svg"/></i><span> 10:00-17:00</span></div>
+                        <div class="header__location"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/location.svg"/></i><span> г. Москва, <br> ул. Куликовская, 12</span></div>
+                    </div>
+                    <div class="header__btn"><a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a></div>
+                    <div class="header__contacts"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/phone.svg"/></i><span><a href="">+7 (499)929-96-66 </a><a href="">+7 (985)364-55-18</a><a href="">+7 (985)226-20-30</a></span></div>
+                </div>
+            </div>
+        </header>
+        <!--END HEADER-->
+
+        <!--START NAV-->
+        <div class="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="menu-btn"><span></span><span></span><span></span></div>
+                    <div class="nav__menu">
+                        <div class="menu-close"><span></span><span></span></div>
+                        <ul>
+                            <li><a href="">Каталог</a></li>
+                            <li><a href="">Услуги</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Объекты</a></li>
+                            <li><a href="">Цены</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav__search">
+                        <div class="search">
+                            <form action="search">
+                                <div class="search__box">
+                                    <input type="text" placeholder="Поиск">
+                                    <input type="submit" value="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END NAV-->

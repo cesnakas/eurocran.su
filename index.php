@@ -3,56 +3,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Title');
 ?>
 
-	<div class="wrapper">
-		<!--START HEADER-->
-		<header class="header">
-			<div class="container">
-				<div class="row">
-					<div class="header__general">
-						<div class="header__logo"><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo.svg"/></a></div>
-						<div class="header__slogan">Аренда спецтехники LIEBHERR c 2000 года</div>
-					</div>
-					<div class="header__info">
-						<div class="header__schedule"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/clock.svg"/></i><span> 10:00-17:00</span></div>
-						<div class="header__location"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/location.svg"/></i><span> г. Москва, <br> ул. Куликовская, 12</span></div>
-					</div>
-					<div class="header__btn"><a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a></div>
-					<div class="header__contacts"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/phone.svg"/></i><span><a href="">+7 (499)929-96-66 </a><a href="">+7 (985)364-55-18</a><a href="">+7 (985)226-20-30</a></span></div>
-				</div>
-			</div>
-		</header>
-		<!--END HEADER-->
-		<!--START NAV-->
-		<div class="nav">
-			<div class="container">
-				<div class="row">
-					<div class="menu-btn"><span></span><span></span><span></span></div>
-					<div class="nav__menu">
-						<div class="menu-close"><span></span><span></span></div>
-						<ul>
-							<li> <a href="">Каталог</a></li>
-							<li> <a href="">Услуги</a></li>
-							<li> <a href="">О компании</a></li>
-							<li> <a href="">Объекты</a></li>
-							<li> <a href="">Цены</a></li>
-							<li> <a href="">Блог</a></li>
-							<li> <a href="">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="nav__search">
-						<div class="search">
-							<form action="search">
-								<div class="search__box">
-									<input type="text" placeholder="Поиск">
-									<input type="submit" value="">
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--END NAV-->
 		<!--START PROMO-->
 		<div class="promo">
 			<div class="container--lg">
@@ -87,6 +37,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END PROMO-->
+
 		<!--START LEASE-->
 		<div class="lease">
 			<div class="container">
@@ -165,6 +116,7 @@ $APPLICATION->SetTitle('Title');
 			<div class="lease__dots"></div>
 		</div>
 		<!--END LEASE-->
+
 		<!--START RELIABLE-->
 		<div class="reliable">
 			<div class="container">
@@ -197,6 +149,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END RELIABLE-->
+
 		<!--START NUMBERS-->
 		<div class="numbers">
 			<div class="container">
@@ -214,6 +167,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END NUMBERS-->
+
 		<!--START PROJECTS-->
 		<div class="projects">
 			<div class="container">
@@ -376,6 +330,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END PROJECTS-->
+
 		<!--START CATALOG-->
 		<div class="catalog">
 			<div class="container">
@@ -530,6 +485,7 @@ $APPLICATION->SetTitle('Title');
 			<div class="catalog__tocat"><a class="btn btn--empty" href="">Перейти в каталог</a></div>
 		</div>
 		<!--END CATALOG-->
+
 		<!--START RENT-PRICE-->
 		<div class="rent-price">
 			<div class="container">
@@ -561,6 +517,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END RENT-PRICE-->
+
 		<!--START PUT-THE-TECHNIQUE-->
 		<div class="put-the-technique">
 			<div class="container">
@@ -583,6 +540,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END PUT-THE-TECHNIQUE-->
+
 		<!--START ABOUT-->
 		<div class="about">
 			<div class="container--lg">
@@ -608,6 +566,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END ABOUT-->
+
 		<!--START SERVICES-->
 		<div class="services">
 			<div class="container">
@@ -636,6 +595,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END SERVICES-->
+
 		<!--START INFO-BLOCK-->
 		<div class="info-block">
 			<div class="container">
@@ -658,6 +618,7 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END INFO-BLOCK-->
+
 		<!--START QUESTIONS-->
 		<div class="questions">
 			<div class="container">
@@ -681,64 +642,10 @@ $APPLICATION->SetTitle('Title');
 			</div>
 		</div>
 		<!--END QUESTIONS-->
+
 		<!--START MAP-->
 		<div class="map"></div>
 		<!--END MAP-->
-		<!--START FOOTER-->
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="footer__logo"><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo-footer.svg"/></a>
-						<p>Аренда мобильных и <br> гусеничных кранов LIEBHERR</p><b>© 2000-2021 Все права защищены</b>
-					</div>
-					<div class="footer__item">
-						<h3>Клиентам</h3>
-						<ul>
-							<li> <a href="">О компании</a></li>
-							<li><a href="">Услуги</a></li>
-							<li><a href="">Каталог техники</a></li>
-							<li><a href="">Аренда кранов</a></li>
-							<li><a href="">Наши работы</a></li>
-							<li><a href="">Прайс-лист</a></li>
-							<li><a href="">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="footer__item">
-						<h3>Техника</h3>
-						<ul>
-							<li><a href="">Гусеничные краны</a></li>
-							<li><a href="">Мобильные краны</a></li>
-							<li><a href="">Низкорамные тралы</a></li>
-							<li><a href="">Модульные платформы</a></li>
-						</ul>
-					</div>
-					<div class="footer__item2">
-						<h3>Услуги</h3>
-						<ul>
-							<li><a href="">Аренда гусеничного крана</a></li>
-							<li><a href="">Аренда мобильного крана</a></li>
-							<li><a href="">Аренда башенного крана</a></li>
-							<li><a href="">Перевозка негабаритного груза</a></li>
-							<li><a href="">Разработка ппрк</a></li>
-						</ul>
-					</div>
-					<div class="footer__actions"><a class="btn btn--full" href="">Свяжитесь со мной</a>
-						<ul>
-							<li><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/insta.svg"/></a></li>
-							<li><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/twitter.svg"/></a></li>
-							<li><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/whatsapp.svg"/></a></li>
-							<li><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/vk.svg"/></a></li>
-							<li><a href=""><img src="<?=SITE_TEMPLATE_PATH?>/img/content/yandex.svg"/></a></li>
-						</ul>
-					</div>
-					<div class="footer__contacts">
-						<h3>Контакты</h3><a href="tel:+7 (499)929-96-66">+7 (499)929-96-66 </a><a href="tel:+7 (985)364-55-18">+7 (985)364-55-18 </a><a href="tel:+7 (985)226-20-30">+7 (985)226-20-30 </a>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!--END FOOTER-->
-	</div>
 
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
