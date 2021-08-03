@@ -1,0 +1,39 @@
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+
+
+.news-list-page .news-item.media img {
+	width: 94px;
+	height: 94px;
+	border-radius: 50%;
+}
+
+.mr-3, .mx-3 {
+	margin-right: 1rem !important;
+}
+
+.media {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.stati-news {
+	margin-top: 50px;
+}
+
+.breadcrumbs {
+	margin: 34px 0 29px;
+	padding: 0 21px;
+	width: 100%;
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+}

@@ -1,0 +1,25 @@
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
+
+
+.catalog-tech-image {
+	width: 100%;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.catalog-tech-image img {
+	width: auto !important;
+	max-height: 140px !important;
+	height: auto !important;
+}
+
+.tech-img {
+	text-align: center;
+}
