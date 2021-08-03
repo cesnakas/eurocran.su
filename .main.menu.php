@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ГЛАВНАЯ", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О КОМПАНИИ", 
+		"/o-kompanii/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"УСЛУГИ", 
+		"/uslugi/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"КАТАЛОГ ТЕХНИКИ", 
+		"/tehnika/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Аренда кранов", 
+		"/avtokrany/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"НАШИ РАБОТЫ", 
+		"/objekty/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ПРАЙС-ЛИСТ", 
+		"/prais-list/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"КОНТАКТЫ", 
+		"/kontakty/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

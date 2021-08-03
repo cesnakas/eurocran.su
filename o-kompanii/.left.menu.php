@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Документация", 
+		"/o-kompanii/documentacia/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Благодарности", 
+		"/o-kompanii/blagodarnosti/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Вакансии", 
+		"/vakansii/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

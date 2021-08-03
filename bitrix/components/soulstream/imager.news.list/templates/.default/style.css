@@ -1,0 +1,5 @@
+div.imager-gallery-list .preview_picture { float:left; margin:0 8px 6px 0px; }
+div.imager-gallery-list .imager-gallery { margin:5px 0 0 0; }
+div.imager-gallery-list .imager-gallery a { float:left; margin:0 10px 0 0; border:2px solid silver; }
+div.imager-gallery-list .imager-gallery a:hover { border:2px solid gray; }
+div.imager-gallery-list .news-date-time { color:#486DAA; }

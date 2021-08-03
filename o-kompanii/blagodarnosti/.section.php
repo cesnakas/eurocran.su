@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Благодарности";
+$arDirProperties = Array(
+
+);
+?>

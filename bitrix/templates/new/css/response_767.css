@@ -1,0 +1,161 @@
+@media print, (max-width: 767px)
+{
+    /*------------
+        Header
+    ------------*/
+    header .logo,
+    header .logo img
+    {
+        height: 45px;
+    }
+
+
+    header .callback
+    {
+        display: none;
+    }
+
+
+
+    /*-----------------------------------
+        Category info - Category name
+    -----------------------------------*/
+    .category_info .category_name
+    {
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+
+
+    /*------------------------------
+        Category info - Products
+    ------------------------------*/
+    .category_info .products .row > *
+    {
+        width: calc(100% - 20px);
+    }
+
+
+
+    /*---------------------------------
+        Category info - Action form
+    ---------------------------------*/
+    .category_info .action_form
+    {
+        padding: 25px;
+    }
+
+
+    .category_info .action_form .form
+    {
+        width: 715px;
+        max-width: calc(100% + 20px);
+        margin-bottom: -15px;
+        margin-left: -20px;
+    }
+
+    .category_info .action_form .form > *
+    {
+        max-width: calc(100% - 20px);
+        margin-bottom: 15px;
+        margin-left: 20px;
+    }
+
+    #buy-form .action_form .form .line,
+    .category_info .action_form .form .line,
+    .category_info .action_form .form .submit
+    {
+        width: calc(50% - 20px);
+    }
+
+    .category_info .action_form .form .submit_btn
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*--------------------------------
+        Category info - Text block
+    --------------------------------*/
+    .category_info .text_block h2
+    {
+        font-size: 18px;
+        line-height: 24px;
+
+        margin-bottom: 22px;
+    }
+
+    .category_info .text_block h3
+    {
+        font-size: 15px;
+    }
+
+
+    /*-----------------------------------
+        Category info - Photo gallery
+    -----------------------------------*/
+    .category_info .photo_gallery .block_title
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .category_info .photo_gallery .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+
+    /*-------------------------
+        Category info - FAQ
+    -------------------------*/
+    .category_info .faq .block_title
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    .category_info .faq .item .title
+    {
+        line-height: 19px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding-top: 10px;
+    }
+
+
+    footer .logo,
+    footer .links,
+    footer .contacts
+    {
+        width: calc(50% - 10px);
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+
+    footer .logo img
+    {
+        height: 50px;
+    }
+
+    footer .logo .name,
+    footer .logo .desc
+    {
+        font-size: 12px;
+
+        margin-top: 20px;
+    }
+}

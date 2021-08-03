@@ -1,0 +1,191 @@
+@media print, (max-width: 1023px)
+{
+    /*------------
+        Header
+    ------------*/
+    header .logo,
+    header .logo img
+    {
+        height: 50px;
+    }
+
+
+    header .slogan
+    {
+        display: none;
+    }
+
+
+    header .phones .main_number,
+    header .phones .phone
+    {
+        font-size: 16px;
+    }
+
+    header .phones .mini_modal
+    {
+        width: 230px;
+    }
+
+    header .phones .phone span
+    {
+        bottom: 3px;
+
+        margin-right: 3px;
+    }
+
+
+    header .callback
+    {
+        margin-left: 20px;
+    }
+
+    header .callback .btn
+    {
+        font-size: 14px;
+
+        padding: 10px 20px;
+    }
+
+    header .callback .mini_modal
+    {
+        padding: 20px 30px 25px;
+    }
+
+    header .callback form .input
+    {
+        font-size: 17px;
+    }
+
+    header .callback form .submit_btn
+    {
+        font-size: 15px;
+
+        padding: 12px 20px;
+    }
+
+
+    header .bottom
+    {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        display: none;
+
+        width: 280px;
+        padding: 15px 0;
+    }
+
+    header .bottom .cont
+    {
+        padding: 0;
+    }
+
+    header .menu .item
+    {
+        width: 100%;
+    }
+
+    header .menu .item > a
+    {
+        font-size: 14px;
+
+        padding: 8px 20px;
+
+        text-align: right;
+
+        justify-content: flex-end;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        margin-bottom: 15px;
+        padding-top: 20px;
+    }
+
+
+
+    /*-------------------
+        Category info
+    -------------------*/
+    .category_info.content_flex .content
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------------------
+        Category info - Aside
+    ---------------------------*/
+    .category_info aside
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .category_info aside .mob_filter_btn
+    {
+        display: block;
+    }
+
+
+    .category_info aside .filter .title
+    {
+        display: none;
+    }
+
+    .category_info aside .filter form
+    {
+        display: none;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+
+    /*-----------------------------------
+        Category info - Category name
+    -----------------------------------*/
+    .category_info .category_name
+    {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        margin-top: 60px;
+        padding: 40px 0 20px;
+    }
+
+
+    footer .logo + .links
+    {
+        display: none;
+    }
+
+    footer .links
+    {
+        max-width: 164px;
+    }
+
+
+    footer .copyright
+    {
+        margin-top: 15px;
+    }
+}

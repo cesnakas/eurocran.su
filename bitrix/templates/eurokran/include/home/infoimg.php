@@ -1,0 +1,1 @@
+<img width="89%" src="bitrix/templates/eurokran/images/cover1.png" height="92%" alt="" style="margin-top: 11px;">

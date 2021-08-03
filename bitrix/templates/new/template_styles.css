@@ -1,0 +1,95 @@
+.content_search{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-page{
+    text-align: center;
+}
+
+.input_srch{
+    color: currentColor;
+    font-family: 'Lucida Grande', 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    height: 44px;
+    padding: 0 20px;
+    border-radius: 3px;
+}
+.srch_pg_btn{
+    color: #000;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 13px;
+    transition: .2s linear;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #2c2d2c;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.srch_pg_btn:hover{
+    background-color: #ffd014;
+    color: black;
+}
+
+@media (max-width: 767px)
+{
+    .input_srch{
+        width: 100%;
+    }
+    .srch_pg_btn{
+        margin-top: 15px;
+    }
+    .search-page{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+header .bottom2
+{
+    background: #fcd127;
+}
+
+.top_srch_frm{
+    padding: 10px;
+    text-align: center;
+}
+
+.lup_img{
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.pers_dann_chk_callback_top{
+    appearance: auto !important;
+}
+
+.pers_dann_chk_callback_top:before{
+    color: red !important;
+    background-color: red !important;
+}
+
+.pers_dann_chk_callback_top:after{
+    color: red !important;
+    background-color: red !important;
+}
+
+.pers_dann_chk_callback_top:active{
+    color: red !important;
+    background-color: red !important;
+}
+
+.pers_dann_chk_callback_field{
+    color: white;
+    margin: 5px;
+}
+
+.pers_dann_chk_callback_field a{
+    color: white !important;
+    font-size: 12px;
+}
