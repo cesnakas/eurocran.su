@@ -42,16 +42,58 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                 <div class="row">
                     <div class="header__general">
                         <div class="header__logo">
-                            <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo.svg"/></a>
+                            <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo.svg"></a>
                         </div>
-                        <div class="header__slogan">Аренда спецтехники LIEBHERR c 2000 года</div>
+                        <div class="header__slogan">
+							<?$APPLICATION->IncludeComponent(
+								'bitrix:main.include',
+								'',
+								Array(
+									'AREA_FILE_SHOW' => 'file',
+									'PATH' => SITE_TEMPLATE_PATH.'/include/header_title.php'
+								)
+							);?>
+                        </div>
                     </div>
                     <div class="header__info">
-                        <div class="header__schedule"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/clock.svg"/></i><span> 10:00-17:00</span></div>
-                        <div class="header__location"> <i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/img/content/location.svg"/></i><span> г. Москва, <br> ул. Куликовская, 12</span></div>
+                        <div class="header__schedule">
+                            <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/clock.svg"></i>
+                            <span>
+                                <?$APPLICATION->IncludeComponent(
+									'bitrix:main.include',
+									'',
+									Array(
+										'AREA_FILE_SHOW' => 'file',
+										'PATH' => SITE_TEMPLATE_PATH.'/include/header_time.php'
+									)
+								);?>
+                            </span>
+                        </div>
+                        <div class="header__location">
+                            <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/location.svg"></i>
+                            <span>
+                                <?$APPLICATION->IncludeComponent(
+									'bitrix:main.include',
+									'',
+									Array(
+										'AREA_FILE_SHOW' => 'file',
+										'PATH' => SITE_TEMPLATE_PATH.'/include/header_address.php'
+									)
+								);?>
+                            </span>
+                        </div>
                     </div>
-                    <div class="header__btn"><a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a></div>
-                    <div class="header__contacts"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/phone.svg"/></i><span><a href="">+7 (499)929-96-66 </a><a href="">+7 (985)364-55-18</a><a href="">+7 (985)226-20-30</a></span></div>
+                    <div class="header__btn">
+                        <a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a>
+                    </div>
+                    <div class="header__contacts">
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH;?>/img/content/phone.svg"></i>
+                        <span>
+                            <a href="tel:+74999299666">+7 (499)929-96-66</a>
+                            <a href="tel:+79853645518">+7 (985)364-55-18</a>
+                            <a href="tel:+79852262030">+7 (985)226-20-30</a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -81,27 +123,18 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 									"MENU_CACHE_GET_VARS" => array()
 								)
 							);?>
-                            <!--
-                            <li><a href="<?/*=SITE_DIR*/?>">Каталог</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">Услуги</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">О компании</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">Объекты</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">Цены</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">Блог</a></li>
-                            <li><a href="<?/*=SITE_DIR*/?>">Контакты</a></li>
-                            -->
                         </ul>
                     </div>
-                    <!--<div class="nav__search">
+                    <div class="nav__search">
                         <div class="search">
-                            <form action="search">
+                            <form action="<?=SITE_DIR?>search/">
                                 <div class="search__box">
-                                    <input type="text" placeholder="Поиск">
+                                    <input type="text" name="q" value="<?=$_GET['q']?>" size="40" placeholder="Поиск">
                                     <input type="submit" value="">
                                 </div>
                             </form>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>

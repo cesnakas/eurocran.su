@@ -2,7 +2,7 @@
 
 <? if (!empty($arResult)) { ?>
 
-<? foreach($arResult as $arItem) { ?>
+<? foreach($arResult as $arItem): ?>
 
 	<?if($arItem["SELECTED"]) { ?>
 		<li class="active">
@@ -14,6 +14,6 @@
         </li>
 	<? } ?>
 	
-<? } ?>
+<? endforeach; ?>
 
 <? } ?>
