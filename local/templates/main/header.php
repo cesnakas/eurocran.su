@@ -45,40 +45,31 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                             <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo.svg"></a>
                         </div>
                         <div class="header__slogan">
-							<?$APPLICATION->IncludeComponent(
-								'bitrix:main.include',
-								'',
-								Array(
-									'AREA_FILE_SHOW' => 'file',
-									'PATH' => SITE_TEMPLATE_PATH.'/include/header_title.php'
-								)
-							);?>
+							<?$APPLICATION->IncludeFile(
+                                SITE_TEMPLATE_PATH.'/include/header_title.php',
+                                [],
+                                ['SHOW_BORDER' => true, 'MODE' => 'text']
+                            );?>
                         </div>
                     </div>
                     <div class="header__info">
                         <div class="header__schedule">
                             <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/clock.svg"></i>
                             <span>
-                                <?$APPLICATION->IncludeComponent(
-									'bitrix:main.include',
-									'',
-									Array(
-										'AREA_FILE_SHOW' => 'file',
-										'PATH' => SITE_TEMPLATE_PATH.'/include/header_time.php'
-									)
+								<?$APPLICATION->IncludeFile(
+									SITE_TEMPLATE_PATH.'/include/header_time.php',
+									[],
+									['SHOW_BORDER' => true, 'MODE' => 'text']
 								);?>
                             </span>
                         </div>
                         <div class="header__location">
                             <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/location.svg"></i>
                             <span>
-                                <?$APPLICATION->IncludeComponent(
-									'bitrix:main.include',
-									'',
-									Array(
-										'AREA_FILE_SHOW' => 'file',
-										'PATH' => SITE_TEMPLATE_PATH.'/include/header_address.php'
-									)
+                                <?$APPLICATION->IncludeFile(
+									SITE_TEMPLATE_PATH.'/include/header_address.php',
+									[],
+									['SHOW_BORDER' => true, 'MODE' => 'text']
 								);?>
                             </span>
                         </div>
