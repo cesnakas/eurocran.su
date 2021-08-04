@@ -65,6 +65,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </div>
 
     <!-- Feedback -->
+    <?/*
     <a href="#x" class="overlay" id="callback"></a>
     <div class="popup">
         <?$APPLICATION->IncludeComponent(
@@ -86,6 +87,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         );?>
         <a class="close" title="Закрыть" href="#close"></a>
     </div>
+    */?>
     <!-- /Feedback -->
 
 </body>
