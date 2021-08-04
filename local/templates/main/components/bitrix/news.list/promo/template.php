@@ -19,33 +19,38 @@ $this->setFrameMode(true);
 	<div class="container--lg">
 
 		<div class="promo__slider" id="promo__slider">
-			<div class="promo__item" style="background-image:url(<?=SITE_TEMPLATE_PATH?>/img/content/sl1.jpg)">
-				<div class="promo__num">01/<span>02</span></div>
+			<? $i = 1; ?>
+			<?foreach($arResult['ITEMS'] as $arItem):?>
+			<div class="promo__item" style="background:url(<?=$arItem['PREVIEW_PICTURE']['SRC']?>) 0 0 no-repeat;background-size:cover;">
+				<div class="promo__num">
+					<?
+					CModule::IncludeModule('iblock');
+					$iblock_id = 3;
+					$arFilter = Array('IBLOCK_ID'=>$iblock_id, 'ACTIVE'=>'Y');
+					$res_count = CIBlockElement::GetList(Array(), $arFilter, Array(), false, Array());
+					?>
+					0<?=$i;?>/<span><?=$res_count;?></span>
+                </div>
 				<div class="promo__row">
 					<div class="promo__content">
 						<div class="g-title">
-							<h2>Аренда спецтехники Liebherr для любых задач</h2>
+							<h2><?=$arItem['NAME']?></h2>
 						</div>
-						<p>Мобильные, гусеничные и башенные краны LIEBHERR в аренду для любых задач и грузов. работаем по всей России</p>
-						<div class="promo__btns"><a class="btn btn--full" href="">Заказать звонок</a><a class="btn btn--empty" href="">Каталог техники</a></div>
+						<?=$arItem['PREVIEW_TEXT']?>
+						<div class="promo__btns">
+                            <a class="btn btn--full" href="#callback-form">Заказать звонок</a>
+                            <a class="btn btn--empty" href="<?=SITE_DIR?>tehnika/">Каталог техники</a>
+                        </div>
 					</div>
 				</div>
 			</div>
-			<div class="promo__item" style="background-image:url(<?=SITE_TEMPLATE_PATH?>/img/content/sl1.jpg)">
-				<div class="promo__num">02/<span>02</span></div>
-				<div class="promo__row">
-					<div class="promo__content">
-						<div class="g-title">
-							<h2>Аренда спецтехники Liebherr для любых задач</h2>
-						</div>
-						<p>Мобильные, гусеничные и башенные краны LIEBHERR в аренду для любых задач и грузов. работаем по всей России</p>
-						<div class="promo__btns"><a class="btn btn--full" href="">Заказать звонок</a><a class="btn btn--empty" href="">Каталог техники</a></div>
-					</div>
-				</div>
-			</div>
+            <? $i++; ?>
+			<?endforeach;?>
+
 		</div>
+
 		<div class="promo__arrows"></div>
 		<div class="promo__bottom-text"></div>
-
+		
 	</div>
 </div>
