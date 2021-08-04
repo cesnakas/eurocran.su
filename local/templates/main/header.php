@@ -65,16 +65,34 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     <div class="nav__menu">
                         <div class="menu-close"><span></span><span></span></div>
                         <ul>
-                            <li><a href="<?=SITE_DIR?>">Каталог</a></li>
-                            <li><a href="<?=SITE_DIR?>">Услуги</a></li>
-                            <li><a href="<?=SITE_DIR?>">О компании</a></li>
-                            <li><a href="<?=SITE_DIR?>">Объекты</a></li>
-                            <li><a href="<?=SITE_DIR?>">Цены</a></li>
-                            <li><a href="<?=SITE_DIR?>">Блог</a></li>
-                            <li><a href="<?=SITE_DIR?>">Контакты</a></li>
+							<?$APPLICATION->IncludeComponent(
+								"bitrix:menu",
+								"main",
+								Array(
+									"ROOT_MENU_TYPE" => "main",
+									"MAX_LEVEL" => "1",
+									"CHILD_MENU_TYPE" => "",
+									"USE_EXT" => "N",
+									"DELAY" => "N",
+									"ALLOW_MULTI_SELECT" => "N",
+									"MENU_CACHE_TYPE" => "N",
+									"MENU_CACHE_TIME" => "3600",
+									"MENU_CACHE_USE_GROUPS" => "Y",
+									"MENU_CACHE_GET_VARS" => array()
+								)
+							);?>
+                            <!--
+                            <li><a href="<?/*=SITE_DIR*/?>">Каталог</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">Услуги</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">О компании</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">Объекты</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">Цены</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">Блог</a></li>
+                            <li><a href="<?/*=SITE_DIR*/?>">Контакты</a></li>
+                            -->
                         </ul>
                     </div>
-                    <div class="nav__search">
+                    <!--<div class="nav__search">
                         <div class="search">
                             <form action="search">
                                 <div class="search__box">
@@ -83,7 +101,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
