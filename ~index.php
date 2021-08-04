@@ -414,25 +414,44 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 			<div class="g-title">
 				<h2>Услуги</h2>
 			</div>
-			<div class="row"><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services1.png"/>
+			<div class="row">
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services1.png"/>
 					</div>
-					<div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div></a><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services2.jpg"/>
+					<div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div>
+                </a>
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services2.jpg"/>
 					</div>
-					<div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div></a><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services3.jpg"/>
+					<div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div>
+                </a>
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services3.jpg"/>
 					</div>
-					<div class="services__btn btn--full">Аренда низкорамных тралов</div></a><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services4.jpg"/>
+					<div class="services__btn btn--full">Аренда низкорамных тралов</div>
+                </a>
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services4.jpg"/>
 					</div>
-					<div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div></a><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services5.jpg"/>
+					<div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div>
+                </a>
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services5.jpg"/>
 					</div>
-					<div class="services__btn btn--full">Разработка ППРК</div></a><a class="services__item" href="">
-					<div class="services__img"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/services6.jpg"/>
+					<div class="services__btn btn--full">Разработка ППРК</div>
+                </a>
+                <a class="services__item" href="">
+					<div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/services6.jpg"/>
 					</div>
-					<div class="services__btn btn--full"> Выезд специалиста на объект</div></a></div>
+					<div class="services__btn btn--full"> Выезд специалиста на объект</div>
+                </a>
+            </div>
 		</div>
 	</div>
 	<!--END SERVICES-->
