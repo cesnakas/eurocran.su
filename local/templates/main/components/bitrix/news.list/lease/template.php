@@ -43,8 +43,10 @@ $this->setFrameMode(true);
 					<div class="g-title">
 						<h3><?=$arItem['NAME']?></h3>
 					</div>
-					<?=$arItem['PREVIEW_TEXT']?>
-					<!--<p>Аренда гусеничного крана – актуальная услуга для многих строительных площадок. Использование спецтехники существенно упрощает погрузку - выгрузку материалов, оптимизирует рабочий процесс.</p>-->
+                    <?php
+                    $str = $arItem['PREVIEW_TEXT'];
+                    echo TruncateText($str, 350);
+                    ?>
 					<div class="lease__btn">
                         <a class="btn btn--full" href="<?=$arItem["DETAIL_PAGE_URL"]?>">Выбрать спецтехнику</a>
                     </div>
