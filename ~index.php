@@ -146,28 +146,55 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 	<div class="reliable">
 		<div class="container">
 			<div class="g-title">
-				<h2>С нами надежно</h2>
+				<h2>
+					<?$APPLICATION->IncludeFile(
+						SITE_TEMPLATE_PATH.'/include/reliable-title.php',
+						[],
+						['SHOW_BORDER' => true, 'MODE' => 'text']
+					);?>
+                </h2>
 			</div>
 			<div class="row">
 				<div class="reliable__text">
-					<p>Компания Еврокран успешно работает на территории РФ с 2000 года. </p>
-					<p>В нашем автопарке гусеничные и мобильные краны известного немецкого бренда. </p>
-					<p>Среди них есть модели любой грузоподъемности, для погрузочных, монтажных, транспортировочных и других работ. </p>
-					<p>Обращение в компанию гарантирует комплексный подход к решению поставленных задач. Получить больше информации можно у менеджеров Компании Еврокран.</p>
+					<?$APPLICATION->IncludeFile(
+						SITE_TEMPLATE_PATH.'/include/reliable-text.php',
+						[],
+						['SHOW_BORDER' => true, 'MODE' => 'text']
+					);?>
 					<div class="reliable__btn"><a class="btn btn--full" href="">Заказать звонок</a></div>
 				</div>
 				<div class="reliable__row">
-					<div class="reliable__item"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable1.svg"/></i>
-						<p>Поставка техники <br> точно в срок</p>
+					<div class="reliable__item">
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable1.svg"/></i>
+						<?$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/reliable-item_1.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
 					</div>
-					<div class="reliable__item"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable2.svg"/></i>
-						<p>Сопровождение <br> спецтехники</p>
+					<div class="reliable__item">
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable2.svg"/></i>
+						<?$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/reliable-item_2.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
 					</div>
-					<div class="reliable__item"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable3.svg"/></i>
-						<p>Квалифицированнные <br> специалисты</p>
+					<div class="reliable__item">
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable3.svg"/></i>
+						<?$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/reliable-item_3.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
 					</div>
-					<div class="reliable__item"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable4.svg"/></i>
-						<p>Автопарк от ведущих <br> мировых производителей</p>
+					<div class="reliable__item">
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable4.svg"/></i>
+						<?$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/reliable-item_4.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
 					</div>
 				</div>
 			</div>
@@ -179,13 +206,16 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 	<div class="numbers">
 		<div class="container">
 			<div class="row">
-				<div class="numbers__item"> <strong class="count1" data-num="20">0</strong>
+				<div class="numbers__item">
+                    <strong class="count1" data-num="20">0</strong>
 					<p>лет на рынке</p>
 				</div>
-				<div class="numbers__item"> <strong class="count2" data-num="1000">0</strong>
+				<div class="numbers__item">
+                    <strong class="count2" data-num="1000">0</strong>
 					<p>выполненных проектов</p>
 				</div>
-				<div class="numbers__item"> <strong class="count3" data-num="20">0</strong>
+				<div class="numbers__item">
+                    <strong class="count3" data-num="20">0</strong>
 					<p>единиц техники всегда в <br> наличии</p>
 				</div>
 			</div>
@@ -197,7 +227,13 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 	<div class="projects">
 		<div class="container">
 			<div class="g-title">
-				<h2>Реализованные проекты</h2>
+				<h2>
+					<?$APPLICATION->IncludeFile(
+						SITE_TEMPLATE_PATH.'/include/projects-title.php',
+						[],
+						['SHOW_BORDER' => true, 'MODE' => 'text']
+					);?>
+                </h2>
 			</div>
 		</div>
 		<?$APPLICATION->IncludeComponent(
@@ -331,12 +367,19 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 	<div class="rent-price">
 		<div class="container">
 			<div class="g-title">
-				<h2>Из чего складывается стоимость аренды</h2>
+				<h2>
+					<?$APPLICATION->IncludeFile(
+						SITE_TEMPLATE_PATH.'/include/rent-price_title.php',
+						[],
+						['SHOW_BORDER' => true, 'MODE' => 'text']
+					);?>
+                </h2>
 			</div>
 			<ul>
 				<li>
 					<div class="rent-price__number">01</div>
 					<div class="rent-price__shadow">01</div>
+
 					<p>Стоимость аренды крана определяется так: 8 (восемь) часов работы каждой единицы спецтехники в течение смены.</p>
 				</li>
 				<li>
@@ -478,51 +521,6 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
         ),
         false
     );?>
-	<!--<div class="services">
-		<div class="container">
-			<div class="g-title">
-				<h2>Услуги</h2>
-			</div>
-			<div class="row">
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services1.png"/>
-					</div>
-					<div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div>
-                </a>
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services2.jpg"/>
-					</div>
-					<div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div>
-                </a>
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services3.jpg"/>
-					</div>
-					<div class="services__btn btn--full">Аренда низкорамных тралов</div>
-                </a>
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services4.jpg"/>
-					</div>
-					<div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div>
-                </a>
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services5.jpg"/>
-					</div>
-					<div class="services__btn btn--full">Разработка ППРК</div>
-                </a>
-                <a class="services__item" href="">
-					<div class="services__img">
-                        <img src="<?/*=SITE_TEMPLATE_PATH*/?>/img/content/services6.jpg"/>
-					</div>
-					<div class="services__btn btn--full"> Выезд специалиста на объект</div>
-                </a>
-            </div>
-		</div>
-	</div>-->
 	<!--END SERVICES-->
 
 	<!--START INFO-BLOCK-->
