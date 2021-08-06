@@ -75,7 +75,9 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         </div>
                     </div>
                     <div class="header__btn">
+
                         <a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a>
+
                     </div>
                     <div class="header__contacts">
                         <i class="icon"><img src="<?=SITE_TEMPLATE_PATH;?>/img/content/phone.svg"></i>

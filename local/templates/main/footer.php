@@ -64,31 +64,5 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <!--END FOOTER-->
     </div>
 
-    <!-- Feedback -->
-    <?/*
-    <a href="#x" class="overlay" id="callback"></a>
-    <div class="popup">
-        <?$APPLICATION->IncludeComponent(
-            "bitrix:main.feedback",
-            "template1",
-            array(
-                "USE_CAPTCHA" => "Y",
-                "OK_TEXT" => "Спасибо, ваше сообщение принято.",
-                "EMAIL_TO" => "evro-k@yandex.ru",
-                "REQUIRED_FIELDS" => array(
-                    0 => "NAME",
-                    1 => "EMAIL",
-                ),
-                "EVENT_MESSAGE_ID" => array(
-                    0 => "7",
-                )
-            ),
-            false
-        );?>
-        <a class="close" title="Закрыть" href="#close"></a>
-    </div>
-    */?>
-    <!-- /Feedback -->
-
 </body>
 </html>

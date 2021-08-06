@@ -1,4 +1,5 @@
-<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global \CMain $APPLICATION */
@@ -21,7 +22,7 @@ $this->setFrameMode(true);
 		</div>
 		<div class="row">
 			<?foreach($arResult['ITEMS'] as $arItem):?>
-			<a class="services__item" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+			<a class="services__item" href="<?=$arItem['DETAIL_PAGE_URL']?>">
 				<div class="services__img">
 					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC']?>"/>
 				</div>
