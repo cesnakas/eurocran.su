@@ -65,33 +65,56 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 
 	<!--START LEASE-->
     <?$APPLICATION->IncludeComponent(
+        "bitrix:catalog.section.list",
+        "lease",
+        Array(
+            "IBLOCK_TYPE" => "catalog",
+            "IBLOCK_ID" => "1",
+            "SECTION_ID" => $_REQUEST["SECTION_ID"],
+            "SECTION_CODE" => "",
+            "COUNT_ELEMENTS" => "Y",
+            "TOP_DEPTH" => "1",
+            "SECTION_FIELDS" => ['*'],
+            "SECTION_USER_FIELDS" => "",
+			'FILTER_NAME' => 'sectionFilter',
+            "VIEW_MODE" => "TILE",
+
+            "SHOW_PARENT_NAME" => "Y",
+            "SECTION_URL" => "",
+            "ADD_SECTIONS_CHAIN" => "Y",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "36000000",
+            "CACHE_NOTES" => "",
+            "CACHE_GROUPS" => "Y"
+        )
+    );?>
+    <?/*$APPLICATION->IncludeComponent(
         "bitrix:news.list",
         "lease",
         Array(
 			"IBLOCK_TYPE" => "catalog",
-			"IBLOCK_ID" => "1",
-			"NEWS_COUNT" => "10",
-			"SORT_BY1" => "ACTIVE_FROM",
-			"SORT_ORDER1" => "DESC",
+            "IBLOCK_ID" => '1',
+			$arFilter[] = array(
+				"LOGIC" => "AND",
+				array("SECTION_ID" => 2),
+				array("SECTION_ID" => 1),
+                array('SECTION_ID' => 4)
+			),
+			"NEWS_COUNT" => "3",
+			"SORT_BY1" => "ID",
+			"SORT_ORDER1" => "ASC",
 			"SORT_BY2" => "SORT",
 			"SORT_ORDER2" => "ASC",
-			"FILTER_NAME" => "arrFilter",
-			"FIELD_CODE" => Array(
-                // 'ID',
-                '1',
-                '2',
-                '4'
-            ),
-			"PROPERTY_CODE" => Array("DESCRIPTION"),
-
-            // "DISPLAY_DATE" => "Y",
-			"DISPLAY_NAME" => "Y",
-			"DISPLAY_PICTURE" => "Y",
-			"DISPLAY_PREVIEW_TEXT" => "Y",
-			// "AJAX_MODE" => "Y",
+			"FILTER_NAME" => 'arrFilter',
+			"FIELD_CODE" => '',
+			"PROPERTY_CODE" => Array('DESCRIPTION'),
 			"CHECK_DATES" => "Y",
-			"DETAIL_URL" => "",
-			"PREVIEW_TRUNCATE_LEN" => "",
+			"DETAIL_URL" => SITE_DIR.'tehnika/#SECTION_CODE#/',
+            "AJAX_MODE" => "N",
+			"AJAX_OPTION_JUMP" => "N",
+			"AJAX_OPTION_STYLE" => "Y",
+			"AJAX_OPTION_HISTORY" => "N",
+			'PREVIEW_TRUNCATE_LEN' => '200',
 			"ACTIVE_DATE_FORMAT" => "d.m.Y",
 			"SET_TITLE" => "N",
 			"SET_BROWSER_TITLE" => "N",
@@ -100,35 +123,32 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 			"SET_LAST_MODIFIED" => "N",
 			"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 			"ADD_SECTIONS_CHAIN" => "N",
-			"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
-			"PARENT_SECTION" => "",
-			"PARENT_SECTION_CODE" => "",
-			"INCLUDE_SUBSECTIONS" => "Y",
+			"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+			"PARENT_SECTION" => ['2', '1', '4'],
+			"PARENT_SECTION_CODE" => '',
+			"INCLUDE_SUBSECTIONS" => "N",
+            "DISPLAY_DATE" => "N",
+			"DISPLAY_NAME" => "Y",
+			"DISPLAY_PICTURE" => "Y",
+			"DISPLAY_PREVIEW_TEXT" => "Y",
 			"CACHE_TYPE" => "A",
-			"CACHE_TIME" => "3600",
 			"CACHE_FILTER" => "Y",
+			"CACHE_TIME" => "3600",
 			"CACHE_GROUPS" => "Y",
+			"PAGER_TEMPLATE" => "",
 			"DISPLAY_TOP_PAGER" => "N",
 			"DISPLAY_BOTTOM_PAGER" => "N",
 			"PAGER_TITLE" => "Новости",
 			"PAGER_SHOW_ALWAYS" => "N",
-			"PAGER_TEMPLATE" => "",
-			"PAGER_DESC_NUMBERING" => "Y",
+			"PAGER_DESC_NUMBERING" => "N",
 			"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-			"PAGER_SHOW_ALL" => "Y",
-			"PAGER_BASE_LINK_ENABLE" => "Y",
+			"PAGER_SHOW_ALL" => "N",
+			"PAGER_BASE_LINK_ENABLE" => "N",
 			"SET_STATUS_404" => "Y",
-			"SHOW_404" => "Y",
-			"MESSAGE_404" => "",
-			"PAGER_BASE_LINK" => "",
-			"PAGER_PARAMS_NAME" => "arrPager",
-			"AJAX_OPTION_JUMP" => "N",
-			"AJAX_OPTION_STYLE" => "Y",
-			"AJAX_OPTION_HISTORY" => "N",
-			"AJAX_OPTION_ADDITIONAL" => ""
+			"SHOW_404" => "N"
         ),
     false
-    );?>
+    );*/?>
 	<!--END LEASE-->
 
 	<!--START RELIABLE-->
