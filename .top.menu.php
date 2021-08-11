@@ -1,0 +1,52 @@
+<?php
+$aMenuLinks = Array(
+	Array(
+		"Каталог",
+		"/tehnika/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Услуги",
+		"/uslugi/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"О компании",
+		"/o-kompanii/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Объекты",
+		"/objekty/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Цены",
+		"/prais-list/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Блог",
+		"/stati/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Контакты",
+		"/kontakty/",
+		Array(),
+		Array(),
+		""
+	)
+);

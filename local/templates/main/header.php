@@ -130,7 +130,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 								"bitrix:menu",
 								"main",
 								Array(
-									"ROOT_MENU_TYPE" => "main",
+									"ROOT_MENU_TYPE" => "top",
 									"MAX_LEVEL" => "1",
 									"CHILD_MENU_TYPE" => "",
 									"USE_EXT" => "N",
