@@ -30,14 +30,15 @@ $this->setFrameMode(true);
 			<div class="lease__item">
 				<div class="row">
 					<div class="lease__img">
-						<?=CFile::ShowImage(
-							$arSection['PICTURE'],
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/lease1.jpg"/>
+						<?/*=CFile::ShowImage(
+							$arSection['PICTURE']['SRC'],
 							650,
 							460,
 							'style="width: 650px; height: 460px; object-fit: cover; object-position: center;" alt="'.$arSection['NAME'].'"',
 							$arSection["SECTION_PAGE_URL"],
 							false
-						);?>
+						);*/?>
 					</div>
 					<div class="lease__text">
 						<div class="g-title">
@@ -62,4 +63,3 @@ $this->setFrameMode(true);
 	<div class="lease__dots"></div>
 
 </div>
-
