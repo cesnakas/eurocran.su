@@ -18,6 +18,7 @@ $APPLICATION->SetPageProperty("title", "Спецтехника Liebherr на о�
 		</div>
 	</div>
 	<!--END BREADCRUMBS-->
+
 	<!--START OBJECTS-->
 	<div class="objects">
 		<div class="container">
@@ -136,6 +137,7 @@ $APPLICATION->SetPageProperty("title", "Спецтехника Liebherr на о�
 		</div>
 	</div>
 	<!--END OBJECTS-->
+
 	<!--START INFO-BLOCK-->
 	<div class="info-block">
 		<div class="container">
