@@ -37,7 +37,7 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
 						</div>
 					</div>
 				</div>
-				<div class="okompanii__video"><a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1"><img src="img/content/about-video2.jpg"/></a></div>
+				<div class="okompanii__video"><a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/about-video2.jpg"/></a></div>
 			</div>
 		</div>
 	</div>
@@ -49,25 +49,44 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
             <div class="g-title">
                 <h2>Услуги</h2>
             </div>
-            <div class="row"><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services1.png"/>
+            <div class="row">
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services1.png"/>
                     </div>
-                    <div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div></a><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services2.jpg"/>
+                    <div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div>
+                </a>
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services2.jpg"/>
                     </div>
-                    <div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div></a><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services3.jpg"/>
+                    <div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div>
+                </a>
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services3.jpg"/>
                     </div>
-                    <div class="services__btn btn--full">Аренда низкорамных тралов</div></a><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services4.jpg"/>
+                    <div class="services__btn btn--full">Аренда низкорамных тралов</div>
+                </a>
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services4.jpg"/>
                     </div>
-                    <div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div></a><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services5.jpg"/>
+                    <div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div>
+                </a>
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services5.jpg"/>
                     </div>
-                    <div class="services__btn btn--full">Разработка ППРК</div></a><a class="services__item" href="">
-                    <div class="services__img"><img src="img/content/services6.jpg"/>
+                    <div class="services__btn btn--full">Разработка ППРК</div>
+                </a>
+                <a class="services__item" href="">
+                    <div class="services__img">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services6.jpg"/>
                     </div>
-                    <div class="services__btn btn--full"> Выезд специалиста на объект</div></a></div>
+                    <div class="services__btn btn--full"> Выезд специалиста на объект</div>
+                </a>
+            </div>
         </div>
     </div>
     <!--END SERVICES-->
@@ -80,13 +99,17 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
             </div>
             <div class="leters__arrows"></div>
             <div class="leters__slider" id="leters__slider">
-                <div class="leters__item"><img src="img/content/leters1.jpg"/>
+                <div class="leters__item">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/leters1.jpg"/>
                 </div>
-                <div class="leters__item"><img src="img/content/leters2.jpg"/>
+                <div class="leters__item">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/leters2.jpg"/>
                 </div>
-                <div class="leters__item"><img src="img/content/leters3.jpg"/>
+                <div class="leters__item">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/leters3.jpg"/>
                 </div>
-                <div class="leters__item"><img src="img/content/leters1.jpg"/>
+                <div class="leters__item">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/leters1.jpg"/>
                 </div>
             </div>
             <div class="leters__dots"></div>
@@ -159,12 +182,12 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
                 <div class="contacts__info">
                     <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
                     <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
-                    <div class="contacts__loc"><i class="icon"> <img src="img/content/location.svg"/></i><span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span></div>
+                    <div class="contacts__loc"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/location.svg"/></i><span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span></div>
                     <div class="contacts__row">
-                        <div class="contacts__tel"><i class="icon"><img src="img/content/phone.svg"/></i><span> <a href="tel:+74999299666">+7 (499)929-96-66</a><a href="tel:+79853645518">+7 (985)364-55-18</a><a href="tel:+79852262030">+7 (985)226-20-30</a></span></div>
+                        <div class="contacts__tel"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/phone.svg"/></i><span> <a href="tel:+74999299666">+7 (499)929-96-66</a><a href="tel:+79853645518">+7 (985)364-55-18</a><a href="tel:+79852262030">+7 (985)226-20-30</a></span></div>
                         <div class="contacts__other">
-                            <div class="contacts__mail"><i class="icon"> <img src="img/content/mail.svg"/></i><a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a></div>
-                            <div class="contacts__schedule"><i class="icon"> <img src="img/content/clock.svg"/></i><span>10:00 - 17:00</span></div>
+                            <div class="contacts__mail"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/mail.svg"/></i><a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a></div>
+                            <div class="contacts__schedule"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/clock.svg"/></i><span>10:00 - 17:00</span></div>
                         </div>
                     </div>
                 </div>
@@ -193,8 +216,6 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
     <!--START MAP-->
     <div class="map"></div>
     <!--END MAP-->
-
-    
 
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

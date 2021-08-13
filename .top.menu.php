@@ -23,7 +23,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Объекты",
-		"/objekty/",
+		"/objekty/~index.php",
 		Array(),
 		Array(),
 		""

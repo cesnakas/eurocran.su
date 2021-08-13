@@ -14,15 +14,15 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     $asset->addString('<meta content="notranslate" name="google">');
     $asset->addString('<meta name="viewport" content="width=device-width,initial-scale=1">');
     // css
-    $asset->addCss(SITE_TEMPLATE_PATH.'/css/style.css');
+    $asset->addCss(SITE_TEMPLATE_PATH.'/dist/css/style.css');
     // js
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/jquery.min.js');
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/slick.min.js');
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/magnific-popup.js');
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/jquery.animateNumber.min.js');
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/main.min.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/jquery.min.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/slick.min.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/magnific-popup.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/jquery.animateNumber.min.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/main.min.js');
     $asset->addString('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqn_--LrDNTF6w9Dz5WOLUsyLVIZ6FqOc&amp;callback=initMap" async defer></script>');
-    $asset->addJs(SITE_TEMPLATE_PATH.'/js/google-map.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/google-map.js');
 ?>
 
     <title><?$APPLICATION->ShowTitle();?></title>
