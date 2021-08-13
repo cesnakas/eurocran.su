@@ -37,7 +37,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Блог",
-		"/stati/",
+		"/stati/~index.php",
 		Array(),
 		Array(),
 		""
