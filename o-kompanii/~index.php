@@ -5,34 +5,6 @@ $APPLICATION->SetPageProperty("title", "О компании ООО \"Компа�
 $APPLICATION->SetTitle("О КОМПАНИИ");
 ?>
 
-	<!--START BREADCRUMB-->
-    <div class="breadcrumb">
-        <div class="container">
-            <?php
-            $APPLICATION->IncludeComponent(
-                'bitrix:breadcrumb',
-                '.default',
-                Array(
-                    'START_FROM' => '0',
-                    'PATH' => '',
-                    'SITE_ID' => 's1'
-                )
-            );?>
-        </div>
-    </div>
-
-    <!--<div class="breadcrumb">
-		<div class="container">
-			<div class="bx-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-				<div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a>
-					<meta itemprop="position" content="1"/>
-				</div>
-				<div class="bx-breadcrumb-item"><span>Блог</span></div>
-			</div>
-		</div>
-	</div>-->
-	<!--END BREADCRUMBS-->
-
 	<!--START ABOUT-->
 	<div class="okompanii">
 		<div class="container">
@@ -45,65 +17,96 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
 				<div class="okompanii__content">
 					<div class="okompanii__box">
 						<div class="okompanii__text">
-							<p>Компания ЕвроКран – это команда специалистов, обеспечивающих эффективное использование высокопроизводительных немецких автокранов марки LIEBHERR. Мы работаем с 2000 года и за это время не раз доказали свой профессионализм и компетентность: сегодня нам доверяют крупнейшие предприятия России.</p>
-							<p>Наши операторы автокранов – это профессионалы с опытом и всеми необходимыми навыками, прошедшие обучение в самой фирме LIEBHERR.</p>
-							<p>Для нас не существует слишком сложных задач, мы готовы выполнить любые работы:</p>
-							<p>монтаж/демонтаж башенных кранов, турбин ТЭЦ, куполов храмов, церквей, вращающихся печей, реакторов синтеза метанола, металлических конструкций; <br> монтаж вышек сотовой связи;  <br> строительство зданий, сооружений, мостов;  <br> установка рекламных щитов;  <br> перевозка автотрейлерами крупногабаритных и тяжеловесных грузов.</p>
+							<?php
+                            $APPLICATION->IncludeFile(
+								SITE_TEMPLATE_PATH.'/include/about/okompanii-text.php',
+								[],
+								['SHOW_BORDER' => true, 'MODE' => 'text']
+							);?>
 						</div>
 					</div>
 				</div>
-				<div class="okompanii__video"><a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/about-video2.jpg"/></a></div>
+				<div class="okompanii__video">
+                    <a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/about-video2.jpg"/>
+                    </a>
+                </div>
 			</div>
 		</div>
 	</div>
 	<!--END ABOUT-->
 
     <!--START SERVICES-->
-    <div class="services">
-        <div class="container">
-            <div class="g-title">
-                <h2>Услуги</h2>
-            </div>
-            <div class="row">
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services1.png"/>
-                    </div>
-                    <div class="services__btn btn--full">Аренда мобильных автокранов Liebherr</div>
-                </a>
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services2.jpg"/>
-                    </div>
-                    <div class="services__btn btn--full">Аренда гусеничных кранов Liebherr</div>
-                </a>
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services3.jpg"/>
-                    </div>
-                    <div class="services__btn btn--full">Аренда низкорамных тралов</div>
-                </a>
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services4.jpg"/>
-                    </div>
-                    <div class="services__btn btn--full">Перевозка негабаритного и тяжеловесного груза</div>
-                </a>
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services5.jpg"/>
-                    </div>
-                    <div class="services__btn btn--full">Разработка ППРК</div>
-                </a>
-                <a class="services__item" href="">
-                    <div class="services__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/services6.jpg"/>
-                    </div>
-                    <div class="services__btn btn--full"> Выезд специалиста на объект</div>
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php
+    $APPLICATION->IncludeComponent(
+        'bitrix:news.list',
+        'services-home',
+        array(
+            "DISPLAY_DATE" => "N",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "AJAX_MODE" => "N",
+            "IBLOCK_TYPE" => "services",
+            "IBLOCK_ID" => "11",
+            "NEWS_COUNT" => "20",
+            "SORT_BY1" => 'ID',
+            "SORT_ORDER1" => 'ASC',
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER2" => "ASC",
+            "FILTER_NAME" => "",
+            "FIELD_CODE" => array(
+                0 => "ID",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(
+                0 => "",
+                1 => "DESCRIPTION",
+                2 => "",
+            ),
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "SET_TITLE" => "N",
+            "SET_BROWSER_TITLE" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "INCLUDE_SUBSECTIONS" => "N",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "3600",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "DISPLAY_TOP_PAGER" => "N",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "PAGER_TITLE" => "Новости",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SHOW_404" => "Y",
+            "MESSAGE_404" => "",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "COMPONENT_TEMPLATE" => "services-home",
+            "STRICT_SECTION_CHECK" => "N",
+            "FILE_404" => ""
+        ),
+        false
+    );?>
     <!--END SERVICES-->
 
     <!--START LETERS-->

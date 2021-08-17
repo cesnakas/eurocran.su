@@ -159,3 +159,24 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             </div>
         </div>
         <!--END NAV-->
+
+        <?
+        if(!CSite::InDir(SITE_DIR.'~index.php')):
+        ?>
+        <!--START BREADCRUMB-->
+        <div class="breadcrumb">
+            <div class="container">
+				<?php
+				$APPLICATION->IncludeComponent(
+					'bitrix:breadcrumb',
+					'.default',
+					Array(
+						'START_FROM' => '0',
+						'PATH' => '',
+						'SITE_ID' => 's1'
+					)
+				);?>
+            </div>
+        </div>
+        <!--END BREADCRUMBS-->
+        <? endif; ?>
