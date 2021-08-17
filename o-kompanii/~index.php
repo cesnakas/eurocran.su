@@ -6,7 +6,22 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
 ?>
 
 	<!--START BREADCRUMB-->
-	<div class="breadcrumb">
+    <div class="breadcrumb">
+        <div class="container">
+            <?php
+            $APPLICATION->IncludeComponent(
+                'bitrix:breadcrumb',
+                '.default',
+                Array(
+                    'START_FROM' => '0',
+                    'PATH' => '',
+                    'SITE_ID' => 's1'
+                )
+            );?>
+        </div>
+    </div>
+
+    <!--<div class="breadcrumb">
 		<div class="container">
 			<div class="bx-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
 				<div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a>
@@ -15,7 +30,7 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
 				<div class="bx-breadcrumb-item"><span>Блог</span></div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	<!--END BREADCRUMBS-->
 
 	<!--START ABOUT-->

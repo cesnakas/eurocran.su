@@ -1,5 +1,6 @@
 <?php
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+
 ?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID;?>">
@@ -56,7 +57,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </script>
 
 </head>
-<body>
+<body <?=(CSite::InDir(SITE_DIR.'~index.php')) ? '' : 'class="page"';?>>
 
     <?php echo'<div id="panel">'; $APPLICATION->ShowPanel(); echo'</div>';?>
 
