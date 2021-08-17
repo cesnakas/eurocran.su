@@ -109,11 +109,11 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
     );?>
     <!--END SERVICES-->
 
-    <!--START LETERS-->
+    <!--START LETTERS-->
     <?php
     $APPLICATION->IncludeComponent(
         'bitrix:news.list',
-        'leters',
+        'letters',
         array(
             "DISPLAY_DATE" => "N",
             "DISPLAY_NAME" => "Y",
@@ -180,7 +180,7 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
         ),
         false
     );?>
-    <!--END LETERS-->
+    <!--END LETTERS-->
 
     <!--START RENT-PRICE-->
     <div class="rent-price">
@@ -192,26 +192,82 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
                 <li>
                     <div class="rent-price__number">01</div>
                     <div class="rent-price__shadow">01</div>
-                    <h3>Прозрачность</h3>
-                    <p>работаем с клиентами без посредников</p>
+                    <h3>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH.'/include/about/rent-price_i1-title.php',
+                        [],
+                        ['SHOW_BORDER' => true, 'MODE' => 'text']
+                    );?>
+                    </h3>
+                    <p>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH.'/include/about/rent-price_i1-text.php',
+                        [],
+                        ['SHOW_BORDER' => true, 'MODE' => 'text']
+                    );?>
+                    </p>
                 </li>
                 <li>
                     <div class="rent-price__number">02</div>
                     <div class="rent-price__shadow">02</div>
-                    <h3>Ответственность</h3>
-                    <p> исполняем обязательства в соответствии с договором и гарантируем завершение работы в срок</p>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i2-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i2-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
                 </li>
                 <li>
                     <div class="rent-price__number">03</div>
                     <div class="rent-price__shadow">03</div>
-                    <h3>Профессионализм</h3>
-                    <p> постоянная подготовка кадров для безопасной работы со спецтехникой любой сложности</p>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i3-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i3-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
                 </li>
                 <li>
                     <div class="rent-price__number">04</div>
                     <div class="rent-price__shadow">04</div>
-                    <h3>Качество</h3>
-                    <p>высший класс обслуживания заказчиков и новейший парк техники</p>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i4-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i4-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -221,18 +277,20 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
     <!--START INFO-BLOCK-->
     <div class="info-block">
         <div class="container">
-            <h2>Заголовок</h2>
-            <p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
-            <p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
+            <h2>
+				<?php
+				$APPLICATION->IncludeFile(
+					SITE_TEMPLATE_PATH.'/include/about/info-block_title.php',
+					[],
+					['SHOW_BORDER' => true, 'MODE' => 'text']
+				);?>
+            </h2>
+			<?php
+			$APPLICATION->IncludeFile(
+				SITE_TEMPLATE_PATH.'/include/about/info-block_text.php',
+				[],
+				['SHOW_BORDER' => true, 'MODE' => 'text']
+			);?>
         </div>
     </div>
     <!--END INFO-BLOCK-->
