@@ -1,22 +1,9 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("ООО \"Компания ЕвроКран\" ► Контакты");
 $APPLICATION->SetPageProperty("title", "Контакты компании Еврокран, адрес и телефоны, время работы");
 $APPLICATION->SetPageProperty("description", "ООО \"Компания ЕвроКран\" ► Москва, Россия, 117628, 🚇 Бульвар Дмитрия Донского, ул. Куликовская, 12. ☎ +7(495) 226-20-30 ✓ ☎ +7(495) 364-55-18 ✓ ☎ +7(495) 645-19-20 ✓.");
 ?>
-
-	<!--START BREADCRUMB-->
-	<div class="breadcrumb">
-		<div class="container">
-			<div class="bx-breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
-				<div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a>
-					<meta itemprop="position" content="1"/>
-				</div>
-				<div class="bx-breadcrumb-item"><span>Контакты</span></div>
-			</div>
-		</div>
-	</div>
-	<!--END BREADCRUMBS-->
 
     <!--START CONTACTS-B-->
     <div class="contacts">
@@ -68,5 +55,5 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
     <!--END MAP-->
 
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>
