@@ -66,25 +66,18 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
                     </div>
                 </div>
                 <div class="contacts__form">
-
-                    <form action="">
-                        <input type="text" placeholder="Ваше имя">
-                        <div class="form__row">
-                            <input type="tel" placeholder="Ваш телефон*">
-                            <input type="email" placeholder="Ваша почта">
-                        </div>
-                        <textarea name="" placeholder="Оставьте ваш вопрос"></textarea>
-                        <label class="checkbox">
-                            <input type="checkbox" checked="checked">
-                            <div class="input"></div>
-                            <span>Я согласен с <a href="">условиями обработки</a> и использования моих персональных данных</span>
-                        </label>
-                        <label class="btn btn--full">
-                            Оставить заявку
-                            <input type="submit">
-                        </label>
-                    </form>
-
+					<?php
+                    $APPLICATION->IncludeComponent(
+                        'cesnakas:main.feedback',
+                        '.default',
+                        [
+							'USE_CAPTCHA' => 'N',
+							'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+							'EMAIL_TO' => 's.cesnakas@gmail.com',
+							'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
+							'EVENT_MESSAGE_ID' => Array('7')
+						]
+					);?>
                 </div>
             </div>
             <div class="contacts__text">
