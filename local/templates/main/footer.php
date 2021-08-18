@@ -7,7 +7,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             <div class="container">
                 <div class="row">
                     <div class="footer__logo">
-                        <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/logo-footer.svg"/></a>
+                        <a href="<?=SITE_DIR?>"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/logo-footer.svg"/></a>
                         <p>Аренда мобильных и <br> гусеничных кранов LIEBHERR</p>
                         <b>© 2000-<?=date('Y')?> Все права защищены</b>
                     </div>
@@ -45,11 +45,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     <div class="footer__actions">
                         <a class="btn btn--full" href="#callback-form">Свяжитесь со мной</a>
                         <ul>
-                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/insta.svg"/></a></li>
-                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/twitter.svg"/></a></li>
-                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/whatsapp.svg"/></a></li>
-                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/vk.svg"/></a></li>
-                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/yandex.svg"/></a></li>
+                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/insta.svg"/></a></li>
+                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/twitter.svg"/></a></li>
+                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/whatsapp.svg"/></a></li>
+                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/vk.svg"/></a></li>
+                            <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/yandex.svg"/></a></li>
                         </ul>
                     </div>
                     <div class="footer__contacts">

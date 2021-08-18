@@ -305,12 +305,41 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
                 <div class="contacts__info">
                     <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
                     <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
-                    <div class="contacts__loc"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/location.svg"/></i><span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span></div>
+                    <div class="contacts__loc">
+                        <i class="icon">
+                            <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Location">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#location"/>
+                            </svg>
+                        </i>
+                        <span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span>
+                    </div>
                     <div class="contacts__row">
-                        <div class="contacts__tel"><i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/phone.svg"/></i><span> <a href="tel:+74999299666">+7 (499)929-96-66</a><a href="tel:+79853645518">+7 (985)364-55-18</a><a href="tel:+79852262030">+7 (985)226-20-30</a></span></div>
+                        <div class="contacts__tel">
+                            <i class="icon">
+                                <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Phone">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#phone"/>
+                                </svg>
+                            </i>
+                            <span> <a href="tel:+74999299666">+7 (499)929-96-66</a><a href="tel:+79853645518">+7 (985)364-55-18</a><a href="tel:+79852262030">+7 (985)226-20-30</a></span></div>
                         <div class="contacts__other">
-                            <div class="contacts__mail"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/mail.svg"/></i><a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a></div>
-                            <div class="contacts__schedule"><i class="icon"> <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/clock.svg"/></i><span>10:00 - 17:00</span></div>
+                            <div class="contacts__mail">
+                                <i class="icon">
+                                    <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Mail">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#mail"/>
+                                    </svg>
+                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/mail.svg"/>-->
+                                </i>
+                                <a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a>
+                            </div>
+                            <div class="contacts__schedule">
+                                <i class="icon">
+                                    <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Time">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#workTime"/>
+                                    </svg>
+                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/clock.svg"/>-->
+                                </i>
+                                <span>10:00 - 17:00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
