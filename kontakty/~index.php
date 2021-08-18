@@ -66,6 +66,7 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
                     </div>
                 </div>
                 <div class="contacts__form">
+
                     <form action="">
                         <input type="text" placeholder="Ваше имя">
                         <div class="form__row">
@@ -75,17 +76,24 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
                         <textarea name="" placeholder="Оставьте ваш вопрос"></textarea>
                         <label class="checkbox">
                             <input type="checkbox" checked="checked">
-                            <div class="input"></div><span>Я согласен с <a href=""> условиями обработки </a> и использования моих персональных данных</span>
+                            <div class="input"></div>
+                            <span>Я согласен с <a href="">условиями обработки</a> и использования моих персональных данных</span>
                         </label>
-                        <label class="btn btn--full">Оставить заявку
+                        <label class="btn btn--full">
+                            Оставить заявку
                             <input type="submit">
                         </label>
                     </form>
+
                 </div>
             </div>
             <div class="contacts__text">
-                <h3>Как добраться:</h3>
-                <p>Принимая во внимание показатели успешности, глубокий уровень погружения играет определяющее значение для прогресса профессионального сообщества. Лишь предприниматели в сети интернет, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут ограничены исключительно образом мышления. Кстати, активно развивающиеся страны третьего мира смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.</p>
+				<?php
+				$APPLICATION->IncludeFile(
+					SITE_TEMPLATE_PATH.'/include/contacts/contacts__text.php',
+					[],
+					['SHOW_BORDER' => true, 'MODE' => 'text']
+				);?>
             </div>
         </div>
     </div>

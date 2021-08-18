@@ -1,6 +1,6 @@
 function initMap() {
 	var locations = [
-		['Bondi Beach', -33.890542, 151.274856, 4],
+		['ООО \"Компания Еврокран\"', 55.572171803868, 37.563537087017, 17],
 	];
 
 	var CustomMapStyles = [
@@ -165,8 +165,8 @@ function initMap() {
 	];
 
 	var map = new google.maps.Map(document.querySelector(".map"), {
-		zoom: 15,
-		center: new google.maps.LatLng(-33.890542, 151.274856, 4),
+		zoom: 16,
+		center: new google.maps.LatLng(55.572171803868, 37.563537087017, 17),
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		styles: CustomMapStyles,
 	});
