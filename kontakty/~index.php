@@ -73,7 +73,7 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
                         [
 							'USE_CAPTCHA' => 'N',
 							'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
-							'EMAIL_TO' => 's.cesnakas@gmail.com',
+							'EMAIL_TO' => 'evro-k@yandex.ru',
 							'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
 							'EVENT_MESSAGE_ID' => Array('7')
 						]
