@@ -113,7 +113,7 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 				</div>
 				<div class="reliable__row">
 					<div class="reliable__item">
-                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable1.svg"/></i>
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/reliable1.svg"/></i>
 						<?$APPLICATION->IncludeFile(
 							SITE_TEMPLATE_PATH.'/include/reliable-item_1.php',
 							[],
@@ -121,7 +121,7 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 						);?>
 					</div>
 					<div class="reliable__item">
-                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable2.svg"/></i>
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/reliable2.svg"/></i>
 						<?$APPLICATION->IncludeFile(
 							SITE_TEMPLATE_PATH.'/include/reliable-item_2.php',
 							[],
@@ -129,7 +129,7 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 						);?>
 					</div>
 					<div class="reliable__item">
-                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable3.svg"/></i>
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/reliable3.svg"/></i>
 						<?$APPLICATION->IncludeFile(
 							SITE_TEMPLATE_PATH.'/include/reliable-item_3.php',
 							[],
@@ -137,7 +137,7 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 						);?>
 					</div>
 					<div class="reliable__item">
-                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/img/content/reliable4.svg"/></i>
+                        <i class="icon"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/reliable4.svg"/></i>
 						<?$APPLICATION->IncludeFile(
 							SITE_TEMPLATE_PATH.'/include/reliable-item_4.php',
 							[],
@@ -371,19 +371,20 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 			<div class="g-title">
 				<h3><span>Оперативно </span> поставим технику</h3>
 			</div>
-			<form action="">
-				<div class="row">
-					<input type="text" placeholder="Ваше имя">
-					<input type="text" placeholder="Ваш телефон*">
-					<label class="btn btn--full">Заказать звонок
-						<input type="submit">
-					</label>
-				</div>
-				<label class="checkbox">
-					<input type="checkbox" checked="checked">
-					<div class="input"></div><span>Я согласен с <a href=""> условиями обработки </a> и использования моих персональных данных</span>
-				</label>
-			</form>
+
+			<?php
+			$APPLICATION->IncludeComponent(
+				'cesnakas:main.feedback',
+				'main.technique',
+				[
+					'USE_CAPTCHA' => 'N',
+					'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+					'EMAIL_TO' => 's.cesnakas@gmail.com',
+					'REQUIRED_FIELDS' => ['NAME','PHONE'],
+					'EVENT_MESSAGE_ID' => ['7']
+				]
+			);?>
+
 		</div>
 	</div>
 	<!--END PUT-THE-TECHNIQUE-->
@@ -411,7 +412,7 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 				<div class="about__video">
 					<div class="about__mob"></div>
                     <a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/about-video.jpg"/>
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/about-video.jpg"/>
                     </a>
 				</div>
 			</div>
@@ -510,20 +511,19 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 				<h3>Остались вопросы?</h3>
 			</div>
 			<p>Оставьте заявку на звонок и мы ответим на все ваши вопросы в самое ближайшее время</p>
-			<form action="">
-				<input type="text" placeholder="Ваше имя">
-				<input type="text" placeholder="Ваш телефон*">
-				<input type="text" placeholder="Ваша почта">
-				<textarea name="" placeholder="Оставьте ваш вопрос"></textarea>
-				<label class="checkbox">
-					<input type="checkbox" checked="checked">
-					<div class="input"></div><span>Я согласен с <a href=""> условиями обработки </a> и использования моих персональных данных </span>
-				</label>
-				<label class="btn btn--full">Заказать звонок
-					<input type="text">
-				</label>
-			</form>
-		</div>
+			<?php
+			$APPLICATION->IncludeComponent(
+				'cesnakas:main.feedback',
+				'main.questions',
+				[
+					'USE_CAPTCHA' => 'N',
+					'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+					'EMAIL_TO' => 's.cesnakas@gmail.com',
+					'REQUIRED_FIELDS' => ['NAME','PHONE','EMAIL','MESSAGE'],
+					'EVENT_MESSAGE_ID' => ['7']
+				]
+			);?>
+        </div>
 	</div>
 	<!--END QUESTIONS-->
 

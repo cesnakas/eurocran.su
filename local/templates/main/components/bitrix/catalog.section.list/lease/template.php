@@ -30,7 +30,7 @@ $this->setFrameMode(true);
 			<div class="lease__item">
 				<div class="row">
 					<div class="lease__img">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/img/content/lease1.jpg"/>
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/lease1.jpg"/>
 						<?/*=CFile::ShowImage(
 							$arSection['PICTURE']['SRC'],
 							650,
