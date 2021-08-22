@@ -3,88 +3,108 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
 
 	<!--START INFO-BLOCK-->
-	<div class="objects-single">
-		<div class="container">
-			<h1>Разгрузка и монтаж трансформатора</h1>
-			<p>Разгрузка и монтаж трансформатора ТРДН 80000-110 весом 90т на объекте: НПЗ, г.Туапсе <br> Работу выполняет автокран LIEBHERR LTM1500грузоподъемностью 500т.</p>
-			<div class="objects-single__arrows"></div>
-			<div class="objects-single__slider" id="objects-single__slider">
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-			</div>
-			<div class="objects-single__nav" id="objects-single__nav">
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-				<div class="objects-single__nav-item"><img src="img/content/objects-single__item1.jpg"/>
-				</div>
-			</div>
-			<h2>Заголовок</h2>
-			<p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-			<p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-			<p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-			<p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
-			<p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-			<p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-			<p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-			<p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-			<p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой, 105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-			<p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-			<p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
-		</div>
-	</div>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:news.detail",
+        "objects-single",
+        Array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "ADD_ELEMENT_CHAIN" => "Y",
+            "ADD_SECTIONS_CHAIN" => "Y",
+            "AJAX_MODE" => "Y",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "Y",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "BROWSER_TITLE" => "-",
+            "CACHE_GROUPS" => "Y",
+            "CACHE_TIME" => "3600",
+            "CACHE_TYPE" => "A",
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "DISPLAY_BOTTOM_PAGER" => "Y",
+            "DISPLAY_DATE" => "Y",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "DISPLAY_TOP_PAGER" => "Y",
+            "ELEMENT_CODE" => "",
+            "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+            "FIELD_CODE" => array(
+                "ID",
+                "DETAIL_PICTURE",
+                'ITEMS'
+            ),
+            "FILE_404" => "",
+            "GROUP_PERMISSIONS" => array("1"),
+            "IBLOCK_ID" => "2",
+            "IBLOCK_TYPE" => "catalog",
+            "IBLOCK_URL" => "news.php?ID=#IBLOCK_ID#\"",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+            "MESSAGE_404" => "",
+            "META_DESCRIPTION" => "-",
+            "META_KEYWORDS" => "-",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "PAGER_SHOW_ALL" => "Y",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_TITLE" => "Страница",
+            "PROPERTY_CODE" => array("ADRESS","TITLE","DESCRIPTION","KEYWORDS",""),
+            "SET_BROWSER_TITLE" => "Y",
+            "SET_CANONICAL_URL" => "Y",
+            "SET_LAST_MODIFIED" => "Y",
+            "SET_META_DESCRIPTION" => "Y",
+            "SET_META_KEYWORDS" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SET_TITLE" => "Y",
+            "SHARE_HANDLERS" => array("delicious"),
+            "SHARE_HIDE" => "N",
+            "SHARE_SHORTEN_URL_KEY" => "",
+            "SHARE_SHORTEN_URL_LOGIN" => "",
+            "SHARE_TEMPLATE" => "",
+            "SHOW_404" => "N",
+            "STRICT_SECTION_CHECK" => "Y",
+            "USE_PERMISSIONS" => "N",
+            "USE_SHARE" => "Y"
+        )
+    );?>
 	<!--END INFO-BLOCK-->
 
 	<!--START OBJECTS-->
-	<div class="objects-slider">
-		<div class="container">
-			<h2>Другие объекты</h2>
-			<div class="objects-slider__arrows"></div>
-			<div class="objects-slider" id="objects-slider"><a class="objects-slider__item" href="">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="objects-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-					</div></a><a class="objects-slider__item" href="">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="objects-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-					</div></a><a class="objects-slider__item" href="">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="objects-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-					</div></a><a class="objects-slider__item" href="">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="objects-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-					</div></a></div>
-			<div class="objects-btn"><a class="btn" href="">Смотреть все	</a></div>
-		</div>
-	</div>
+    <div class="objects-slider">
+        <div class="container">
+            <h2>Другие объекты</h2>
+            <div class="objects-slider__arrows"></div>
+            <div class="objects-slider" id="objects-slider">
+                <a class="objects-slider__item" href="">
+                    <picture>
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
+                    </picture>
+                    <div class="objects-slider__info">
+                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
+                    </div>
+                </a><a class="objects-slider__item" href="">
+                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
+                    </picture>
+                    <div class="objects-slider__info">
+                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
+                    </div>
+                </a><a class="objects-slider__item" href="">
+                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
+                    </picture>
+                    <div class="objects-slider__info">
+                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
+                    </div>
+                </a><a class="objects-slider__item" href="">
+                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
+                    </picture>
+                    <div class="objects-slider__info">
+                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
+                    </div>
+                </a></div>
+            <div class="objects-btn"><a class="btn" href="">Смотреть все </a></div>
+        </div>
+    </div>
 	<!--END OBJECTS-->
 
 <?php
