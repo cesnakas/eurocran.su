@@ -1,6 +1,10 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+?>
+
 <h1>Наши работы</h1>
-<?
+
+<?php
 $arParams["SET_TITLE"] = "N";
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
