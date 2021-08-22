@@ -3,89 +3,146 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 ?>
 
 	<!--START INFO-BLOCK-->
-	<div class="about-single">
-		<div class="container">
-			<h1>Аренда автокрана Liebherr ltm 1160</h1>
-			<p>Компания liebherr – ведущий поставщик строительной и землеройной техники в мире. Кроме тяжелых гусеничных экскаваторов производитель предлагает автомобильные краны от легкой до тяжелой категории. </p>
-			<p>Каждая машина демонстрирует отличные параметры при эксплуатации в тяжелых условиях и проведении серьезных работ.  </p>
-			<p>Спрос на автокраны немецкого производителя огромный. Однако не все компании имеют достаточно средств на покупку такой машины. Отличное решение – аренда автокрана 160 тонн. </p>
-			<div class="img-grid">
-				<div><img src="img/content/about-single1.jpg"/>
-				</div>
-				<div><img src="img/content/about-single2.jpg"/>
-				</div>
-			</div>
-			<h2>Условия аренды автокранов liebherr ltm 1160</h2>
-			<p>Компания Еврокран предлагает в аренду в москве автокраны производства liebherr. В линейке надежные, исправные машины, которые часто проходят сервисное обслуживание. Благодаря этому арендованная техника быстро справляется с поставленными задачами. В парке – мобильные и гусеничные транспортные средства. </p>
-			<p>С помощью кранов разной грузоподъемности можно провести погрузочные, монтажные, транспортировочные работы. Цена аренды зависит от вида выбранной машины, сроков и других факторов. В стоимость проката входит оплата труда опытного крановщика. </p>
-			<p>Наши постоянные клиенты получают скидки на предоставляемые услуги. Своим клиентам гарантируем следующие выгоды сотрудничества:  </p>
-			<ul>
-				<li>Быстрая выдача транспорта в пользование клиента; </li>
-				<li>Высококлассное обслуживание; </li>
-				<li>Штат опытных водителей, с помощью которых эффективно проводятся любые поставленные задачи: </li>
-				<li>Консультации опытных сотрудников, которые помогают с выбором крана и сопровождают на всех этапах сотрудничества; </li>
-				<li>Сотрудничество на основе договора, в котором отражаются сроки, цены услуг и обязательства сторон. </li>
-			</ul>
-			<p>Наши краны используются при строительстве высотных объектов, при проведении работ на промышленных добывающих объектах, при прокладке и ремонте дорог, железнодорожных путей. </p>
-			<p>Техника незаменима при ремонте старых строений, операциях, требующих высокой точности.</p>
-			<h2>Особенности и преимущества крана liebherr ltm 1160</h2>
-			<p>Большим спросом среди предложения нашей компании пользуется автокран liebherr ltm 1160. Модель обладает такими характеристиками: </p>
-			<ul>
-				<li>Современная концепция привода; </li>
-				<li>Мощное шасси, позволяющее работать на местностях с плохим рельефом; </li>
-				<li>Безопасное перемещение груза; </li>
-				<li>Возможность оперативной установки крана на опоры;</li>
-				<li>Надежная лебедочная система с канавками особого типа, монтированными планетарными редукторами; </li>
-				<li>Небольшие габариты, позволяющие установке легко маневрировать в стесненных пространствах; </li>
-				<li>Оснащение дисковыми пневматическими тормозами. Благодаря этому получилась повышенная скорость торможения без утраты устойчивости; </li>
-				<li>Дистанционное управление, которое позволяет работать без участия водителя, при помощи компьютерной программы, которая автоматически настраивает требуемые показатели после ввода массы груза. </li>
-				<li>Радиус разворота механизма – 10,5 м. Особая программа тестирования liccon дает возможность оператору исключить сбои датчиков без применения измерительных приборов.</li>
-			</ul>
-			<p>Если хотите заказать услуги аренды в москве и московской области, позвоните менеджерам нашей фирмы по номеру +7 (495) 645-19-20. По всем интересующим вопросам вас проконсультируют сотрудники, а также помогут с выбором транспорта.</p>
-		</div>
-	</div>
+    <?php
+    $APPLICATION->IncludeComponent(
+        "bitrix:news.detail",
+        "blog-single",
+        Array(
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "ADD_ELEMENT_CHAIN" => "Y",
+            "ADD_SECTIONS_CHAIN" => "Y",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "AJAX_MODE" => "Y",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "AJAX_OPTION_HISTORY" => "Y",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "BROWSER_TITLE" => "-",
+            "CACHE_GROUPS" => "Y",
+            "CACHE_TIME" => "3600",
+            "CACHE_TYPE" => "A",
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "DISPLAY_BOTTOM_PAGER" => "Y",
+            "DISPLAY_DATE" => "Y",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "DISPLAY_TOP_PAGER" => "Y",
+            "ELEMENT_CODE" => "",
+            "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+            "FIELD_CODE" => array(
+                "ID",
+                "DETAIL_PICTURE",
+                'ITEMS'
+            ),
+            "FILE_404" => "",
+            "GROUP_PERMISSIONS" => array("1"),
+            "IBLOCK_ID" => "5",
+            "IBLOCK_TYPE" => "stati",
+            "IBLOCK_URL" => "news.php?ID=#IBLOCK_ID#\"",
+            "MESSAGE_404" => "",
+            "META_DESCRIPTION" => "-",
+            "META_KEYWORDS" => "-",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "PAGER_SHOW_ALL" => "Y",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_TITLE" => "Страница",
+            "PROPERTY_CODE" => array("ADRESS","TITLE","DESCRIPTION","KEYWORDS",""),
+            "SET_BROWSER_TITLE" => "Y",
+            "SET_CANONICAL_URL" => "Y",
+            "SET_LAST_MODIFIED" => "Y",
+            "SET_META_DESCRIPTION" => "Y",
+            "SET_META_KEYWORDS" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SET_TITLE" => "Y",
+            "SHARE_HANDLERS" => array("delicious"),
+            "SHARE_HIDE" => "N",
+            "SHARE_SHORTEN_URL_KEY" => "",
+            "SHARE_SHORTEN_URL_LOGIN" => "",
+            "SHARE_TEMPLATE" => "",
+            "SHOW_404" => "N",
+            "STRICT_SECTION_CHECK" => "Y",
+            "USE_PERMISSIONS" => "N",
+            "USE_SHARE" => "Y"
+        )
+    );?>
 	<!--END INFO-BLOCK-->
+
 	<!--START OBJECTS-->
-	<div class="blog-slider">
-		<div class="container">
-			<h2>Другие статьи</h2>
-			<div class="blog-slider__arrows"></div>
-			<div class="blog-slider" id="blog-slider">
-				<section class="blog-slider__item">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="blog-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-						<p>Компания Liebherr – ведущий поставщик строительной и землеройной техники в мире. Предлагаем автомобильные краны от легкой до тяжелой категории.</p><a class="btn btn--full" href="">Подробнее</a>
-					</div>
-				</section>
-				<section class="blog-slider__item">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="blog-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-						<p>Компания Liebherr – ведущий поставщик строительной и землеройной техники в мире. Предлагаем автомобильные краны от легкой до тяжелой категории.</p><a class="btn btn--full" href="">Подробнее	</a>
-					</div>
-				</section>
-				<section class="blog-slider__item">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="blog-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-						<p>Компания Liebherr – ведущий поставщик строительной и землеройной техники в мире. Предлагаем автомобильные краны от легкой до тяжелой категории. </p><a class="btn btn--full" href="">Подробнее</a>
-					</div>
-				</section>
-				<section class="blog-slider__item">
-					<picture><img src="img/content/blog.jpg"/>
-					</picture>
-					<div class="blog-slider__info">
-						<h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-						<p>Компания Liebherr – ведущий поставщик строительной и землеройной техники в мире. Предлагаем автомобильные краны от легкой до тяжелой категории. </p><a class="btn btn--full" href="">Подробнее</a>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:news.list",
+        "blog-slider",
+        array(
+            "IBLOCK_TYPE" => "blog",
+            "IBLOCK_ID" => "5",
+            "NEWS_COUNT" => "9",
+            "SORT_BY1" => 'ID',
+            "SORT_ORDER1" => 'ASC',
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER2" => "ASC",
+            "FILTER_NAME" => "",
+            "FIELD_CODE" => array(
+                0 => "ID",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(
+                0 => "",
+                1 => "DESCRIPTION",
+                2 => "",
+            ),
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "~detail.php?ELEMENT_ID=#ELEMENT_ID#",
+            "AJAX_MODE" => "Y",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "Y",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "SET_TITLE" => "N",
+            "SET_BROWSER_TITLE" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "ADD_SECTIONS_CHAIN" => "Y",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "PARENT_SECTION" => '',
+            "PARENT_SECTION_CODE" => "",
+
+            "DISPLAY_DATE" => "N",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "INCLUDE_SUBSECTIONS" => "N",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "3600",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "DISPLAY_TOP_PAGER" => "N",
+            "DISPLAY_BOTTOM_PAGER" => "Y",
+            "PAGER_TITLE" => "Новости",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "show-more",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "Y",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SHOW_404" => "Y",
+            "MESSAGE_404" => "",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "COMPONENT_TEMPLATE" => "",
+            "STRICT_SECTION_CHECK" => "N",
+            "FILE_404" => ""
+        ),
+        false
+    );?>
+    <!--END OBJECTS-->
+
 	<!--START MAP-->
 	<div class="map"></div>
 	<!--END MAP-->
