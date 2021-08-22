@@ -7,48 +7,48 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         "bitrix:news.detail",
         "objects-single",
         Array(
-            "ACTIVE_DATE_FORMAT" => "d.m.Y",
-            "ADD_ELEMENT_CHAIN" => "Y",
-            "ADD_SECTIONS_CHAIN" => "Y",
-            "AJAX_MODE" => "Y",
-            "AJAX_OPTION_ADDITIONAL" => "",
-            "AJAX_OPTION_HISTORY" => "Y",
-            "AJAX_OPTION_JUMP" => "N",
-            "AJAX_OPTION_STYLE" => "Y",
-            "BROWSER_TITLE" => "-",
-            "CACHE_GROUPS" => "Y",
-            "CACHE_TIME" => "3600",
-            "CACHE_TYPE" => "A",
-            "CHECK_DATES" => "Y",
-            "DETAIL_URL" => "",
-            "DISPLAY_BOTTOM_PAGER" => "Y",
-            "DISPLAY_DATE" => "Y",
-            "DISPLAY_NAME" => "Y",
-            "DISPLAY_PICTURE" => "Y",
-            "DISPLAY_PREVIEW_TEXT" => "Y",
-            "DISPLAY_TOP_PAGER" => "Y",
-            "ELEMENT_CODE" => "",
-            "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
-            "FIELD_CODE" => array(
-                "ID",
-                "DETAIL_PICTURE",
-                'ITEMS'
+			"ACTIVE_DATE_FORMAT" => "d.m.Y",
+			"ADD_ELEMENT_CHAIN" => "Y",
+			"ADD_SECTIONS_CHAIN" => "Y",
+			"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+			"AJAX_MODE" => "Y",
+			"AJAX_OPTION_ADDITIONAL" => "",
+			"AJAX_OPTION_HISTORY" => "Y",
+			"AJAX_OPTION_JUMP" => "N",
+			"AJAX_OPTION_STYLE" => "Y",
+			"BROWSER_TITLE" => "-",
+			"CACHE_GROUPS" => "Y",
+			"CACHE_TIME" => "3600",
+			"CACHE_TYPE" => "A",
+			"CHECK_DATES" => "Y",
+			"DETAIL_URL" => "",
+			"DISPLAY_BOTTOM_PAGER" => "Y",
+			"DISPLAY_DATE" => "Y",
+			"DISPLAY_NAME" => "Y",
+			"DISPLAY_PICTURE" => "Y",
+			"DISPLAY_PREVIEW_TEXT" => "Y",
+			"DISPLAY_TOP_PAGER" => "Y",
+			"ELEMENT_CODE" => "",
+			"ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+			"FIELD_CODE" => array(
+				"ID",
+				"DETAIL_PICTURE",
+				'ITEMS'
             ),
-            "FILE_404" => "",
-            "GROUP_PERMISSIONS" => array("1"),
-            "IBLOCK_ID" => "2",
-            "IBLOCK_TYPE" => "catalog",
-            "IBLOCK_URL" => "news.php?ID=#IBLOCK_ID#\"",
-            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-            "MESSAGE_404" => "",
-            "META_DESCRIPTION" => "-",
-            "META_KEYWORDS" => "-",
-            "PAGER_BASE_LINK" => "",
-            "PAGER_BASE_LINK_ENABLE" => "Y",
-            "PAGER_PARAMS_NAME" => "arrPager",
-            "PAGER_SHOW_ALL" => "Y",
-            "PAGER_TEMPLATE" => "",
-            "PAGER_TITLE" => "Страница",
+			"FILE_404" => "",
+			"GROUP_PERMISSIONS" => array("1"),
+			"IBLOCK_ID" => "2",
+			"IBLOCK_TYPE" => "catalog",
+			"IBLOCK_URL" => "news.php?ID=#IBLOCK_ID#\"",
+			"MESSAGE_404" => "",
+			"META_DESCRIPTION" => "-",
+			"META_KEYWORDS" => "-",
+			"PAGER_BASE_LINK" => "",
+			"PAGER_BASE_LINK_ENABLE" => "Y",
+			"PAGER_PARAMS_NAME" => "arrPager",
+			"PAGER_SHOW_ALL" => "Y",
+			"PAGER_TEMPLATE" => "",
+			"PAGER_TITLE" => "Страница",
             "PROPERTY_CODE" => array("ADRESS","TITLE","DESCRIPTION","KEYWORDS",""),
             "SET_BROWSER_TITLE" => "Y",
             "SET_CANONICAL_URL" => "Y",
@@ -69,43 +69,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
         )
     );?>
 	<!--END INFO-BLOCK-->
-
-	<!--START OBJECTS-->
-    <div class="objects-slider">
-        <div class="container">
-            <h2>Другие объекты</h2>
-            <div class="objects-slider__arrows"></div>
-            <div class="objects-slider" id="objects-slider">
-                <a class="objects-slider__item" href="">
-                    <picture>
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
-                    </picture>
-                    <div class="objects-slider__info">
-                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-                    </div>
-                </a><a class="objects-slider__item" href="">
-                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
-                    </picture>
-                    <div class="objects-slider__info">
-                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве</h2>
-                    </div>
-                </a><a class="objects-slider__item" href="">
-                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
-                    </picture>
-                    <div class="objects-slider__info">
-                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-                    </div>
-                </a><a class="objects-slider__item" href="">
-                    <picture><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/blog.jpg"/>
-                    </picture>
-                    <div class="objects-slider__info">
-                        <h2>Аренда автокрана LIEBHERR LTM 1160 в Москве </h2>
-                    </div>
-                </a></div>
-            <div class="objects-btn"><a class="btn" href="">Смотреть все </a></div>
-        </div>
-    </div>
-	<!--END OBJECTS-->
 
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");

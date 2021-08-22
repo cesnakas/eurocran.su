@@ -1,0 +1,11 @@
+.objects-single__item img {
+    max-height: 700px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.objects-single__nav-item img {
+    height: 170px !important;
+    object-fit: cover;
+    object-position: center;
+}
