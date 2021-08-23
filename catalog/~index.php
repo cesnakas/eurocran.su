@@ -9,44 +9,48 @@ require($_SERVER["DOCUMENT_ROOT"]."/tehnika/meta.php");
 	<!--START INFO-BLOCK-->
     <div class="product-single">
         <div class="container">
+
             <h1>Гусеничный кран Liebherr LR 1750</h1>
+
             <div class="row">
                 <div class="product-single__img">
                     <div class="product-single__slider" id="product-single__slider">
-                        <div class="product-single__item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
                     </div>
+
                     <div class="product-single__nav" id="product-single__nav">
-                        <div class="product-single__nav-item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__nav-item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__nav-item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__nav-item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__nav-item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__nav-item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__nav-item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__nav-item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
-                        <div class="product-single__nav-item"><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/product-single.jpg"/>
+                        <div class="product-single__nav-item">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
                         </div>
                     </div>
                 </div>
+
                 <div class="product-single__info">
                     <div class="product-single__table">
                         <p><span>Максимальная грузоподъемность:</span><span>750 т</span></p>
@@ -56,8 +60,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/tehnika/meta.php");
                         <p><span>Максимальный вылет стрелы:</span><span>156 м</span></p>
                         <p><span>Решетчатый удлинитель:</span><span>от 14,00 до 105,00 м</span></p>
                         <p><span>Скорость передвижения:</span><span>1,65 км/ч</span></p>
-                        <p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p><a class="btn btn--full"
-                                                                                               href="">Заказать</a>
+                        <p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p>
+                        <a class="btn btn--full" href="">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -171,10 +175,12 @@ require($_SERVER["DOCUMENT_ROOT"]."/tehnika/meta.php");
             <div class="catalog__dots"></div>
             <div class="catalog__slider" id="catalog__slider">
                 <div class="catalog__item">
-                    <div class="catalog__row"><a class="catalog__img" href=""
-                                                 style="background-image:url(<?= SITE_TEMPLATE_PATH ?>/dist/img/content/catalog1.jpg)"></a><a
-                                class="catalog__title" href="">
-                            <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
+                    <div class="catalog__row">
+                        <a class="catalog__img" href="" style="background-image:url(<?= SITE_TEMPLATE_PATH ?>/dist/img/content/catalog1.jpg)"></a>
+                        <a class="catalog__title" href="">
+                            <h3>Гусеничный кран Liebherr LR 1750</h3>
+                        </a>
+                        <a class="catalog__info" href="">
                             <div class="catalog__tr">
                                 <p>Грузоподъемность:</p>
                                 <p>40 тонн</p>
@@ -183,11 +189,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/tehnika/meta.php");
                                 <p>Длина стрелы:</p>
                                 <p>35 м</p>
                             </div>
-                            <div class="catalog__more"><span>Все характеристики</span><img
-                                        src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow.svg"/>
+                            <div class="catalog__more">
+                                <span>Все характеристики</span>
+                                <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow.svg"/>
                             </div>
                         </a>
-                        <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
+                        <div class="catalog__btn">
+                            <a class="btn btn--full" href="">Арендовать</a>
+                        </div>
                     </div>
                 </div>
                 <div class="catalog__item">
