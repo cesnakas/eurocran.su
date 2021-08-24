@@ -15,6 +15,24 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 		]
 	);?>
 
+	<!--START PUT-THE-TECHNIQUE-->
+	<div class="put-the-technique">
+		<div class="container">
+			<div class="g-title">
+				<h2>Нужна помощь в подборе? </h2>
+			</div>
+			<form action="">
+				<div class="row">
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Телефон">
+					<label class="btn btn--full">Получить консультацию
+						<input type="submit">
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
 ?>
