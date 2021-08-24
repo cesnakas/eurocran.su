@@ -130,7 +130,7 @@ $this->setFrameMode(true);
 
 					<?foreach($arResult['PROPERTIES']['PHOTO']['VALUE'] as $photo):?>
                     <div class="product-single__item">
-                        <?=CFile::ShowImage($photo)?>
+                        <img src="<?=CFile::GetPath($photo)?>"/>
                     </div>
                     <?endforeach;?>
 
@@ -138,37 +138,24 @@ $this->setFrameMode(true);
 
                 <div class="product-single__nav" id="product-single__nav">
 
+					<?foreach($arResult['PROPERTIES']['PHOTO']['VALUE'] as $photo):?>
                     <div class="product-single__nav-item">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
+                        <img src="<?=CFile::GetPath($photo)?>"/>
                     </div>
-
-                    <div class="product-single__nav-item">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
-                    </div>
-                    <div class="product-single__nav-item">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
-                    </div>
-                    <div class="product-single__nav-item">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
-                    </div>
-                    <div class="product-single__nav-item">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/product-single.jpg"/>
-                    </div>
+                    <?endforeach;?>
 
                 </div>
             </div>
 
             <div class="product-single__info">
                 <div class="product-single__table">
-                    <p><span>Максимальная грузоподъемность:</span><span>750 т</span></p>
-                    <p><span>При вылете стрелы:</span><span>7,00 м</span></p>
-                    <p><span>Главная стрела:</span><span>140 м</span></p>
-                    <p><span>Максимальная высота подъема:</span><span>191 м</span></p>
-                    <p><span>Максимальный вылет стрелы:</span><span>156 м</span></p>
-                    <p><span>Решетчатый удлинитель:</span><span>от 14,00 до 105,00 м</span></p>
-                    <p><span>Скорость передвижения:</span><span>1,65 км/ч</span></p>
+
+					<?foreach($arResult['PROPERTIES']['PARAMS']['VALUE'] as $key=>$value):?>
+                    <p><span><?=$value?>:</span><span><?=$arResult["PROPERTIES"]["PARAMS"]["DESCRIPTION"][$key]?></span></p>
+                    <?endforeach;?>
                     <p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p>
                     <a class="btn btn--full" href="">Заказать</a>
+
                 </div>
             </div>
         </div>
@@ -182,73 +169,57 @@ $this->setFrameMode(true);
             </div>
             <div class="tabs__body">
                 <div class="tabs__item active" id="opisanie">
-                    <h2>Аренда гусеничного крана Liebherr LR 1750</h2>
-                    <p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций,
-                        нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых
-                        установок. </p>
-                    <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой,
-                        105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем,
-                        деррик-оборудованием и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-                    <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют
-                        обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-                    <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу
-                        13 x 13 м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/tabs__item1.jpg"/><img
-                            src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/tabs__item2.jpg"/><img
-                            src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/tabs__item3.jpg"/>
+
+					<?=$arResult['DETAIL_TEXT']?>
+
+                    <!--<img src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/tabs__item1.jpg"/>
+                    <img src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/tabs__item2.jpg"/>
+                    <img src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/tabs__item3.jpg"/>-->
+
                 </div>
                 <div class="tabs__item" id="harakteristiki">
                     <div class="product-single__table">
-                        <p><span>Максимальная грузоподъемность:</span><span>750 т</span></p>
-                        <p><span>При вылете стрелы:</span><span>7,00 м</span></p>
-                        <p><span>Главная стрела:</span><span>140 м</span></p>
-                        <p><span>Максимальная высота подъема:</span><span>191 м</span></p>
-                        <p><span>Максимальный вылет стрелы:</span><span>156 м</span></p>
-                        <p><span>Решетчатый удлинитель:</span><span>от 14,00 до 105,00 м</span></p>
-                        <p><span>Скорость передвижения:</span><span>1,65 км/ч</span></p>
-                        <p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p><a class="btn btn--full"
-                                                                                               href="">Заказать</a>
+
+						<?foreach($arResult['PROPERTIES']['PARAMS']['VALUE'] as $key=>$value):?>
+                        <p><span><?=$value?>:</span><span><?=$arResult["PROPERTIES"]["PARAMS"]["DESCRIPTION"][$key]?></span></p>
+						<?endforeach;?>
+                        <p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p>
+
+                        <a class="btn btn--full" href="">Заказать</a>
+
                     </div>
                 </div>
                 <div class="tabs__item" id="dokumentatciia">
-                    <div class="product-single__downloads"><a href=""><img
-                                    src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/download.jpg"/><span>скачать</span></a><a
-                                href=""><img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/download.jpg"/><span>скачать</span></a><a
-                                href=""><img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/download.jpg"/><span>скачать</span></a><a
-                                href=""><img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/download.jpg"/><span>скачать</span></a>
+                    <div class="product-single__downloads">
+						<?php
+						if ($arResult['PROPERTIES']['PDF']['VALUE']) {
+                            $dbFile = CFile::GetByID($arResult['PROPERTIES']['PDF']['VALUE']);
+                            $arFile = $dbFile->Fetch();
+                            $size = round($arFile['FILE_SIZE']/1048576, 2);
+						?>
+                        <a href="<?=CFile::GetPath($arResult['PROPERTIES']['PDF']['VALUE'])?>" target="_blank">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/download.jpg"/>
+                            <span>скачать <?=$size?> МБ</span>
+                        </a>
+                        <? } ?>
+
+                        <?php
+                        if ($arResult['PROPERTIES']['PDF2']['VALUE']) {
+							$dbFile = CFile::GetByID($arResult['PROPERTIES']['PDF2']['VALUE']);
+							$arFile = $dbFile->Fetch();
+							$size = round($arFile['FILE_SIZE']/1048576, 2);
+                        ?>
+                        <a href="<?=CFile::GetPath($arResult['PROPERTIES']['PDF2']['VALUE'])?>" target="_blank">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/download.jpg"/>
+                            <span>скачать <?=$size?> МБ</span>
+                        </a>
+                        <? } ?>
                     </div>
                 </div>
             </div>
         </div>
         <div class="product-single__content">
-            <h2>Заголовок</h2>
-            <p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих
-                заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой,
-                105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием
-                и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют
-                обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13
-                м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
-            <p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих
-                заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой,
-                105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием
-                и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют
-                обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13
-                м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.Гусеничный кран LR
-                1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на
-                строительных площадках мостов и при монтаже ветросиловых установок. </p>
-            <p>Эта 750-тонная машина имеет универсальное применение со своей 140-метровой основной стрелой,
-                105-метровым управляемым удлинителем стрелы, 21-метровым монтажным удлинителем, деррик-оборудованием
-                и 400-тонным подвесным противовесом или балластировочной тележкой. </p>
-            <p>Компактные габариты компонентов подъемного крана и их умеренный индивидуальный вес позволяют
-                обеспечить экономичную транспортировку этого подъемного крана к строительной площадке. </p>
-            <p>Этот 750-тонный кран может также использоваться с выдвижными опорами, имеющими опорную базу 13 x 13
-                м. Результирующая грузоподъемность в этом случае может быть увеличена до 370 %.</p>
+			<?=$arResult['PREVIEW_TEXT']?>
         </div>
     </div>
 </div>

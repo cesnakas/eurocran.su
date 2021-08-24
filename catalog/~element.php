@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 			'ELEMENT_ID' => $_REQUEST['ELEMENT_ID'],
 			'ELEMENT_CODE' => $_REQUEST['ELEMENT_CODE'],
 			'FIELD_CODE' => ['ID',''],
-			'PROPERTY_CODE' => ['PHOTO']
+			'PROPERTY_CODE' => ['PHOTO','P1']
 		]
 	);?>
 
