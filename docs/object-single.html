@@ -27,7 +27,7 @@
               <div class="header__schedule"> <i class="icon"> <img src="img/content/clock.svg"/></i><span> 10:00-17:00</span></div>
               <div class="header__location"> <i class="icon"> <img src="img/content/location.svg"/></i><span> г. Москва, <br> ул. Куликовская, 12</span></div>
             </div>
-            <div class="header__btn"><a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a></div>
+            <div class="header__btn"><a class="open-modal btn btn--empty-inverce btn--sm" href="#submit-request">Свяжитесь со мной</a></div>
             <div class="header__contacts"><i class="icon"><img src="img/content/phone.svg"/></i><span><a href="">+7 (499)929-96-66 </a><a href="">+7 (985)364-55-18</a><a href="">+7 (985)226-20-30</a></span></div>
           </div>
         </div>
@@ -211,9 +211,39 @@
           </div>
         </div>
       </footer>
+      <div class="modal" id="submit-request">
+        <div class="modal__box">
+          <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+          </div>
+          <div class="modal__title">Арендовать спецтехнику</div>
+          <p>Оставьте заявку на звонок и мы ответим на все ваши вопросы в самое ближайшее время</p>
+          <form action="">
+            <input type="text" placeholder="Ваше имя">
+            <input type="text" placeholder="Ваш телефон*">
+            <input type="text" placeholder="Ваша почта">
+            <label class="checkbox">
+              <input type="checkbox" checked="checked">
+              <div class="input"></div><span>Я согласен с <a href="">условиями обработки</a> и использования моих персональных данных</span>
+            </label>
+            <label class="btn btn--full"><span>Оставить заявку</span>
+              <input type="submit" value="Оставить заявку">
+            </label>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="request-success">
+        <div class="modal__box">
+          <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+          </div>
+          <div class="modal__title">Ваша заявка отправлена</div>
+          <p>Мы позвоним вам в самое ближайшее время</p>
+          <div class="btn btn--empty modal__close">Вернуться</div>
+        </div>
+      </div>
       <!--END FOOTER-->
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/magnific-popup.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
