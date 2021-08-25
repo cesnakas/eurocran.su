@@ -55,7 +55,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </script>
 
 </head>
-<body <?=(CSite::InDir(SITE_DIR.'~index.php')) ? '' : 'class="page"';?>>
+<body <?=(CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'index.php')) ? '' : 'class="page"';?>>
 
     <?php echo'<div id="panel">'; $APPLICATION->ShowPanel(); echo'</div>';?>
 
@@ -171,7 +171,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         <!--END NAV-->
 
         <?
-        if(!CSite::InDir(SITE_DIR.'~index.php')):
+        if(!CSite::InDir(SITE_DIR.'index.php')):
         ?>
         <!--START BREADCRUMB-->
         <div class="breadcrumb">
@@ -183,7 +183,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 					Array(
 						'START_FROM' => '0',
 						'PATH' => '',
-						'SITE_ID' => 's1'
+						'SITE_ID' => ['s1','dv']
 					)
 				);?>
             </div>
