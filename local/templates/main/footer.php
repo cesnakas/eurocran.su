@@ -62,6 +62,39 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             </div>
         </footer>
         <!--END FOOTER-->
+
+        <div class="modal" id="submit-request">
+            <div class="modal__box">
+                <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+                </div>
+                <div class="modal__title">Арендовать спецтехнику</div>
+                <p>Оставьте заявку на звонок и мы ответим на все ваши вопросы в самое ближайшее время</p>
+                <form action="">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Ваш телефон*">
+                    <input type="text" placeholder="Ваша почта">
+                    <label class="checkbox">
+                        <input type="checkbox" checked="checked">
+                        <div class="input"></div>
+                        <span>Я согласен с <a href="">условиями обработки</a> и использования моих персональных данных</span>
+                    </label>
+                    <label class="btn btn--full"><span>Оставить заявку</span>
+                        <input type="submit" value="Оставить заявку">
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal" id="request-success">
+            <div class="modal__box">
+                <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+                </div>
+                <div class="modal__title">Ваша заявка отправлена</div>
+                <p>Мы позвоним вам в самое ближайшее время</p>
+                <div class="btn btn--empty modal__close">Вернуться</div>
+            </div>
+        </div>
+
     </div>
 
     <!-- BEGIN JIVOSITE CODE {literal} -->

@@ -109,7 +109,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                     </div>
                     <div class="header__btn">
 
-                        <a class="btn btn--empty-inverce btn--sm" href="">Свяжитесь со мной</a>
+                        <a class="open-modal btn btn--empty-inverce btn--sm" href="#submit-request">Свяжитесь со мной</a>
 
                     </div>
                     <div class="header__contacts">
