@@ -56,16 +56,55 @@ $this->setFrameMode(true);
 </div>
 */?>
 
+<!--START SUB_CATS-->
+<div class="container">
+    <h1>Каталог техники</h1>
+    <div class="sub_cats row">
+        <div><a href="">40 тонн</a></div>
+        <div><a href="">50 тонн</a></div>
+        <div><a href="">65 тонн</a></div>
+        <div><a href="">68 тонн</a></div>
+        <div><a href="">70 тонн</a></div>
+        <div><a href="">82,5 тонн</a></div>
+        <div><a href="">82,5 тонн</a></div>
+        <div><a href="">84 тонн</a></div>
+        <div><a href="">85 тонн</a></div>
+        <div><a href="">90 тонн</a></div>
+        <div><a href="">93,8 тонн</a></div>
+        <div><a href="">95 тонн</a></div>
+        <div><a href="">112,5 тонн</a></div>
+        <div><a href="">120 тонн</a></div>
+        <div><a href="">131,6 тонн</a></div>
+        <div><a href="">150 тонн</a></div>
+        <div><a href="">160 тонн</a></div>
+        <div><a href="">200 тонн</a></div>
+        <div><a href="">250 тонн</a></div>
+        <div><a href="">280 тонн</a></div>
+        <div><a href="">300 тонн</a></div>
+        <div><a href="">350 тонн</a></div>
+        <div><a href="">400 тонн</a></div>
+        <div><a href="">500 тонн</a></div>
+        <div><a href="">750 тонн</a></div>
+    </div>
+</div>
+
 <div class="cats__main">
     <div class="container">
-        <div class="filter-btn"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/filter1.svg"/>
+
+        <div class="filter-btn">
+            <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/filter1.svg"/>
         </div>
+
         <!--START SUB_CATS-->
-        <accide class="sidebar">
+        <aside class="sidebar">
             <div class="sidebar__box">
+
                 <div class="sidebar__title">Параметры</div>
+
                 <div class="sidebar__item">
-                    <div class="sidebar__body"><strong>Вид техники</strong>
+
+                    <div class="sidebar__body">
+                        <strong>Вид техники</strong>
                         <label class="checkbox">
                             <input type="checkbox" name="">
                             <div class="input"> Мобильные краны</div>
@@ -83,7 +122,9 @@ $this->setFrameMode(true);
                             <div class="input"> Модульные платформы</div>
                         </label>
                     </div>
-                    <div class="sidebar__body"><strong>Грузоподъемность т.</strong>
+
+                    <div class="sidebar__body">
+                        <strong>Грузоподъемность т.</strong>
                         <div class="ranges">
                             <div class="ranges__inputs">
                                 <div class="amount-min">
@@ -96,7 +137,10 @@ $this->setFrameMode(true);
                             <div class="slider-range" data-min="40" data-max="750" data-val="[75, 300]"></div>
                         </div>
                     </div>
-                    <div class="sidebar__body"><strong>Высота подъема, м.</strong>
+
+                    <div class="sidebar__body">
+
+                        <strong>Высота подъема, м.</strong>
                         <div class="ranges">
                             <div class="ranges__inputs">
                                 <div class="amount-min">
@@ -108,6 +152,7 @@ $this->setFrameMode(true);
                             </div>
                             <div class="slider-range" data-min="10" data-max="84" data-val="[15, 70]"></div>
                         </div>
+
                         <strong>Высота подъема, м.</strong>
                         <div class="ranges">
                             <div class="ranges__inputs">
@@ -126,9 +171,11 @@ $this->setFrameMode(true);
                         <label class="btn btn--dark"><span>Показать</span>
                             <input type="submit" value="Показать">
                         </label>
+
                     </div>
                 </div>
             </div>
+
             <div class="sidebar__box">
                 <div class="sidebar__title">Парк техники</div>
                 <div class="sidebar__item">
@@ -192,12 +239,15 @@ $this->setFrameMode(true);
                     </div>
                 </div>
             </div>
-        </accide>
+        </aside>
         <!--END SUB_CATS-->
+
         <!--START CATS__CONTENT-->
         <div class="cats__content">
+
             <div class="cats__filterbar">
-                <div class="cats__sort"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/sorting.svg"/>
+                <div class="cats__sort">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/sorting.svg"/>
                     <select name="">
                         <option value="">По умолчанию</option>
                         <option value="">По умолчанию</option>
@@ -205,15 +255,52 @@ $this->setFrameMode(true);
                     </select>
                 </div>
                 <div class="cats__viev">
-                    <div class="cats__viev--item cats__viev--tile active"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/viev--tile.svg"/>
+                    <div class="cats__viev--item cats__viev--tile active">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/viev--tile.svg"/>
                     </div>
-                    <div class="cats__viev--item cats__viev--rows"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/viev--rows.svg"/>
+                    <div class="cats__viev--item cats__viev--rows">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/viev--rows.svg"/>
                     </div>
                 </div>
             </div>
+
             <div class="cats__items">
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+
+				<?foreach($arResult['ITEMS'] as $arItem):?>
+                <div class="catalog__row">
+                    <a class="catalog__img" href="<?=$arItem["DETAIL_PAGE_URL"]?>" style="background-image:url(<?=$arItem["PREVIEW_PICTURE"]['SRC']?>)"></a>
+
+                    <a class="catalog__title" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+                        <h3><?=$arItem['NAME']?></h3>
+                    </a>
+
+                    <a class="catalog__info" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+						<?foreach($arItem['PROPERTIES']['PARAMS']['VALUE'] as $key => $value):?>
+                        <div class="catalog__tr">
+                            <p><?=$value?>:</p>
+                            <p><?=$arItem['PROPERTIES']['PARAMS']['DESCRIPTION'][$key]?></p>
+                            <!--<p>Грузоподъемность:</p>
+                            <p>40 тонн</p>-->
+                        </div>
+                        <?endforeach;?>
+                        <!--<div class="catalog__tr">
+                            <p>Длина стрелы:</p>
+                            <p>35 м</p>
+                        </div>-->
+                        <div class="catalog__more">
+                            <span>Все характеристики</span>
+                            <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow.svg"/>
+                        </div>
+                    </a>
+
+                    <div class="catalog__btn">
+                        <a class="btn btn--full" href="<?=$arItem["DETAIL_PAGE_URL"]?>">Арендовать</a>
+                    </div>
+                </div>
+                <?endforeach;?>
+
+                <!--<div class="catalog__row"><a class="catalog__img" href=""
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -224,13 +311,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -241,13 +329,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -258,13 +347,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -275,13 +365,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -292,13 +383,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -309,13 +401,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -326,13 +419,14 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
                 <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
+                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
                             class="catalog__title" href="">
                         <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
                         <div class="catalog__tr">
@@ -343,34 +437,31 @@ $this->setFrameMode(true);
                             <p>Длина стрелы:</p>
                             <p>35 м</p>
                         </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
+                        <div class="catalog__more"><span>Все характеристики</span><img
+                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
                         </div>
                     </a>
                     <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?=SITE_TEMPLATE_PATH?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow.svg"/>
-                        </div>
+                </div>-->
+
+                <div class="pagination">
+                    <span class="prev">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow-g-l.svg"/>
+                    </span>
+                    <a class="active" href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <span></span><span></span><span></span>
+                    <a href="">5</a>
+                    <a href="">6</a>
+                    <a href="">7</a>
+                    <a class="next" href="">
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow-g-r.svg"/>
                     </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
                 </div>
-                <div class="pagination"><span class="prev"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow-g-l.svg"/></span><a
-                            class="active" href="">1</a><a href="">2</a><a
-                            href="">3</a><span></span><span></span><span></span><a href="">5</a><a href="">6</a><a
-                            href="">7</a><a class="next" href=""><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/arrow-g-r.svg"/></a></div>
             </div>
         </div>
         <!--END CATS__CONTENT-->
+
     </div>
 </div>
