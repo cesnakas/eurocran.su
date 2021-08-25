@@ -1,6 +1,4 @@
-<?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-?>
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?if($arParams["USE_RSS"]=="Y"):?>
 	<?
@@ -26,7 +24,6 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 );?>
 <br />
 <?endif?>
-
 <?if($arParams["USE_FILTER"]=="Y"):?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.filter",
@@ -46,7 +43,6 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 ?>
 <br />
 <?endif?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
