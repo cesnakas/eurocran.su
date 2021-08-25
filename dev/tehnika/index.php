@@ -10,12 +10,13 @@ $APPLICATION->IncludeComponent(
 		'IBLOCK_TYPE' => 'catalog',
 		'IBLOCK_ID' => '1',
 		'SEF_MODE' => 'Y',
-		'SEF_FOLDER' => '/catalog/',
+		'SEF_FOLDER' => SITE_DIR.'tehnika/',
 		'SEF_URL_TEMPLATES' => [
 			'news' => '',
 			'section' => '#SECTION_CODE#/',
-			'detail' => '~element.php?ELEMENT_ID=#ELEMENT_ID#',
+			'detail' => 'detail.php?ELEMENT_ID=#ELEMENT_ID#',
 		],
+		'NEWS_COUNT' => '50',
 		'INCLUDE_IBLOCK_INTO_CHAIN' => 'N'
 	]
 );?>

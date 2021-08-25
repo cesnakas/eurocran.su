@@ -1,0 +1,11 @@
+.product-single__item img {
+    max-width: 570px;
+    max-height: 420px;
+    object-fit: contain;
+    object-position: center;
+}
+.product-single__nav-item {
+    max-height: 112px;
+    object-fit: cover;
+    object-position: center;
+}
