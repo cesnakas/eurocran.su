@@ -275,18 +275,19 @@ $this->setFrameMode(true);
                     </a>
 
                     <a class="catalog__info" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-						<?foreach($arItem['PROPERTIES']['PARAMS']['VALUE'] as $key => $value):?>
+						<?php
+                        $i = 0;
+                        foreach($arItem['PROPERTIES']['PARAMS']['VALUE'] as $key => $value):
+                        $i++;
+                        if ($i > 2) break;
+                        $cutValue = mb_substr($value,0,17);
+                        $cutKey = mb_substr($arItem['PROPERTIES']['PARAMS']['DESCRIPTION'][$key],0,5);
+                        ?>
                         <div class="catalog__tr">
-                            <p><?=$value?>:</p>
-                            <p><?=$arItem['PROPERTIES']['PARAMS']['DESCRIPTION'][$key]?></p>
-                            <!--<p>Грузоподъемность:</p>
-                            <p>40 тонн</p>-->
+                            <p><?=$cutValue?>:</p>
+                            <p style="min-width: 1%;"><?=$cutKey?></p>
                         </div>
                         <?endforeach;?>
-                        <!--<div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>-->
                         <div class="catalog__more">
                             <span>Все характеристики</span>
                             <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow.svg"/>
