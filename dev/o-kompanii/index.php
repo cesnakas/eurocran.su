@@ -5,7 +5,6 @@ $APPLICATION->SetPageProperty("title", "О компании ООО \"Компа�
 $APPLICATION->SetTitle("О КОМПАНИИ");
 ?>
 
-	<!--START ABOUT-->
 	<div class="okompanii">
 		<div class="container">
 			<div class="g-title">
@@ -34,7 +33,6 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
 			</div>
 		</div>
 	</div>
-	<!--END ABOUT-->
 
     <!--START SERVICES-->
     <?php
@@ -327,7 +325,6 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
                                     <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Mail">
                                         <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#mail"/>
                                     </svg>
-                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/mail.svg"/>-->
                                 </i>
                                 <a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a>
                             </div>
@@ -336,7 +333,6 @@ $APPLICATION->SetTitle("О КОМПАНИИ");
                                     <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Time">
                                         <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#workTime"/>
                                     </svg>
-                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/clock.svg"/>-->
                                 </i>
                                 <span>10:00 - 17:00</span>
                             </div>

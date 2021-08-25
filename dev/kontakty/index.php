@@ -5,7 +5,6 @@ $APPLICATION->SetPageProperty("title", "Контакты компании Евр
 $APPLICATION->SetPageProperty("description", "ООО \"Компания ЕвроКран\" ► Москва, Россия, 117628, 🚇 Бульвар Дмитрия Донского, ул. Куликовская, 12. ☎ +7(495) 226-20-30 ✓ ☎ +7(495) 364-55-18 ✓ ☎ +7(495) 645-19-20 ✓.");
 ?>
 
-    <!--START CONTACTS-B-->
     <div class="contacts">
         <div class="container">
             <h1>Контакты</h1>
@@ -90,11 +89,9 @@ $APPLICATION->SetPageProperty("description", "ООО \"Компания Евро
             </div>
         </div>
     </div>
-    <!--END CONTACTS-B-->
 
-    <!--START MAP-->
     <div class="map"></div>
-    <!--END MAP-->
+
 
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

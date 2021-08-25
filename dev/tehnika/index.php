@@ -15,7 +15,8 @@ $APPLICATION->IncludeComponent(
 			'news' => '',
 			'section' => '#SECTION_CODE#/',
 			'detail' => '~element.php?ELEMENT_ID=#ELEMENT_ID#',
-		]
+		],
+		'INCLUDE_IBLOCK_INTO_CHAIN' => 'N'
 	]
 );?>
 
