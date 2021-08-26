@@ -56,6 +56,22 @@ $this->setFrameMode(true);
 </div>
 */?>
 
+<?$APPLICATION->IncludeComponent(
+	'bitrix:catalog.filter',
+	'',
+	Array(
+		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+		"FILTER_NAME" => $arParams["FILTER_NAME"],
+		"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+		"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+		"CACHE_TIME" => $arParams["CACHE_TIME"],
+		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+	),
+	$component
+);?>
+
 <!--START SUB_CATS-->
 <div class="container">
     <h1>Каталог техники</h1>
@@ -300,151 +316,6 @@ $this->setFrameMode(true);
                 </div>
                 <?endforeach;?>
 
-                <!--<div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>
-                <div class="catalog__row"><a class="catalog__img" href=""
-                                             style="background-image:url(<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/catalog1.jpg)"></a><a
-                            class="catalog__title" href="">
-                        <h3>Гусеничный кран Liebherr LR 1750</h3></a><a class="catalog__info" href="">
-                        <div class="catalog__tr">
-                            <p>Грузоподъемность:</p>
-                            <p>40 тонн</p>
-                        </div>
-                        <div class="catalog__tr">
-                            <p>Длина стрелы:</p>
-                            <p>35 м</p>
-                        </div>
-                        <div class="catalog__more"><span>Все характеристики</span><img
-                                    src="<?/*= SITE_TEMPLATE_PATH */?>/dist/img/content/arrow.svg"/>
-                        </div>
-                    </a>
-                    <div class="catalog__btn"><a class="btn btn--full" href="">Арендовать</a></div>
-                </div>-->
-
                 <div class="pagination">
                     <span class="prev">
                         <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow-g-l.svg"/>
@@ -460,6 +331,7 @@ $this->setFrameMode(true);
                         <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/arrow-g-r.svg"/>
                     </a>
                 </div>
+
             </div>
         </div>
         <!--END CATS__CONTENT-->
