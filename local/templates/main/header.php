@@ -55,7 +55,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </script>
 
 </head>
-<body <?=(CSite::InDir(SITE_DIR.'~index.php')) ? '' : 'class="page"';?>>
+<body <?=(CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php')) ? '' : 'class="page"';?>>
 
     <?php echo'<div id="panel">'; $APPLICATION->ShowPanel(); echo'</div>';?>
 
