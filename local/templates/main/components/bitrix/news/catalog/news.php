@@ -4,16 +4,19 @@ $this->setFrameMode(true);
 ?>
 
 <?php
-$arFilter = Array();
-global $arFilter;
-$arParams['FILTER_NAME'] = 'arFilter';
+global $arrFilter;
+$arrFilter = [
+	// 'FILTER_PROPERTY_CODE' => ['PARAMS','PHOTO','PDF','PDF2','P1','P2','P3','TYPE','NAMEWIDE','TITLE','DESCRIPTION','KEYWORDS','H1_TITLE','PRICES','PRICES_DET','INHOME','DETAIL_TEXT','PREVIEW_TEXT'],
+
+];
+// $arParams['FILTER_NAME'] = 'arrFilter';
 //$GLOBALS['arrFilter'] = [
 	// 'FILTER_PROPERTY_CODE' => ['P2']
 //];
 
-if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
-if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
-if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
+//if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
+//if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
+//if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
 ?>
 
 <?php

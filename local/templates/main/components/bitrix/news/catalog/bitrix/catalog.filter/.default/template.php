@@ -15,6 +15,169 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
 
+<aside class="sidebar">
+    <form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">
+
+		<? foreach ($arResult["ITEMS"] as $arItem):
+			if (array_key_exists("HIDDEN", $arItem)):
+				echo $arItem["INPUT"];
+			endif;
+		endforeach; ?>
+
+    <div class="sidebar__box">
+
+        <div class="sidebar__title">Параметры</div>
+
+        <div class="sidebar__item">
+
+            <div class="sidebar__body">
+
+                <strong>Вид техники</strong>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Мобильные краны</div>
+                </label>
+
+				<? foreach ($arResult["ITEMS"] as $arItem): ?>
+					<? if (!array_key_exists("HIDDEN", $arItem)): ?>
+                        <?= $arItem["NAME"] ?>: <?= $arItem["INPUT"] ?>
+					<? endif ?>
+				<? endforeach; ?>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Гусеничные краны</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Низкорамные тралы</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Модульные платформы</div>
+                </label>
+            </div>
+
+            <div class="sidebar__body">
+                <strong>Грузоподъемность т.</strong>
+                <div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="75">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="300">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="40" data-max="750" data-val="[75, 300]"></div>
+                </div>
+            </div>
+
+            <div class="sidebar__body">
+
+                <strong>Высота подъема, м.</strong>
+                <div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="15">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="70">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="10" data-max="84" data-val="[15, 70]"></div>
+                </div>
+
+                <strong>Высота подъема, м.</strong>
+                <div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="50">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="60">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="50" data-max="60" data-val="[50, 60]"></div>
+                </div>
+                <label class="btn btn--clear"><span>Очистить фильтр</span>
+                    <input type="submit" value="Очистить фильтр">
+                </label>
+                <label class="btn btn--dark"><span>Показать</span>
+                    <input type="submit" value="Показать">
+                </label>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar__box">
+        <div class="sidebar__title">Парк техники</div>
+        <div class="sidebar__item">
+            <div class="sidebar__body">
+                <h3 class="active">Мобильные краны Liebherr LTM</h3>
+                <ul class="active">
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </form>
+</aside>
+
 
 <form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">
 
@@ -51,5 +214,3 @@ $this->setFrameMode(true);
         </tfoot>
     </table>
 </form>
-
-<pre><?var_dump($arResult)?></pre>

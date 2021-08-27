@@ -114,8 +114,8 @@ $this->setFrameMode(true);
 
         <!--START SUB_CATS-->
         <?$APPLICATION->IncludeComponent(
-            'bitrix:catalog.smart.filter',
-            'tech',
+            'bitrix:catalog.filter',
+            '',
             Array(
                 "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                 "IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -126,7 +126,7 @@ $this->setFrameMode(true);
                 "CACHE_TIME" => $arParams["CACHE_TIME"],
                 "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
             ),
-            false
+			false
         );?>
 
         <!--<aside class="sidebar">
