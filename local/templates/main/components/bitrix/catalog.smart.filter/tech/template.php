@@ -47,10 +47,42 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 
                 <strong>Вид техники</strong>
 
+				<?php
+				foreach($arResult["ITEMS"] as $key=>$arItem):
+				    $arCur = current($arItem["VALUES"]);
+                    foreach($arItem["VALUES"] as $val => $ar):
+                ?>
                 <label class="checkbox">
                     <input type="checkbox" name="">
-                    <div class="input"> Мобильные краны</div>
+                    <div class="input"><?=$ar["VALUE"];?></div>
                 </label>
+
+
+                        <div class="checkbox">
+                            <label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <?=$ar["DISABLED"] ? 'disabled': '' ?>" for="<?=$ar["CONTROL_ID"]?>">
+                                <span class="bx-filter-input-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        value="<? echo $ar["HTML_VALUE"] ?>"
+                                        name="<? echo $ar["CONTROL_NAME"] ?>"
+                                        id="<? echo $ar["CONTROL_ID"] ?>"
+                                        <? echo $ar["CHECKED"]? 'checked="checked"': '' ?>
+                                        onclick="smartFilter.click(this)"
+                                    />
+                                    <span class="bx-filter-param-text" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
+                                        if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
+                                            ?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
+                                        endif;?></span>
+                                </span>
+                            </label>
+                        </div>
+
+                <?php
+                    endforeach;
+                endforeach;
+                ?>
+
+                <hr>
 
                 <label class="checkbox">
                     <input type="checkbox" name="">
@@ -66,7 +98,7 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
                     <input type="checkbox" name="">
                     <div class="input"> Модульные платформы</div>
                 </label>
-                
+
             </div>
 
             <div class="sidebar__body">
