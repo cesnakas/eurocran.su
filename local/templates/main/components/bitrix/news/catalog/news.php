@@ -4,6 +4,12 @@ $this->setFrameMode(true);
 ?>
 
 <?php
+$arFilter = Array();
+global $arFilter;
+$arParams['FILTER_NAME'] = 'arFilter';
+?>
+
+<?php
 $arParams["SET_TITLE"] = "N";
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
