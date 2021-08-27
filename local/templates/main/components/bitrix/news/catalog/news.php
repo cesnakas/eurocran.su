@@ -7,6 +7,13 @@ $this->setFrameMode(true);
 $arFilter = Array();
 global $arFilter;
 $arParams['FILTER_NAME'] = 'arFilter';
+//$GLOBALS['arrFilter'] = [
+	// 'FILTER_PROPERTY_CODE' => ['P2']
+//];
+
+if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
+if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
+if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
 ?>
 
 <?php

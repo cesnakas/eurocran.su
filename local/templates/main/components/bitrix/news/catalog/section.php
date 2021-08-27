@@ -40,11 +40,10 @@ $this->setFrameMode(true);
 <br />
 <?endif?>
 
-<?/*
-if($arParams["USE_FILTER"] == "Y"):?>
+<?/*if($arParams["USE_FILTER"] == "Y"):?>
     <?$APPLICATION->IncludeComponent(
-        "bitrix:catalog.filter",
-        "",
+        'bitrix:catalog.filter',
+        '',
         Array(
             "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
             "IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -57,14 +56,7 @@ if($arParams["USE_FILTER"] == "Y"):?>
         ),
         $component
     );?>
-<?endif
-*/?>
-
-<?php
-$arFilter = Array();
-global $arFilter;
-$arParams['FILTER_NAME'] = 'arFilter';
-?>
+<?endif*/?>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",

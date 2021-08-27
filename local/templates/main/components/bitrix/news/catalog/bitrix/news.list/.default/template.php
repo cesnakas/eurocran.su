@@ -56,15 +56,9 @@ $this->setFrameMode(true);
 </div>
 */?>
 
-<?php
-$arFilter = Array();
-global $arFilter;
-$arParams['FILTER_NAME'] = 'arFilter';
-?>
-
-<?$APPLICATION->IncludeComponent(
-	'bitrix:catalog.filter',
-	'',
+<?/*$APPLICATION->IncludeComponent(
+	'bitrix:catalog.smart.filter',
+	'tech',
 	Array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -75,8 +69,9 @@ $arParams['FILTER_NAME'] = 'arFilter';
 		"CACHE_TIME" => $arParams["CACHE_TIME"],
 		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 	),
-	$component
-);?>
+	// $component
+    false
+);*/?>
 
 <!--START SUB_CATS-->
 <div class="container">
@@ -118,7 +113,23 @@ $arParams['FILTER_NAME'] = 'arFilter';
         </div>
 
         <!--START SUB_CATS-->
-        <aside class="sidebar">
+        <?$APPLICATION->IncludeComponent(
+            'bitrix:catalog.smart.filter',
+            'tech',
+            Array(
+                "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+                "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                "FILTER_NAME" => $arParams["FILTER_NAME"],
+                "FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+                "PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+                "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+                "CACHE_TIME" => $arParams["CACHE_TIME"],
+                "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+            ),
+            false
+        );?>
+
+        <!--<aside class="sidebar">
             <div class="sidebar__box">
 
                 <div class="sidebar__title">Параметры</div>
@@ -261,7 +272,7 @@ $arParams['FILTER_NAME'] = 'arFilter';
                     </div>
                 </div>
             </div>
-        </aside>
+        </aside>-->
         <!--END SUB_CATS-->
 
         <!--START CATS__CONTENT-->
