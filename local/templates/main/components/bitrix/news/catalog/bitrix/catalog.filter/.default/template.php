@@ -15,14 +15,13 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
 
-<aside class="sidebar">
-    <form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">
+<form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">
 
-		<? foreach ($arResult["ITEMS"] as $arItem):
-			if (array_key_exists("HIDDEN", $arItem)):
-				echo $arItem["INPUT"];
-			endif;
-		endforeach; ?>
+    <?/* foreach ($arResult['ITEMS'] as $arItem):
+        if (array_key_exists('HIDDEN', $arItem)):
+            echo $arItem['INPUT'];
+        endif;
+    endforeach; */?>
 
     <div class="sidebar__box">
 
@@ -34,17 +33,22 @@ $this->setFrameMode(true);
 
                 <strong>Вид техники</strong>
 
-                <label class="checkbox">
+				<? foreach ($arResult['ITEMS'] as $arItem): ?>
+                <div class="sidebar__body">
+					<? if (!array_key_exists('HIDDEN', $arItem)): ?>
+				    <?=$arItem['NAME']?>
+                    <div class="ranges__inputs">
+                        <?=$arItem['INPUT']?>
+                    </div>
+                    <div class="slider-range" data-min="40" data-max="750" data-val="[75, 300]"></div>
+					<? endif ?>
+                </div>
+				<? endforeach; ?>
+
+                <!--<label class="checkbox">
                     <input type="checkbox" name="">
                     <div class="input"> Мобильные краны</div>
                 </label>
-
-				<? foreach ($arResult["ITEMS"] as $arItem): ?>
-					<? if (!array_key_exists("HIDDEN", $arItem)): ?>
-                        <?= $arItem["NAME"] ?>: <?= $arItem["INPUT"] ?>
-					<? endif ?>
-				<? endforeach; ?>
-
                 <label class="checkbox">
                     <input type="checkbox" name="">
                     <div class="input"> Гусеничные краны</div>
@@ -56,10 +60,11 @@ $this->setFrameMode(true);
                 <label class="checkbox">
                     <input type="checkbox" name="">
                     <div class="input"> Модульные платформы</div>
-                </label>
+                </label>-->
+
             </div>
 
-            <div class="sidebar__body">
+            <!--<div class="sidebar__body">
                 <strong>Грузоподъемность т.</strong>
                 <div class="ranges">
                     <div class="ranges__inputs">
@@ -72,11 +77,11 @@ $this->setFrameMode(true);
                     </div>
                     <div class="slider-range" data-min="40" data-max="750" data-val="[75, 300]"></div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="sidebar__body">
 
-                <strong>Высота подъема, м.</strong>
+                <!--<strong>Высота подъема, м.</strong>
                 <div class="ranges">
                     <div class="ranges__inputs">
                         <div class="amount-min">
@@ -87,9 +92,9 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                     <div class="slider-range" data-min="10" data-max="84" data-val="[15, 70]"></div>
-                </div>
+                </div>-->
 
-                <strong>Высота подъема, м.</strong>
+                <!--<strong>Высота подъема, м.</strong>
                 <div class="ranges">
                     <div class="ranges__inputs">
                         <div class="amount-min">
@@ -100,15 +105,20 @@ $this->setFrameMode(true);
                         </div>
                     </div>
                     <div class="slider-range" data-min="50" data-max="60" data-val="[50, 60]"></div>
-                </div>
-                <label class="btn btn--clear"><span>Очистить фильтр</span>
-                    <input type="submit" value="Очистить фильтр">
+                </div>-->
+
+                <label class="btn btn--clear">
+                    <span>Очистить фильтр</span>
+                    <input type="submit" name="del_filter" value="Очистить фильтр">
                 </label>
-                <label class="btn btn--dark"><span>Показать</span>
-                    <input type="submit" value="Показать">
+                <label class="btn btn--dark">
+                    <span>Показать</span>
+                    <input type="submit" name="set_filter" value="Показать">
+                    <input type="hidden" name="set_filter" value="Y"/>
                 </label>
 
             </div>
+
         </div>
     </div>
 
@@ -175,10 +185,12 @@ $this->setFrameMode(true);
             </div>
         </div>
     </div>
-    </form>
-</aside>
 
+</form>
 
+    <pre><?var_dump($arItem)?></pre>
+
+<?/*
 <form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">
 
 	<? foreach ($arResult["ITEMS"] as $arItem):
@@ -214,3 +226,4 @@ $this->setFrameMode(true);
         </tfoot>
     </table>
 </form>
+*/?>

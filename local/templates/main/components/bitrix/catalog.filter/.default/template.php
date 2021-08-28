@@ -35,18 +35,18 @@ $this->setFrameMode(true);
                     <strong>Вид техники</strong>
 
 					<? foreach ($arResult['ITEMS'] as $arItem): ?>
+                        <label class="checkbox">
 						<? if (!array_key_exists('HIDDEN', $arItem)): ?>
-
-                            <?=$arItem['NAME']?>: <?=$arItem['INPUT']?>
-
+                            <input type="checkbox" name="<?=$arItem['INPUT']?>">
+                            <div class="input"><?=$arItem['NAME']?></div>
 						<? endif ?>
+                        </label>
 					<? endforeach; ?>
 
-                    <label class="checkbox">
+                    <!--<label class="checkbox">
                         <input type="checkbox" name="">
                         <div class="input"> Мобильные краны</div>
                     </label>
-
                     <label class="checkbox">
                         <input type="checkbox" name="">
                         <div class="input"> Гусеничные краны</div>
@@ -58,11 +58,13 @@ $this->setFrameMode(true);
                     <label class="checkbox">
                         <input type="checkbox" name="">
                         <div class="input"> Модульные платформы</div>
-                    </label>
+                    </label>-->
+
                 </div>
 
                 <div class="sidebar__body">
                     <strong>Грузоподъемность т.</strong>
+
                     <div class="ranges">
                         <div class="ranges__inputs">
                             <div class="amount-min">
@@ -79,6 +81,7 @@ $this->setFrameMode(true);
                 <div class="sidebar__body">
 
                     <strong>Высота подъема, м.</strong>
+
                     <div class="ranges">
                         <div class="ranges__inputs">
                             <div class="amount-min">
@@ -92,7 +95,7 @@ $this->setFrameMode(true);
                     </div>
 
                     <strong>Высота подъема, м.</strong>
-                    
+
                     <div class="ranges">
                         <div class="ranges__inputs">
                             <div class="amount-min">
@@ -187,7 +190,7 @@ $this->setFrameMode(true);
     </form>
 </aside>
 
-<pre><?var_dump($arResult)?></pre>
+<pre><?var_dump($arParams)?></pre>
 
 <?/*
 <form name="<?=$arResult['FILTER_NAME'].'_form'?>" action="<?=$arResult['FORM_ACTION']?>" method="get">

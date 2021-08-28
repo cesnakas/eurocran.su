@@ -6,18 +6,68 @@ $this->setFrameMode(true);
 <?php
 global $arrFilter;
 $arrFilter = [
-	// 'FILTER_PROPERTY_CODE' => ['PARAMS','PHOTO','PDF','PDF2','P1','P2','P3','TYPE','NAMEWIDE','TITLE','DESCRIPTION','KEYWORDS','H1_TITLE','PRICES','PRICES_DET','INHOME','DETAIL_TEXT','PREVIEW_TEXT'],
-
+	// 'FILTER_PROPERTY_CODE' => []
 ];
-// $arParams['FILTER_NAME'] = 'arrFilter';
-//$GLOBALS['arrFilter'] = [
-	// 'FILTER_PROPERTY_CODE' => ['P2']
-//];
-
 //if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
 //if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
 //if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
 ?>
+
+<div class="container">
+	<h1>Каталог техники</h1>
+	<div class="sub_cats row">
+		<div><a href="">40 тонн</a></div>
+		<div><a href="">50 тонн</a></div>
+		<div><a href="">65 тонн</a></div>
+		<div><a href="">68 тонн</a></div>
+		<div><a href="">70 тонн</a></div>
+		<div><a href="">82,5 тонн</a></div>
+		<div><a href="">82,5 тонн</a></div>
+		<div><a href="">84 тонн</a></div>
+		<div><a href="">85 тонн</a></div>
+		<div><a href="">90 тонн</a></div>
+		<div><a href="">93,8 тонн</a></div>
+		<div><a href="">95 тонн</a></div>
+		<div><a href="">112,5 тонн</a></div>
+		<div><a href="">120 тонн</a></div>
+		<div><a href="">131,6 тонн</a></div>
+		<div><a href="">150 тонн</a></div>
+		<div><a href="">160 тонн</a></div>
+		<div><a href="">200 тонн</a></div>
+		<div><a href="">250 тонн</a></div>
+		<div><a href="">280 тонн</a></div>
+		<div><a href="">300 тонн</a></div>
+		<div><a href="">350 тонн</a></div>
+		<div><a href="">400 тонн</a></div>
+		<div><a href="">500 тонн</a></div>
+		<div><a href="">750 тонн</a></div>
+	</div>
+</div>
+
+<div class="cats__main">
+	<div class="container">
+
+		<div class="filter-btn">
+			<img src="img/content/filter1.svg"/>
+		</div>
+
+		<aside class="sidebar">
+		<?$APPLICATION->IncludeComponent(
+			'bitrix:catalog.filter',
+			'',
+			Array(
+				"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+				"IBLOCK_ID" => $arParams["IBLOCK_ID"],
+				"FILTER_NAME" => $arParams["FILTER_NAME"],
+				"FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+				"PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+				"CACHE_TYPE" => $arParams["CACHE_TYPE"],
+				"CACHE_TIME" => $arParams["CACHE_TIME"],
+				"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+			),
+			$component
+		);?>
+		</aside>
 
 <?php
 $arParams["SET_TITLE"] = "N";
@@ -67,3 +117,6 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 );?>
+
+	</div>
+</div>
