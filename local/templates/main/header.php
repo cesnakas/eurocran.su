@@ -55,7 +55,22 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     </script>
 
 </head>
-<body <?=(CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php')) ? '' : 'class="page"';?>>
+<body
+    <?php
+    if(CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php'))
+    {
+        null;
+    }
+    elseif (CSite::InDir(SITE_DIR.'catalog/~index.php'))
+    {
+        echo 'class="cats"';
+    }
+    else
+	{
+	    null;
+    }
+    ?>
+>
 
     <?php echo'<div id="panel">'; $APPLICATION->ShowPanel(); echo'</div>';?>
 

@@ -36,7 +36,6 @@ $this->setFrameMode(true);
 
                 <div class="blog__info">
                     <h2><?=$arItem["NAME"]?></h2>
-                    <!--<p>Компания Liebherr – ведущий поставщик строительной и землеройной техники в мире. Предлагаем автомобильные краны от легкой до тяжелой категории.</p>-->
 					<?=$arItem['PREVIEW_TEXT']?>
                     <a class="btn btn--full" href="<?=$arItem["DETAIL_PAGE_URL"]?>">Подробнее</a>
                 </div>
@@ -48,7 +47,6 @@ $this->setFrameMode(true);
 		<? if($arParams["DISPLAY_BOTTOM_PAGER"]) { ?>
 			<?=$arResult["NAV_STRING"]?>
 		<? } ?>
-        <!--<a class="btn btn--empty" href="">Загрузить ещё</a>-->
 
     </div>
 </div>
