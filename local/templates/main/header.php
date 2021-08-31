@@ -41,7 +41,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
             webvisor:true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/46722495" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript><div><img src="https://mc.yandex.ru/watch/46722495" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,7 +57,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 </head>
 <body
     <?php
-    if(CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php'))
+    if (CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php'))
     {
         null;
     }
@@ -65,10 +65,14 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     {
         echo 'class="cats"';
     }
+    elseif (CSite::InDir(SITE_DIR.'stati/~detail.php') || CSite::InDir(SITE_DIR.'objekty/~detail.php'))
+	{
+	    echo 'class="single-page"';
+    }
     else
 	{
-	    null;
-    }
+		echo 'class="page"';
+	}
     ?>
 >
 

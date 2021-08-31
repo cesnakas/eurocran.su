@@ -48,7 +48,8 @@ $arFilter["p2"] = array_unique($arFilter["p2"]);
 sort($arFilter["p2"], SORT_NUMERIC);
 ?>
 
-<div class="filter clearfix"><form action="<?=$pureURI?>" method="GET">
+<div class="filter clearfix">
+    <form action="<?=$pureURI?>" method="GET">
 	<div class="filter-title">Фильтр</div>
 	<div class="filter-column">
 		<label>Тип:</label>
@@ -82,7 +83,8 @@ sort($arFilter["p2"], SORT_NUMERIC);
     		</select>
     	</div>
     <? //} ?>
-</form></div>
+</form>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function() {

@@ -23,8 +23,10 @@ $this->setFrameMode(true);
             <img src="<?= SITE_TEMPLATE_PATH ?>/dist/img/content/sorting.svg"/>
             <select name="">
                 <option value="">По умолчанию</option>
-                <option value="">По умолчанию</option>
-                <option value="">По умолчанию</option>
+                <option value="1" <?=$_GET["type"]==1?"selected":"";?>>Мобильные краны</option>
+                <option value="2" <?=$_GET["type"]==2?"selected":"";?>>Гусеничные краны</option>
+                <option value="3" <?=$_GET["type"]==3?"selected":"";?>>Низкорамный трал</option>
+                <option value="4" <?=$_GET["type"]==4?"selected":"";?>>Модульные платформы</option>
             </select>
         </div>
         <div class="cats__viev">

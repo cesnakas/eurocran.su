@@ -36,7 +36,7 @@ $this->setFrameMode(true);
 
                 <div class="blog__info">
                     <h2><?=$arItem["NAME"]?></h2>
-					<?=$arItem['PREVIEW_TEXT']?>
+                    <div class="text"><?=$arItem['PREVIEW_TEXT']?></div>
                     <a class="btn btn--full" href="<?=$arItem["DETAIL_PAGE_URL"]?>">Подробнее</a>
                 </div>
 

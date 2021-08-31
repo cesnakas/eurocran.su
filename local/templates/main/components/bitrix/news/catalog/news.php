@@ -4,18 +4,69 @@ $this->setFrameMode(true);
 ?>
 
 <?php
+/*
 global $arrFilter;
 $arrFilter = [
 	// 'FILTER_PROPERTY_CODE' => []
 ];
-//if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
-//if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
-//if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
+*/
+$arFilter = Array();
+global $arFilter;
+$arParams["FILTER_NAME"] = "arFilter";
+
+if ($_GET["type"] && $_GET["type"] != 0) { $arFilter["SECTION_ID"] = $_GET["type"]; }
+if ($_GET["p1"] && $_GET["p1"] != 0) { $arFilter["PROPERTY_P1"] = $_GET["p1"]; }
+if ($_GET["p2"] && $_GET["p2"] != 0) { $arFilter["PROPERTY_P2"] = $_GET["p2"]; }
+?>
+
+<?php
+$pureURI = $_SERVER["REQUEST_URI"];
+if (substr_count($pureURI, "?")) {
+	$pos = strpos($pureURI, "?");
+	$pureURI = substr($pureURI, 0, $pos);
+}
+$arURI = explode("/", $pureURI);
+
+if (isset($_GET['type']) && $_GET['type'] != 0) {
+	// когда пользователь сам указывает параметры фильтра
+	$filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$_GET["type"]);
+} else if (isset($arResult["SECTION"]["PATH"][0]['ID']) && $arResult["SECTION"]["PATH"][0]['ID'] != 0) {
+	// когда пользователь заходит в конкретный раздел техники через меню
+	$filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$arResult["SECTION"]["PATH"][0]['ID']);
+} else {
+	$filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y");
+}
+
+$q = CIBlockElement::GetList(Array(), $filter, false, false, Array("ID", "PROPERTY_P1", "PROPERTY_P2"));
+$arFilter = Array();
+while ($a = $q->GetNext()) {
+	if ($a["PROPERTY_P1_VALUE"]) { $arFilter["p1"][] = $a["PROPERTY_P1_VALUE"]; }
+	if ($a["PROPERTY_P2_VALUE"]) { $arFilter["p2"][] = $a["PROPERTY_P2_VALUE"]; }
+}
+
+$arFilter["p1"] = array_unique($arFilter["p1"]);
+sort($arFilter["p1"], SORT_NUMERIC);
+$arFilter["p2"] = array_unique($arFilter["p2"]);
+sort($arFilter["p2"], SORT_NUMERIC);
 ?>
 
 <div class="container">
 	<h1>Каталог техники</h1>
 	<div class="sub_cats row">
+
+		<?php
+        $curpage = $APPLICATION->GetCurPage();
+		$string = $APPLICATION->GetCurPageParam();
+		$section = isset($arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"]) ? $arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"] : $arParams["IBLOCK_URL"];
+		?>
+
+		<? foreach ($arFilter["p1"] as $value) { ?>
+            <div>
+                <a<?if(strpos($string, 'arrFilter_2_MIN='.$value.'&'.'arrFilter_2_MAX='.$value) !== false){echo " class='active'";}?> href="<?=$section.'?arrFilter_2_MIN='.$value.'&arrFilter_2_MAX='.$value.'&set_filter=Показать'?>"><?=$value?> тонн</a>
+            </div>
+		<? } ?>
+
+		<!--
 		<div><a href="">40 тонн</a></div>
 		<div><a href="">50 тонн</a></div>
 		<div><a href="">65 тонн</a></div>
@@ -41,6 +92,7 @@ $arrFilter = [
 		<div><a href="">400 тонн</a></div>
 		<div><a href="">500 тонн</a></div>
 		<div><a href="">750 тонн</a></div>
+		-->
 	</div>
 </div>
 
