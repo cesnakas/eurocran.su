@@ -2,28 +2,28 @@
 $aMenuLinks = Array(
 	Array(
 		"Каталог",
-		"/catalog/~index.php",
+		"/catalog/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Услуги",
-		"/uslugi/~index.php",
+		"/uslugi/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"О компании",
-		"/o-kompanii/~index.php",
+		"/o-kompanii/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Объекты",
-		"/objekty/~index.php",
+		"/objekty/",
 		Array(),
 		Array(),
 		""
@@ -37,14 +37,14 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Блог",
-		"/stati/~index.php",
+		"/stati/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Контакты",
-		"/kontakty/~index.php",
+		"/kontakty/",
 		Array(),
 		Array(),
 		""

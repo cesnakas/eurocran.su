@@ -1,155 +1,371 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?php
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty("description", "ООО \"Компания ЕвроКран\" - предоставляет в аренду высокоэффективные немецкие гусенечные и автокраны LIEBHERR на все территории РФ! Большой парк автокранов!");
 $APPLICATION->SetPageProperty("title", "О компании ООО \"Компания ЕвроКран\" - аренда мобильных кранов Liebherr");
 $APPLICATION->SetTitle("О КОМПАНИИ");
-?> 
-<h1>О Компании ЕвроКран</h1>
- Компания ЕвроКран – это команда специалистов, обеспечивающих эффективное использование высокопроизводительных немецких автокранов марки LIEBHERR. Мы работаем с 2000 года и за это время не раз доказали свой профессионализм и компетентность: сегодня нам доверяют крупнейшие предприятия России. 
-<br />
- <iframe src="https://www.youtube.com/embed/gYj-ouDJMtk?rel=0" allowfullscreen="" width="705" height="397" frameborder="0"></iframe> 
-<!--<a id="bxid_40650" href="#" class="float-left" ><img id="bxid_284721" width="315" height="245" style="display:block;"  /></a> 
-<ul class="mini-list"> 	
-  <li><a id="bxid_576755" href="#" ><img id="bxid_431596" width="115" height="115"  /></a></li>
- 
-  <li><a id="bxid_689594" href="#" ><img id="bxid_289678" width="115" height="115"  /></a></li>
- 
-  <li><a id="bxid_416853" href="#" ><img id="bxid_26537" width="115" height="115"  /></a></li>
- 
-  <li><a id="bxid_931353" href="#" ><img id="bxid_304006" width="115" height="115"  /></a></li>
- 
-  <li><a id="bxid_433435" href="#" ><img id="bxid_31841" width="115" height="115"  /></a></li>
- 
-  <li><a id="bxid_771232" href="#" ><img id="bxid_71943" width="115" height="115"  /></a></li>
- </ul>
- -->
- 
-<div class="clearfix">Наши операторы автокранов – это профессионалы с опытом и всеми необходимыми навыками, прошедшие обучение в самой фирме LIEBHERR. 
-  <br />
- 
-  <br />
- Для нас не существует слишком сложных задач, мы готовы выполнить любые работы: 
-  <br />
- 
-  <ul> 
-    <ul> 
-      <li>монтаж/демонтаж башенных кранов, турбин ТЭЦ, куполов храмов, церквей, вращающихся печей, реакторов синтеза метанола, металлических конструкций;</li>
-     
-      <li>монтаж вышек сотовой связи;</li>
-     
-      <li>строительство зданий, сооружений, мостов;</li>
-     
-      <li>установка рекламных щитов;</li>
-     
-      <li> перевозка автотрейлерами крупногабаритных и тяжеловесных грузов. </li>
-     </ul>
-   </ul>
- Мы обладаем собственным парком с более чем 50 единицами техники и находимся в черте Москвы. Поэтому мы можем подать любую технику в любую точку города незамедлительно, что бывает весьма кстати в случае возникновения каких-либо непредвиденных ситуаций. 
-  <br />
- 
-  <br />
- 
-  <h2>Наши услуги</h2>
- Наш парк автокранов – это новая, надежная спецтехника, тщательно проверенная и всегда готовая к работе. 
-  <br />
- 
-  <br />
- Мы будем рады предоставить вам следующие услуги: 
-  <br />
- 
-  <ul> 
-    <ul> 
-      <li>аренда мобильных автокранов LIEBHERR от 40 до 500 тонн с аттестованными операторами;</li>
-     
-      <li>аренда гусеничных кранов LIEBHERR от 350 до 700 тонн с аттестованными операторами;</li>
-     
-      <li>аренда большегрузных тралов и модулей;</li>
-     
-      <li>профессиональные консультации и подбор автокранов и тралов;</li>
-     
-      <li>выезд специалиста на объект;</li>
-     
-      <li>услуги аттестованных стропальщиков;</li>
-     
-      <li>использование дополнительного сертифицированного оборудования;</li>
-     
-      <li>перевозка негабаритного и тяжеловесного груза по всей России.</li>
-     </ul>
-   </ul>
- Мы работаем от центра Москвы и до самых окраин страны, 24 часа в сутки. 
-  <br />
- 
-  <br />
- <?/*$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"list",
-	Array(
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"AJAX_MODE" => "N",
-		"IBLOCK_TYPE" => "catalog",
-		"IBLOCK_ID" => "2",
-		"NEWS_COUNT" => "3",
-		"SORT_BY1" => "SORT",
-		"SORT_ORDER1" => "ASC",
-		"SORT_BY2" => "ID",
-		"SORT_ORDER2" => "ASC",
-		"FILTER_NAME" => "",
-		"FIELD_CODE" => array(),
-		"PROPERTY_CODE" => array(),
-		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"SET_TITLE" => "N",
-		"SET_STATUS_404" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"CACHE_TYPE" => "N",
-		"CACHE_TIME" => "3600",
-		"CACHE_NOTES" => "",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"PAGER_TITLE" => "",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => "",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "Y",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N"
-	)
-);*/?> 
-	<div class="category_info">
-		<div class="photo_gallery">
-			<div class="block_title">Фото нашей спецтехники на объектах:</div>
+?>
+
+	<!--START ABOUT-->
+	<div class="okompanii">
+		<div class="container">
+			<div class="g-title">
+				<h1>О Компании Еврокран</h1>
+			</div>
+		</div>
+		<div class="container--lg">
 			<div class="row">
-			<?$rs = CIBlockElement::GetList(Array("RAND" => "ASC"), Array("IBLOCK_ID" => $IBLOCK_ID, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y"), false, Array("nTopCount" => 3), Array("NAME","PREVIEW_PICTURE","DETAIL_PAGE_URL","PROPERTY_ADRESS"));
-			while($ar = $rs->GetNextElement()){
-				$arPhoto = $ar->GetFields();
-				$pic = CFile::ResizeImageGet($arPhoto['PREVIEW_PICTURE'], array('width' => 262, 'height' => 170), BX_RESIZE_IMAGE_PROPORTIONAL_ALT, false, false);
-				$realy = (isset($pic['src'])) ? $pic['src'] : SITE_TEMPLATE_PATH.'/images/no-photo.png';?>
-				<div class="item">
-					<div class="thumb">
-						<a href="<?=$arPhoto['DETAIL_PAGE_URL']?>"><img src="<?=$realy?>" alt="<?=$arPhoto['NAME']?>" /></a>
-					</div>
-					<div class="name"><?=$arPhoto['NAME']?></div>
-					<div class="location">
-						<img src="<?=SITE_TEMPLATE_PATH?>/images/ic_location.svg" alt="">
-						<span><?=$arPhoto['PROPERTY_ADRESS_VALUE']?></span>
+				<div class="okompanii__content">
+					<div class="okompanii__box">
+						<div class="okompanii__text">
+							<?php
+                            $APPLICATION->IncludeFile(
+								SITE_TEMPLATE_PATH.'/include/about/okompanii-text.php',
+								[],
+								['SHOW_BORDER' => true, 'MODE' => 'text']
+							);?>
+						</div>
 					</div>
 				</div>
-			<?}?>
+				<div class="okompanii__video">
+                    <a class="video" href="https://www.youtube.com/watch?v=vlDzYIIOYmM&amp;list=LL&amp;index=1">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/about-video2.jpg"/>
+                    </a>
+                </div>
 			</div>
 		</div>
 	</div>
-</div>
- <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+	<!--END ABOUT-->
+
+    <!--START SERVICES-->
+    <?php
+    $APPLICATION->IncludeComponent(
+        'bitrix:news.list',
+        'services-home',
+        array(
+            "DISPLAY_DATE" => "N",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "AJAX_MODE" => "N",
+            "IBLOCK_TYPE" => "services",
+            "IBLOCK_ID" => "11",
+            "NEWS_COUNT" => "20",
+            "SORT_BY1" => 'ID',
+            "SORT_ORDER1" => 'ASC',
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER2" => "ASC",
+            "FILTER_NAME" => "",
+            "FIELD_CODE" => array(
+                0 => "ID",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(
+                0 => "",
+                1 => "DESCRIPTION",
+                2 => "",
+            ),
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "SET_TITLE" => "N",
+            "SET_BROWSER_TITLE" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "INCLUDE_SUBSECTIONS" => "N",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "3600",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "DISPLAY_TOP_PAGER" => "N",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "PAGER_TITLE" => "Новости",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SHOW_404" => "Y",
+            "MESSAGE_404" => "",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "COMPONENT_TEMPLATE" => "services-home",
+            "STRICT_SECTION_CHECK" => "N",
+            "FILE_404" => ""
+        ),
+        false
+    );?>
+    <!--END SERVICES-->
+
+    <!--START LETTERS-->
+    <?php
+    $APPLICATION->IncludeComponent(
+        'bitrix:news.list',
+        'letters',
+        array(
+            "DISPLAY_DATE" => "N",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "AJAX_MODE" => "N",
+            "IBLOCK_TYPE" => "blagodarnosti",
+            "IBLOCK_ID" => "8",
+            "NEWS_COUNT" => "20",
+            "SORT_BY1" => 'ID',
+            "SORT_ORDER1" => 'ASC',
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER2" => "ASC",
+            "FILTER_NAME" => "",
+            "FIELD_CODE" => array(
+                0 => "ID",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(
+                0 => "",
+                1 => "DESCRIPTION",
+                2 => "",
+            ),
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "SET_TITLE" => "N",
+            "SET_BROWSER_TITLE" => "N",
+            "SET_META_KEYWORDS" => "N",
+            "SET_META_DESCRIPTION" => "N",
+            "SET_LAST_MODIFIED" => "N",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "INCLUDE_SUBSECTIONS" => "N",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "3600",
+            "CACHE_FILTER" => "N",
+            "CACHE_GROUPS" => "Y",
+            "DISPLAY_TOP_PAGER" => "N",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "PAGER_TITLE" => "Новости",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+            "PAGER_SHOW_ALL" => "N",
+            "PAGER_BASE_LINK_ENABLE" => "Y",
+            "SET_STATUS_404" => "Y",
+            "SHOW_404" => "Y",
+            "MESSAGE_404" => "",
+            "PAGER_BASE_LINK" => "",
+            "PAGER_PARAMS_NAME" => "arrPager",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "N",
+            "AJAX_OPTION_ADDITIONAL" => "",
+            "COMPONENT_TEMPLATE" => "services-home",
+            "STRICT_SECTION_CHECK" => "N",
+            "FILE_404" => ""
+        ),
+        false
+    );?>
+    <!--END LETTERS-->
+
+    <!--START RENT-PRICE-->
+    <div class="rent-price">
+        <div class="container">
+            <div class="g-title">
+                <h2>Несколько фактов о нас</h2>
+            </div>
+            <ul>
+                <li>
+                    <div class="rent-price__number">01</div>
+                    <div class="rent-price__shadow">01</div>
+                    <h3>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH.'/include/about/rent-price_i1-title.php',
+                        [],
+                        ['SHOW_BORDER' => true, 'MODE' => 'text']
+                    );?>
+                    </h3>
+                    <p>
+                    <?php
+                    $APPLICATION->IncludeFile(
+                        SITE_TEMPLATE_PATH.'/include/about/rent-price_i1-text.php',
+                        [],
+                        ['SHOW_BORDER' => true, 'MODE' => 'text']
+                    );?>
+                    </p>
+                </li>
+                <li>
+                    <div class="rent-price__number">02</div>
+                    <div class="rent-price__shadow">02</div>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i2-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i2-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
+                </li>
+                <li>
+                    <div class="rent-price__number">03</div>
+                    <div class="rent-price__shadow">03</div>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i3-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i3-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
+                </li>
+                <li>
+                    <div class="rent-price__number">04</div>
+                    <div class="rent-price__shadow">04</div>
+                    <h3>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i4-title.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </h3>
+                    <p>
+						<?php
+						$APPLICATION->IncludeFile(
+							SITE_TEMPLATE_PATH.'/include/about/rent-price_i4-text.php',
+							[],
+							['SHOW_BORDER' => true, 'MODE' => 'text']
+						);?>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--END RENT-PRICE-->
+
+    <!--START INFO-BLOCK-->
+    <div class="info-block">
+        <div class="container">
+            <h2>
+				<?php
+				$APPLICATION->IncludeFile(
+					SITE_TEMPLATE_PATH.'/include/about/info-block_title.php',
+					[],
+					['SHOW_BORDER' => true, 'MODE' => 'text']
+				);?>
+            </h2>
+			<?php
+			$APPLICATION->IncludeFile(
+				SITE_TEMPLATE_PATH.'/include/about/info-block_text.php',
+				[],
+				['SHOW_BORDER' => true, 'MODE' => 'text']
+			);?>
+        </div>
+    </div>
+    <!--END INFO-BLOCK-->
+
+    <!--START CONTACTS-B-->
+    <div class="contacts">
+        <div class="container">
+            <div class="g-title">
+                <h2>Контакты</h2>
+            </div>
+            <div class="row">
+                <div class="contacts__info">
+                    <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
+                    <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
+                    <div class="contacts__loc">
+                        <i class="icon">
+                            <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Location">
+                                <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#location"/>
+                            </svg>
+                        </i>
+                        <span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span>
+                    </div>
+                    <div class="contacts__row">
+                        <div class="contacts__tel">
+                            <i class="icon">
+                                <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Phone">
+                                    <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#phone"/>
+                                </svg>
+                            </i>
+                            <span> <a href="tel:+74999299666">+7 (499)929-96-66</a><a href="tel:+79853645518">+7 (985)364-55-18</a><a href="tel:+79852262030">+7 (985)226-20-30</a></span></div>
+                        <div class="contacts__other">
+                            <div class="contacts__mail">
+                                <i class="icon">
+                                    <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Mail">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#mail"/>
+                                    </svg>
+                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/mail.svg"/>-->
+                                </i>
+                                <a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a>
+                            </div>
+                            <div class="contacts__schedule">
+                                <i class="icon">
+                                    <svg width="24" height="24" fill="#FCB427" role="img" aria-label="Time">
+                                        <use xlink:href="<?=SITE_TEMPLATE_PATH;?>/images/icons.svg#workTime"/>
+                                    </svg>
+                                    <!--<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/clock.svg"/>-->
+                                </i>
+                                <span>10:00 - 17:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__form">
+					<?php
+					$APPLICATION->IncludeComponent(
+						'cesnakas:main.feedback',
+						'.default',
+						[
+							'USE_CAPTCHA' => 'N',
+							'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+							'EMAIL_TO' => 'evro-k@yandex.ru',
+							'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
+							'EVENT_MESSAGE_ID' => Array('7')
+						]
+					);?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--END CONTACTS-B-->
+
+    <!--START MAP-->
+    <div class="map"></div>
+    <!--END MAP-->
+
+<?php
+require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
+?>

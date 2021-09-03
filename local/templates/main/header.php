@@ -57,11 +57,11 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 </head>
 <body
     <?php
-    if (CSite::InDir(SITE_DIR.'~index.php') || CSite::InDir(SITE_DIR.'uslugi/~index.php'))
+    if (CSite::InDir(SITE_DIR.'index.php') || CSite::InDir(SITE_DIR.'uslugi/index.php'))
     {
         null;
     }
-    elseif (CSite::InDir(SITE_DIR.'catalog/~index.php'))
+    elseif (CSite::InDir(SITE_DIR.'catalog/'))
     {
         echo 'class="cats"';
     }
