@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+    .promo .g-title h2 {
+        font-size: 32px !important;
+    }
+}
+@media (max-width: 991.98px) {
+    .promo .g-title h2 {
+        font-size: 28px !important;
+    }
+}

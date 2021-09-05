@@ -15,7 +15,7 @@ $APPLICATION->SetPageProperty("title", "Спецтехника Liebherr на о�
             "SEF_URL_TEMPLATES" => array(
                 "news" => "",
                 "section" => "#SECTION_CODE#/",
-                "detail" => "~detail.php?ELEMENT_ID=#ELEMENT_ID#",
+                "detail" => "#ELEMENT_CODE#/",
             ),
 
             "IBLOCK_TYPE" => "catalog",
