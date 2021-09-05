@@ -1,11 +1,8 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-?>
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 
-<!--<h1>Наши работы</h1>-->
-
-<?php
 $arParams["SET_TITLE"] = "N";
+
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",
@@ -51,4 +48,18 @@ $APPLICATION->IncludeComponent(
 		"CHECK_DATES"	=>	$arParams["CHECK_DATES"],
 	),
 	$component
-);?>
+);
+?>
+
+    <!--START INFO-BLOCK-->
+    <div class="info-block">
+        <div class="container">
+            <?php
+            $APPLICATION->IncludeFile(
+                SITE_TEMPLATE_PATH.'/include/objects/info-block.php',
+                [],
+                ['SHOW_BORDER' => true, 'MODE' => 'text']
+            );?>
+        </div>
+    </div>
+    <!--END INFO-BLOCK-->

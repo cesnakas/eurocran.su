@@ -99,19 +99,6 @@ $APPLICATION->SetPageProperty("title", "Спецтехника Liebherr на о�
     );
     ?>
 
-	<!--START INFO-BLOCK-->
-	<div class="info-block">
-		<div class="container">
-			<?php
-			$APPLICATION->IncludeFile(
-				SITE_TEMPLATE_PATH.'/include/objects/info-block.php',
-				[],
-				['SHOW_BORDER' => true, 'MODE' => 'text']
-			);?>
-		</div>
-	</div>
-	<!--END INFO-BLOCK-->
-
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>
