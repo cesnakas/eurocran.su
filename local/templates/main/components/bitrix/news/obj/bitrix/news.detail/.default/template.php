@@ -65,7 +65,7 @@ $this->setFrameMode(true);
 					2 => "",
 				),
 				"CHECK_DATES" => "Y",
-				"DETAIL_URL" => "~detail.php?ELEMENT_ID=#ELEMENT_ID#",
+				"DETAIL_URL" => "/objekty/#ELEMENT_CODE#/", // "~detail.php?ELEMENT_ID=#ELEMENT_ID#",
 				"AJAX_MODE" => "Y",
 				"AJAX_OPTION_JUMP" => "N",
 				"AJAX_OPTION_STYLE" => "Y",

@@ -26,7 +26,7 @@ $this->setFrameMode(true);
 
 	<div class="lease__slider" id="lease__slider">
 
-		<?foreach($arResult['SECTIONS'] as $arSection):?>
+		<?foreach($arResult["SECTIONS"] as $arSection):?>
 			<div class="lease__item">
 				<div class="row">
 					<div class="lease__img">

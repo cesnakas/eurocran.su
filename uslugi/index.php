@@ -30,7 +30,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 				2 => "",
 			),
 			"CHECK_DATES" => "Y",
-			"DETAIL_URL" => "",
+			"DETAIL_URL" => "#ELEMENT_CODE#/",
 			"PREVIEW_TRUNCATE_LEN" => "",
 			"ACTIVE_DATE_FORMAT" => "d.m.Y",
 			"SET_TITLE" => "N",
