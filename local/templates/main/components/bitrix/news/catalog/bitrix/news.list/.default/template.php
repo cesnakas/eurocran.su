@@ -41,18 +41,18 @@ $this->setFrameMode(true);
 
     <div class="cats__items">
 
-        <?foreach($arResult['ITEMS'] as $arItem):?>
+        <?foreach($arResult["ITEMS"] as $arItem):?>
         <div class="catalog__row">
-            <a class="catalog__img" href="<?=$arItem["DETAIL_PAGE_URL"]?>" style="background-image:url(<?=$arItem["PREVIEW_PICTURE"]['SRC']?>)"></a>
+            <a class="catalog__img" href="<?=$arItem["DETAIL_PAGE_URL"]?>" style="background-image:url(<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>)"></a>
 
             <a class="catalog__title" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
-                <h3><?=$arItem['NAME']?></h3>
+                <h3><?=$arItem["NAME"]?></h3>
             </a>
 
             <a class="catalog__info" href="<?=$arItem["DETAIL_PAGE_URL"]?>">
                 <?php
                 $i = 0;
-                foreach($arItem['PROPERTIES']['PARAMS']['VALUE'] as $key => $value):
+                foreach($arItem["PROPERTIES"]["PARAMS"]["VALUE"] as $key => $value):
                 $i++;
                 if ($i > 2) break;
                 $cutValue = mb_substr($value,0,17);
