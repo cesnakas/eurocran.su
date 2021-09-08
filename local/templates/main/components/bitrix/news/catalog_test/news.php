@@ -17,6 +17,10 @@ $this->setFrameMode(true);
 <div class="cats__main">
 	<div class="container">
 
+		<div class="filter-btn">
+			<img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/filter1.svg"/>
+		</div>
+
 		<aside class="sidebar">
 			<div class="sidebar__box">
 				<div class="sidebar__title">Параметры</div>

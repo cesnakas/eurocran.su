@@ -1,4 +1,4 @@
-<?
+<?php
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 /** @var array $arParams */
 /** @var array $arResult */
@@ -16,6 +16,25 @@ $this->setFrameMode(true);
 
 <!--START CATS__CONTENT-->
 <div class="cats__content">
+
+    <div class="cats__filterbar">
+        <div class="cats__sort">
+            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/sorting.svg"/>
+            <select name="">
+                <option value="">По умолчанию</option>
+                <option value="">По умолчанию</option>
+                <option value="">По умолчанию</option>
+            </select>
+        </div>
+        <div class="cats__viev">
+            <div class="cats__viev--item cats__viev--tile active">
+                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/viev--tile.svg"/>
+            </div>
+            <div class="cats__viev--item cats__viev--rows">
+                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/viev--rows.svg"/>
+            </div>
+        </div>
+    </div>
 
     <div class="cats__items">
 		<?foreach($arResult["ITEMS"] as $arItem):?>
