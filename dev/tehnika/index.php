@@ -14,13 +14,18 @@ $APPLICATION->IncludeComponent(
 		"SEF_URL_TEMPLATES" => [
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
-			// "detail" => "detail.php?ELEMENT_ID=#ELEMENT_ID#",
 			"detail" => "#ELEMENT_CODE#/"
 		],
 		"SECTION_ID" => $_REQUEST["CODE"],
 		"ELEMENT_ID" => $_REQUEST["CODE"],
 		"NEWS_COUNT" => "20",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N"
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"DETAIL_PROPERTY_CODE" => [
+			"PHOTO",
+			""
+		],
 	]
 );?>
 
