@@ -38,7 +38,7 @@ $this->setFrameMode(true);
 						</div>
 						<?=$arItem['PREVIEW_TEXT']?>
 						<div class="promo__btns">
-                            <a class="btn btn--full" href="#callback-form">Заказать звонок</a>
+                            <a class="btn btn--full open-modal" href="#submit-request">Заказать звонок</a>
                             <a class="btn btn--empty" href="<?=SITE_DIR?>catalog/">Каталог техники</a>
                         </div>
 					</div>
