@@ -58,7 +58,7 @@ $this->setFrameMode(true);
 		<aside class="sidebar">
 			<div class="sidebar__box">
 				<div class="sidebar__title">Параметры</div>
-				
+
 			</div>
 		</aside>-->
 

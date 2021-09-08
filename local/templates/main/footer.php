@@ -65,7 +65,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
         <div class="modal" id="submit-request">
             <div class="modal__box">
-                <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+                <div class="modal__closebtn modal__close">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/popup-close.svg"/>
                 </div>
                 <div class="modal__title">Арендовать спецтехнику</div>
                 <p>Оставьте заявку на звонок и мы ответим на все ваши вопросы в самое ближайшее время</p>
@@ -87,7 +88,8 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
         <div class="modal" id="request-success">
             <div class="modal__box">
-                <div class="modal__closebtn modal__close"><img src="img/content/popup-close.svg"/>
+                <div class="modal__closebtn modal__close">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/popup-close.svg"/>
                 </div>
                 <div class="modal__title">Ваша заявка отправлена</div>
                 <p>Мы позвоним вам в самое ближайшее время</p>
