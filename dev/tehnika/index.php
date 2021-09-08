@@ -26,6 +26,7 @@ $APPLICATION->IncludeComponent(
 			"PHOTO",
 			""
 		],
+		"USE_FILTER" => "Y",
 	]
 );?>
 

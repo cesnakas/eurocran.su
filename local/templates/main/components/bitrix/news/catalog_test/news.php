@@ -14,19 +14,72 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 $this->setFrameMode(true);
 ?>
 
+<div class="container">
+
+    <h1>Каталог техники</h1>
+
+    <div class="sub_cats row">
+        <div><a href="">40 тонн</a></div>
+        <div><a href="">50 тонн</a></div>
+        <div><a href="">65 тонн</a></div>
+        <div><a href="">68 тонн</a></div>
+        <div><a href="">70 тонн</a></div>
+        <div><a href="">82,5 тонн</a></div>
+        <div><a href="">82,5 тонн</a></div>
+        <div><a href="">84 тонн</a></div>
+        <div><a href="">85 тонн</a></div>
+        <div><a href="">90 тонн</a></div>
+        <div><a href="">93,8 тонн</a></div>
+        <div><a href="">95 тонн</a></div>
+        <div><a href="">112,5 тонн</a></div>
+        <div><a href="">120 тонн</a></div>
+        <div><a href="">131,6 тонн</a></div>
+        <div><a href="">150 тонн</a></div>
+        <div><a href="">160 тонн</a></div>
+        <div><a href="">200 тонн</a></div>
+        <div><a href="">250 тонн</a></div>
+        <div><a href="">280 тонн</a></div>
+        <div><a href="">300 тонн</a></div>
+        <div><a href="">350 тонн</a></div>
+        <div><a href="">400 тонн</a></div>
+        <div><a href="">500 тонн</a></div>
+        <div><a href="">750 тонн</a></div>
+    </div>
+
+</div>
+
 <div class="cats__main">
 	<div class="container">
 
-		<div class="filter-btn">
-			<img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/filter1.svg"/>
+		<!--<div class="filter-btn">
+			<img src="<?/*=SITE_TEMPLATE_PATH*/?>/dist/img/content/filter1.svg"/>
 		</div>
 
 		<aside class="sidebar">
 			<div class="sidebar__box">
 				<div class="sidebar__title">Параметры</div>
-				<!--//-->
+				
 			</div>
-		</aside>
+		</aside>-->
+
+<?if($arParams["USE_FILTER"]=="Y"):?>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:catalog.filter",
+        "",
+        Array(
+            "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
+            "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+            "FILTER_NAME" => $arParams["FILTER_NAME"],
+            "FIELD_CODE" => $arParams["FILTER_FIELD_CODE"],
+            "PROPERTY_CODE" => $arParams["FILTER_PROPERTY_CODE"],
+            "CACHE_TYPE" => $arParams["CACHE_TYPE"],
+            "CACHE_TIME" => $arParams["CACHE_TIME"],
+            "CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
+            "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+        ),
+        $component
+    );?>
+<?endif?>
 
 <?php
 $APPLICATION->IncludeComponent(

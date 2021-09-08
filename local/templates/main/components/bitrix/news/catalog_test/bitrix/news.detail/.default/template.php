@@ -77,7 +77,7 @@ $this->setFrameMode(true);
 				<div class="tabs__item active" id="opisanie">
 
 					<?=$arResult['PREVIEW_TEXT']?>
-					<?=$arResult['DETAIL_TEXT']?>
+					<?/*=$arResult['DETAIL_TEXT']*/?>
 
 					<!--<h2>Аренда гусеничного крана Liebherr LR 1750</h2>
 					<p>Гусеничный кран LR 1750 находит свое применение в строительстве электростанций, нефтеперерабатывающих заводов, на строительных площадках мостов и при монтаже ветросиловых установок. </p>
