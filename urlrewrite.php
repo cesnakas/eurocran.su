@@ -10,7 +10,7 @@ $arUrlRewrite=array (
   ),
   13 => 
   array (
-    'CONDITION' => '#^={SITE_DIR."stati/"}#',
+    'CONDITION' => '#^/dev/stati/#',
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/dev/stati/index.php',
