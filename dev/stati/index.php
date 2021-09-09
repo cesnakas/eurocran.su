@@ -12,7 +12,7 @@ $APPLICATION->IncludeComponent(
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
-			"detail" => "#ELEMENT_CODE#/", // 'detail.php?ELEMENT_ID=#ELEMENT_ID#',
+			"detail" => "#ELEMENT_CODE#/",
 		),
 		"IBLOCK_TYPE" => "some_articles",
 		"IBLOCK_ID" => "5",
@@ -30,8 +30,6 @@ $APPLICATION->IncludeComponent(
 			1 => "",
 		],
 		"DETAIL_PROPERTY_CODE" => [
-			// 0 => "PHOTO",
-			// 1 => "",
 			"PHOTO",
 			"DIOR_DESCRIPT",
 			"DIOR_KEYWORDS"
