@@ -65,7 +65,7 @@ $this->setFrameMode(true);
                         <a class="catalog__more" href="<?=$arItem['DETAIL_PAGE_URL']?>">Все характеристики</a>
                     </div>
                     <div class="catalog__btn">
-                        <a class="btn btn--full" href="<?=$arItem['DETAIL_PAGE_URL']?>">Арендовать</a>
+                        <a class="btn btn--full open-modal" href="#submit-request">Арендовать</a>
                     </div>
                 </div>
             </div>

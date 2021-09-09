@@ -73,7 +73,7 @@ $this->setFrameMode(true);
                 </a>
 
                 <div class="catalog__btn">
-                    <a class="btn btn--full" href="<?=$arItem["DETAIL_PAGE_URL"]?>">Арендовать</a>
+                    <a class="btn btn--full open-modal" href="#submit-request">Арендовать</a>
                 </div>
             </div>
 		<?endforeach;?>
