@@ -43,7 +43,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
                         </ul>
                     </div>
                     <div class="footer__actions">
-                        <a class="btn btn--full" href="#callback-form">Свяжитесь со мной</a>
+                        <a class="btn btn--full open-modal" href="#submit-request">Свяжитесь со мной</a>
                         <ul>
                             <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/insta.svg"/></a></li>
                             <li><a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/twitter.svg"/></a></li>
