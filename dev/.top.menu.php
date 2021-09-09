@@ -2,49 +2,49 @@
 $aMenuLinks = Array(
 	Array(
 		"Каталог",
-		SITE_DIR."/tehnika/",
+		SITE_DIR."catalog/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Услуги",
-		SITE_DIR."/uslugi/",
+		SITE_DIR."uslugi/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"О компании",
-		SITE_DIR."/o-kompanii/",
+		SITE_DIR."o-kompanii/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Объекты",
-		SITE_DIR."/objekty/",
+		SITE_DIR."objekty/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Цены",
-		SITE_DIR."/prais-list/",
+		SITE_DIR."prais-list/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Блог",
-		SITE_DIR."/stati/",
+		SITE_DIR."stati/",
 		Array(),
 		Array(),
 		""
 	),
 	Array(
 		"Контакты",
-		SITE_DIR."/kontakty/",
+		SITE_DIR."kontakty/",
 		Array(),
 		Array(),
 		""

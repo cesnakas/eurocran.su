@@ -50,8 +50,16 @@ $this->setFrameMode(true);
 						// echo TruncateText($str, 350);
 						?>
 						<div class="lease__btn">
-							<a class="btn btn--full" href="<?=$arSection["SECTION_PAGE_URL"]?>">Выбрать спецтехнику</a>
+							<a class="btn btn--full" href="<?=SITE_DIR . 'catalog/' . $arSection["CODE"]?>/">Выбрать спецтехнику</a>
 						</div>
+
+                        <pre>
+                        <?
+                        // var_dump($arResult);
+                        // var_dump($arSection);
+                        ?>
+                        </pre>
+
 					</div>
 				</div>
 			</div>

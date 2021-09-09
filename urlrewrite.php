@@ -2,10 +2,10 @@
 $arUrlRewrite=array (
   15 => 
   array (
-    'CONDITION' => '#^/dev/tehnika#',
+    'CONDITION' => '#^/dev/catalog#',
     'RULE' => '',
     'ID' => 'bitrix:news',
-    'PATH' => '/dev/tehnika/index.php',
+    'PATH' => '/dev/catalog/index.php',
     'SORT' => 100,
   ),
   13 => 

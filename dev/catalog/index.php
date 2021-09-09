@@ -10,13 +10,13 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_TYPE" => "catalog",
 		"IBLOCK_ID" => "1",
 		"SEF_MODE" => "Y",
-		"SEF_FOLDER" => SITE_DIR."tehnika/",
+		"SEF_FOLDER" => SITE_DIR."catalog/",
 		"SEF_URL_TEMPLATES" => [
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
-			"detail" => "#ELEMENT_CODE#/"
+			"detail" => "#SECTION_CODE#/#ELEMENT_CODE#/"
 		],
-		"SECTION_ID" => $_REQUEST["CODE"],
+		"SECTION_ID" => $_REQUEST["ID"],
 		"ELEMENT_ID" => $_REQUEST["CODE"],
 		"NEWS_COUNT" => "20",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
@@ -27,6 +27,8 @@ $APPLICATION->IncludeComponent(
 			""
 		],
 		"USE_FILTER" => "Y",
+		"SET_STATUS_404" => "Y",
+		"SHOW_404" => "N"
 	]
 );?>
 
