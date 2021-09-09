@@ -109,7 +109,9 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 						[],
 						['SHOW_BORDER' => true, 'MODE' => 'text']
 					);?>
-					<div class="reliable__btn"><a class="btn btn--full" href="">Заказать звонок</a></div>
+					<div class="reliable__btn">
+                        <a class="btn btn--full open-modal" href="#submit-request">Заказать звонок</a>
+                    </div>
 				</div>
 				<div class="reliable__row">
 					<div class="reliable__item">
