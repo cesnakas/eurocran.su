@@ -81,8 +81,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 					[
 						'USE_CAPTCHA' => 'N',
 						'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
-						// 'EMAIL_TO' => 'evro-k@yandex.ru',
-						'EMAIL_TO' => 's.cesnakas@gmail.com',
+						'EMAIL_TO' => 'evro-k@yandex.ru',
 						'REQUIRED_FIELDS' => ['NAME','PHONE'],
 						'EVENT_MESSAGE_ID' => ['7']
 					]
