@@ -34,29 +34,3 @@ $this->setFrameMode(true);
 
 	</div>
 </div>
-
-<br><br><br>
-
-<!--START PUT-THE-TECHNIQUE-->
-<div class="put-the-technique">
-    <div class="container">
-        <div class="g-title">
-            <h3>Нужна помощь в подборе?</h3>
-        </div>
-
-		<?php
-		$APPLICATION->IncludeComponent(
-			'cesnakas:main.feedback',
-			'main.technique',
-			[
-				'USE_CAPTCHA' => 'N',
-				'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
-				'EMAIL_TO' => 'evro-k@yandex.ru',
-				'REQUIRED_FIELDS' => ['NAME','PHONE'],
-				'EVENT_MESSAGE_ID' => ['7']
-			]
-		);?>
-
-    </div>
-</div>
-<!--END PUT-THE-TECHNIQUE-->

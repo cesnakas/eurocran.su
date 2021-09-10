@@ -4,9 +4,16 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 
 	<?php
 	$APPLICATION->IncludeComponent(
-		'bitrix:news.list',
-		'services-home',
+		'bitrix:news',
+		'uslugi',
 		array(
+			"SEF_MODE" => "Y",
+			"SEF_FOLDER" => SITE_DIR."uslugi/",
+			"SEF_URL_TEMPLATES" => [
+				"news" => "",
+				"section" => "#SECTION_CODE#/",
+				"detail" => "#ELEMENT_CODE#/",
+			],
 			"DISPLAY_DATE" => "N",
 			"DISPLAY_NAME" => "Y",
 			"DISPLAY_PICTURE" => "Y",
