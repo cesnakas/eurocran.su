@@ -43,6 +43,11 @@ $this->setFrameMode(true);
 		<div class="input"></div><span>Я согласен с <a href=""> условиями обработки </a> и использования моих персональных данных</span>
 	</label>
 
-	<?if(strlen($arResult["OK_MESSAGE"]) > 0):?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?endif;?>
+	<?if(strlen($arResult["OK_MESSAGE"]) > 0):?>
+        <?/* <div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div> */?>
+        <script>
+            $('#request-success').addClass('open');
+        </script>
+    <?endif;?>
 
 </form>
