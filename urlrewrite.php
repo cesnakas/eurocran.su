@@ -48,6 +48,14 @@ $arUrlRewrite=array (
     'PATH' => '/uslugi/index.php',
     'SORT' => 100,
   ),
+  2 =>
+  array (
+	'CONDITION' => '#^/dev/uslugi/#',
+	'RULE' => '',
+	'ID' => 'bitrix:news',
+	'PATH' => '/dev/uslugi/index.php',
+	'SORT' => 100,
+  ),
   3 => 
   array (
     'CONDITION' => '#^/stati/#',
