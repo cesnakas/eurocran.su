@@ -24,9 +24,9 @@ $this->setFrameMode(true);
 			ShowError($v);
 	} ?>
 
-    <input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>">
+    <input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>" required>
 
-    <input type="tel" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>">
+    <input type="tel" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>" required>
 
     <input type="email" name="user_email" placeholder="Ваша почта" value="<?=$arResult["AUTHOR_EMAIL"]?>">
 

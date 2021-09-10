@@ -2,16 +2,16 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
-/** @global \CMain $APPLICATION */
-/** @global \CUser $USER */
-/** @global \CDatabase $DB */
-/** @var \CBitrixComponentTemplate $this */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
 /** @var string $templateName */
 /** @var string $templateFile */
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var array $templateData */
-/** @var \CBitrixComponent $component */
+/** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
 
@@ -24,9 +24,9 @@ $this->setFrameMode(true);
 			ShowError($v);
 	} ?>
 
-    <input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>">
+    <input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>" required>
 
-    <input type="text" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>">
+    <input type="text" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>" required>
 
     <input type="text" name="user_email" placeholder="Ваша почта" value="<?=$arResult["AUTHOR_EMAIL"]?>">
 
@@ -38,11 +38,16 @@ $this->setFrameMode(true);
     </label>
 
     <label class="btn btn--full">
-        <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
         Заказать звонок
+        <input type="hidden" name="PARAMS_HASH" value="<?=$arResult["PARAMS_HASH"]?>">
         <input type="submit" name="submit">
     </label>
 
-	<?if(strlen($arResult["OK_MESSAGE"]) > 0):?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?endif;?>
+	<?if($arResult["OK_MESSAGE"] <> ''):?>
+        <!--<div class="mf-ok-text"><?/*=$arResult["OK_MESSAGE"]*/?></div>-->
+        <script>
+            $('#request-success').addClass('open');
+        </script>
+    <?endif;?>
 
 </form>

@@ -518,9 +518,11 @@ $APPLICATION->SetTitle("Аренда автокранов и спецтехни�
 				'cesnakas:main.feedback',
 				'main.questions',
 				[
+					"AJAX_MODE" => "Y",
+					"AJAX_OPTION_SHADOW" => "Y",
 					'USE_CAPTCHA' => 'N',
 					'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
-					'EMAIL_TO' => 'evro-k@yandex.ru',
+					'EMAIL_TO' => 's.cesnakas@gmail.com',
 					'REQUIRED_FIELDS' => ['NAME','PHONE','EMAIL','MESSAGE'],
 					'EVENT_MESSAGE_ID' => ['7']
 				]
