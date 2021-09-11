@@ -63,8 +63,6 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         </footer>
         <!--END FOOTER-->
 
-        <dialog></dialog>
-
         <div class="modal" id="submit-request">
             <div class="modal__box">
 
