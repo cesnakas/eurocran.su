@@ -135,15 +135,20 @@ $APPLICATION->IncludeComponent(
         <div class="g-title">
             <h2>Нужна помощь в подборе? </h2>
         </div>
-        <form action="">
-            <div class="row">
-                <input type="text" placeholder="Имя">
-                <input type="text" placeholder="Телефон">
-                <label class="btn btn--full">Получить консультацию
-                    <input type="submit">
-                </label>
-            </div>
-        </form>
+
+		<?php
+		$APPLICATION->IncludeComponent(
+			'cesnakas:main.feedback',
+			'catalog.feedback',
+			[
+				'USE_CAPTCHA' => 'N',
+				'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+				'EMAIL_TO' => 'evro-k@yandex.ru',
+				'REQUIRED_FIELDS' => ['NAME', 'PHONE'],
+				'EVENT_MESSAGE_ID' => ['7'],
+			]
+		);?>
+
     </div>
 </div>
 <!--END PUT-THE-TECHNIQUE-->
@@ -230,7 +235,20 @@ $APPLICATION->IncludeComponent(
             </div>
             <div class="contacts__form">
 
-                <form action="">
+				<?php
+				$APPLICATION->IncludeComponent(
+					'cesnakas:main.feedback',
+					'.default',
+					[
+						'USE_CAPTCHA' => 'N',
+						'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+						'EMAIL_TO' => 'evro-k@yandex.ru',
+						'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
+						'EVENT_MESSAGE_ID' => Array('7')
+					]
+				);?>
+
+                <!--<form action="">
                     <input type="text" placeholder="Ваше имя">
                     <div class="form__row">
                         <input type="tel" placeholder="Ваш телефон*">
@@ -245,7 +263,7 @@ $APPLICATION->IncludeComponent(
                     <label class="btn btn--full">Оставить заявку
                         <input type="submit">
                     </label>
-                </form>
+                </form>-->
 
             </div>
         </div>

@@ -2,16 +2,16 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
-/** @global \CMain $APPLICATION */
-/** @global \CUser $USER */
-/** @global \CDatabase $DB */
-/** @var \CBitrixComponentTemplate $this */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
 /** @var string $templateName */
 /** @var string $templateFile */
 /** @var string $templateFolder */
 /** @var string $componentPath */
 /** @var array $templateData */
-/** @var \CBitrixComponent $component */
+/** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
 
@@ -20,18 +20,19 @@ if(!empty($arResult["ERROR_MESSAGE"])) {
 	foreach($arResult["ERROR_MESSAGE"] as $v)
 		ShowError($v);
 }
-if(strlen($arResult["OK_MESSAGE"]) > 0) {
-	?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
+if(strlen($arResult["OK_MESSAGE"]) > 0)
+{
+    ?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
 }
 ?>
 
 <form action="<?=$APPLICATION->GetCurPage()?>" method="POST">
 	<?=bitrix_sessid_post()?>
 
-	<input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>">
+	<input type="text" name="user_name" placeholder="Ваше имя" value="<?=$arResult["AUTHOR_NAME"]?>" required>
 
 	<div class="form__row">
-		<input type="tel" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>">
+		<input type="tel" name="user_phone" placeholder="Ваш телефон*" value="<?=$arResult["AUTHOR_PHONE"]?>" required>
 		<input type="email" name="user_email" placeholder="Ваша почта" value="<?=$arResult["AUTHOR_EMAIL"]?>">
 	</div>
 
