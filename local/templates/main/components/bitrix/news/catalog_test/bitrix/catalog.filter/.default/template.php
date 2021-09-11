@@ -23,5 +23,81 @@ $this->setFrameMode(true);
 	<div class="sidebar__box">
 		<div class="sidebar__title">Параметры</div>
 		<!--//-->
+        <div class="sidebar__item">
+
+            <div class="sidebar__body">
+                <strong>Вид техники</strong>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Мобильные краны</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Гусеничные краны</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Низкорамные тралы</div>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="">
+                    <div class="input"> Модульные платформы</div>
+                </label>
+            </div>
+
+            <div class="sidebar__body">
+                <strong>Грузоподъемность т.</strong>
+                <!--<div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="75">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="300">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="40" data-max="750" data-val="[75, 300]"></div>
+                </div>-->
+            </div>
+
+            <div class="sidebar__body">
+
+                <strong>Высота подъема, м.</strong>
+                <!--<div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="15">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="70">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="10" data-max="84" data-val="[15, 70]"></div>
+                </div>-->
+
+                <strong>Высота подъема, м.</strong>
+                <!--<div class="ranges">
+                    <div class="ranges__inputs">
+                        <div class="amount-min">
+                            <input type="number" value="50">
+                        </div>
+                        <div class="amount-max">
+                            <input type="number" value="60">
+                        </div>
+                    </div>
+                    <div class="slider-range" data-min="50" data-max="60" data-val="[50, 60]"></div>
+                </div>-->
+
+                <label class="btn btn--clear"><span>Очистить фильтр</span>
+                    <input type="submit" value="Очистить фильтр">
+                </label>
+
+                <label class="btn btn--dark"><span>Показать</span>
+                    <input type="submit" value="Показать">
+                </label>
+
+            </div>
+        </div>
+        <!--//-->
 	</div>
 </aside>

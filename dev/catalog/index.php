@@ -1,8 +1,6 @@
 <?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-?>
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
-<?php
 $APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"catalog_test",
@@ -22,17 +20,14 @@ $APPLICATION->IncludeComponent(
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
-		"DETAIL_PROPERTY_CODE" => [
-			"PHOTO",
-			""
-		],
+		"DETAIL_PROPERTY_CODE" => ["PHOTO", ""],
 		"USE_FILTER" => "Y",
 		"SET_STATUS_404" => "Y",
 		"SHOW_404" => "N"
 	]
-);?>
+);
 
-<?/*$APPLICATION->IncludeComponent(
+/*$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"catalog_test",
 	Array(
@@ -108,8 +103,6 @@ $APPLICATION->IncludeComponent(
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N"
 	)
-);*/?>
+);*/
 
-<?php
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
-?>
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
