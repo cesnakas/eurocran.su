@@ -1,11 +1,16 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+?>
 
-<? require($_SERVER['DOCUMENT_ROOT'].'/tehnika/meta.php');
-$page = $APPLICATION->GetCurPage();?>
-<?
-if($page=="/tehnika/") { ?>
+<?php
+// require($_SERVER['DOCUMENT_ROOT'].'/tehnika/meta.php');
+$page = $APPLICATION->GetCurPage();
+?>
+
+<?php
+if ($page == "/tehnika/") { ?>
 	<h1>Аренда спецтехники </h1>
-<?} else {
+<? } else {
 	if (isset($seo_h1) && $seo_h1 != '') { ?>
 		<h1><? echo $seo_h1; ?></h1>
 	<? } else { ?>
@@ -16,7 +21,7 @@ if($page=="/tehnika/") { ?>
 
 
 
-<?
+<?php
 $pureURI = $_SERVER["REQUEST_URI"];
 if (substr_count($pureURI, "?")) {
 	$pos = strpos($pureURI, "?");
@@ -28,7 +33,7 @@ $arURI = explode("/", $pureURI);
 if (isset($_GET['type']) && $_GET['type'] != 0) {
     // когда пользователь сам указывает параметры фильтра
     $filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$_GET["TYPE"]);
-} else if (isset($arResult["SECTION"]["PATH"][0]['ID']) && $arResult["SECTION"]["PATH"][0]['ID'] != 0) {
+} elseif (isset($arResult["SECTION"]["PATH"][0]['ID']) && $arResult["SECTION"]["PATH"][0]['ID'] != 0) {
     // когда пользователь заходит в конкретный раздел техники через меню
     $filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$arResult["SECTION"]["PATH"][0]['ID']);
 } else {
@@ -83,7 +88,7 @@ sort($arFilter["P2"], SORT_NUMERIC);
     		</select>
     	</div>
     <? //} ?>
-</form>
+    </form>
 </div>
 
 <script type="text/javascript">

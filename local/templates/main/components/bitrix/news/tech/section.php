@@ -1,7 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?
-
 $arFilter = Array();
 global $arFilter;
 $arParams["FILTER_NAME"] = "arFilter";

@@ -1,14 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  1 =>
-  array (
-    'CONDITION' => '#^/catalog/#',
-    'RULE' => '',
-    'ID' => 'bitrix:news',
-    'PATH' => '/catalog/index.php',
-    'SORT' => 100,
-  ),
-  15 =>
+  15 => 
   array (
     'CONDITION' => '#^/dev/catalog/#',
     'RULE' => '',
@@ -16,7 +8,15 @@ $arUrlRewrite=array (
     'PATH' => '/dev/catalog/index.php',
     'SORT' => 100,
   ),
-  13 =>
+  2 => 
+  array (
+    'CONDITION' => '#^/dev/uslugi/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dev/uslugi/index.php',
+    'SORT' => 100,
+  ),
+  13 => 
   array (
     'CONDITION' => '#^/dev/stati/#',
     'RULE' => '',
@@ -24,7 +24,23 @@ $arUrlRewrite=array (
     'PATH' => '/dev/stati/index.php',
     'SORT' => 100,
   ),
-  5 =>
+  1 => 
+  array (
+    'CONDITION' => '#^/catalog/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/catalog/index.php',
+    'SORT' => 100,
+  ),
+  7 =>
+  array (
+	'CONDITION' => '#^\\??(.*)#',
+	'RULE' => '&$1',
+	'ID' => 'bitrix:catalog.filter',
+	'PATH' => '/local/templates/main/components/bitrix/news/catalog_test/section.php',
+	'SORT' => 100,
+  ),
+  5 => 
   array (
     'CONDITION' => '#^/objekty/#',
     'RULE' => '',
@@ -40,6 +56,14 @@ $arUrlRewrite=array (
     'PATH' => '/tehnika/index.php',
     'SORT' => 100,
   ),
+  16 => 
+  array (
+    'CONDITION' => '#^/dev/tehnika/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/dev/tehnika/index.php',
+    'SORT' => 100,
+  ),
   6 => 
   array (
     'CONDITION' => '#^/uslugi/#',
@@ -47,14 +71,6 @@ $arUrlRewrite=array (
     'ID' => 'bitrix:news',
     'PATH' => '/uslugi/index.php',
     'SORT' => 100,
-  ),
-  2 =>
-  array (
-	'CONDITION' => '#^/dev/uslugi/#',
-	'RULE' => '',
-	'ID' => 'bitrix:news',
-	'PATH' => '/dev/uslugi/index.php',
-	'SORT' => 100,
   ),
   3 => 
   array (
