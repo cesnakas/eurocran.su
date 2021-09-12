@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -12,52 +13,64 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-$templateData = array(
+$templateData = [
 	'TEMPLATE_THEME' => $this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].'/colors.min.css',
 	'TEMPLATE_CLASS' => 'bx-'.$arParams['TEMPLATE_THEME']
-);
+];
 
 if (isset($templateData['TEMPLATE_THEME']))
 {
 	$this->addExternalCss($templateData['TEMPLATE_THEME']);
 }
-$this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME']."/bootstrap.css");
+// $this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME']."/bootstrap.css");
 ?>
-<aside>
-<div class="bx-filter <?=$templateData["TEMPLATE_CLASS"]?> <?if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "bx-filter-horizontal"?> filter">
-	<button class="mob_filter_btn"><?echo GetMessage("CT_BCSF_FILTER_TITLE")?></button>
-		<form name="<?echo $arResult["FILTER_NAME"]."_form"?>" action="<?echo $arResult["FORM_ACTION"]?>" method="get" class="smartfilter">
-			<div class="title"><?echo GetMessage("CT_BCSF_FILTER_TITLE")?></div>
-			<?foreach($arResult["HIDDEN"] as $arItem):?>
-			<input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
-			<?endforeach;?>
-				<?
+
+<div class="filter-btn">
+    <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/filter1.svg"/>
+</div>
+
+<aside class="sidebar">
+
+<!--<div class="bx-filter <?/*=$templateData["TEMPLATE_CLASS"]*/?> <?/*if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL") echo "bx-filter-horizontal"*/?> filter">-->
+    <div class="sidebar__box">
+
+	<!--<button class="mob_filter_btn"><?/*=GetMessage("CT_BCSF_FILTER_TITLE")*/?></button>-->
+
+		<form name="<?=$arResult["FILTER_NAME"]."_form"?>" action="<?=$arResult["FORM_ACTION"]?>" method="get">
+
+            <div class="sidebar__title">Параметры</div>
+
+            <div class="sidebar__item">
+                <div class="sidebar__body">
+
+                <?foreach($arResult["HIDDEN"] as $arItem):?>
+                <input type="hidden" name="<?echo $arItem["CONTROL_NAME"]?>" id="<?echo $arItem["CONTROL_ID"]?>" value="<?echo $arItem["HTML_VALUE"]?>" />
+                <?endforeach;?>
+
+                </div>
+
+				<?php
 				//with sliders
-				foreach($arResult["ITEMS"] as $key=>$arItem)
-				{
-					if(
-						empty($arItem["VALUES"])
-						|| isset($arItem["PRICE"])
-					)
-						continue;
+				foreach ($arResult["ITEMS"] as $key => $arItem) {
+					if (empty($arItem["VALUES"]) || isset($arItem["PRICE"])) continue;
 
 					if (
 						$arItem["DISPLAY_TYPE"] == "A"
-						&& (
-							$arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0
-						)
-					)
-						continue;
+						&&
+                        ($arItem["VALUES"]["MAX"]["VALUE"] - $arItem["VALUES"]["MIN"]["VALUE"] <= 0)
+					) continue;
 					//if($arItem["ID"] !== '2'){
 					?>
 					<div class="item bx-filter-parameters-box <?if ($arItem["DISPLAY_EXPANDED"]== "Y"):?>bx-active<?endif?>">
+
 						<span class="bx-filter-container-modef"></span>
+
 						<div class="bx-filter-parameters-box-title">
 							<div class="bx-filter-parameters-box-hint name"><?=$arItem["NAME"]?>,&nbsp;<?=($arItem["ID"] == '2') ? 'т.' : 'м.'?>
 								<?if ($arItem["FILTER_HINT"] <> ""):?>
 									<script type="text/javascript">
 										new top.BX.CHint({
-											parent: top.BX("item_title_hint_<?echo $arItem["ID"]?>"),
+											parent: top.BX("item_title_hint_<?=$arItem["ID"]?>"),
 											show_timeout: 10,
 											hide_timeout: 200,
 											dx: 2,
@@ -222,6 +235,7 @@ $this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].
 					//}
 				}
 				?>
+
 			<div class="row">
 				<div class="col-xs-12 bx-filter-button-box">
 					<div class="bx-filter-block">
@@ -250,6 +264,8 @@ $this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].
 					</div>
 				</div>
 			</div>
+            </div>
+
 			<?$pureURI = $_SERVER["REQUEST_URI"];
 			if (substr_count($pureURI, "?")) {
 				$pos = strpos($pureURI, "?");
@@ -274,9 +290,16 @@ $this->addExternalCss($this->GetFolder().'/themes/'.$arParams['TEMPLATE_THEME'].
 				</div>
 			</div>
 			<? } ?>
+
+
 		</form>
-</div>
+    </div>
 </aside>
+
 <script type="text/javascript">
-	var smartFilter = new JCSmartFilter('<?echo CUtil::JSEscape($arResult["FORM_ACTION"])?>', '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>', <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>);
+	var smartFilter = new JCSmartFilter(
+        '<?=CUtil::JSEscape($arResult["FORM_ACTION"])?>',
+        '<?=CUtil::JSEscape($arParams["FILTER_VIEW_MODE"])?>',
+        <?=CUtil::PhpToJSObject($arResult["JS_FILTER_PARAMS"])?>
+    );
 </script>

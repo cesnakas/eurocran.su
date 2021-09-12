@@ -15,7 +15,7 @@ $APPLICATION->SetPageProperty("description", "«Компания Еврокра�
 		"USE_RSS" => "N",
 		"USE_RATING" => "N",
 		"USE_CATEGORIES" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"SORT_BY1" => "PROPERTY_P1",
 		"SORT_ORDER1" => "DESC",
 		"SORT_BY2" => "ID",

@@ -66,10 +66,48 @@ if ($isFilter)
 		$arCurSection = array();
 ?>
 
+<div class="container">
+
+	<h1>Каталог техники</h1>
+
+    <?php
+    $filter = ["IBLOCK_ID" => $arParams["IBLOCK_ID"], "IBLOCK_SECTION_ID" => $arResult["SECTION"]["PATH"][0]["ID"], "ACTIVE" => "Y"];
+    $q = CIBlockElement::GetList(Array(), $filter, false, false, Array("ID", "PROPERTY_P1"));
+    $arrFilter = Array();
+    while ($a = $q->GetNext()) {
+        if ($a["PROPERTY_P1_VALUE"]) {$arrFilter["p1"][] = $a["PROPERTY_P1_VALUE"];}
+    }
+    $arrFilter["p1"] = array_unique($arrFilter["p1"]);
+    sort($arrFilter["p1"], SORT_NUMERIC);
+    ?>
+    <div class="sub_cats row">
+		<?$curpage = $APPLICATION->GetCurPage();
+		$string = $APPLICATION->GetCurPageParam();
+		/*$pattern = '/(arrFilter_2_MIN=)([a-zA-Z0-9\-_]+)&(arrFilter_2_MAX=)([a-zA-Z0-9\-_]+)/';
+		$replacement = '${1}'.$value.'&${3}'.$value;
+		$repo = preg_replace($pattern, $replacement, $another);*/
+		$section = isset($arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"]) ? $arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"] : $arParams["IBLOCK_URL"];
+		?>
+		<?foreach ($arrFilter["p1"] as $value) {
+			//$min = min($arrFilter["p1"]);?>
+        <div>
+            <a <?if(strpos($string, 'arrFilter_2_MIN='.$value.'&'.'arrFilter_2_MAX='.$value) !== false) {echo "class='active'";}?> href="<?=$section.'?arrFilter_2_MIN='.$value.'&arrFilter_2_MAX='.$value.'&set_filter=Показать'?>">
+                <?=$value?> тонн
+            </a>
+        </div>
+		<? } ?>
+    </div><!-- /sub_cats -->
+
+</div><!-- /container -->
+
+
+<div class="cats__main">
+    <div class="container">
+
 <?php
 $APPLICATION->IncludeComponent(
 	"bitrix:catalog.smart.filter",
-	"another",
+	"", // "another",
 	Array(
 		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 		"CACHE_TIME" => $arParams["CACHE_TIME"],
@@ -99,7 +137,7 @@ $APPLICATION->IncludeComponent(
 }
 ?>
 
-<?
+<?php
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"category",
@@ -156,3 +194,6 @@ $APPLICATION->IncludeComponent(
 	),
 	$component
 );?>
+
+    </div>
+</div>
