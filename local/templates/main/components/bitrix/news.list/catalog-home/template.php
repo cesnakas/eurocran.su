@@ -73,6 +73,6 @@ $this->setFrameMode(true);
 
         </div>
         <div class="catalog__tocat">
-            <a class="btn btn--empty" href="<?SITE_DIR?>tehnika/">Перейти в каталог</a>
+            <a class="btn btn--empty" href="<?SITE_DIR?>catalog/">Перейти в каталог</a>
         </div>
     </div>
