@@ -1,5 +1,5 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -12,6 +12,54 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
+// Filter
+global $arFilter;
+$arFilter = [];
+$arParams["FILTER_NAME"] = "arFilter";
+
+if ($_GET["TYPE"] && $_GET["TYPE"] != 0) {$arFilter["SECTION_ID"] = $_GET["TYPE"];}
+if ($_GET["P1"] && $_GET["P1"] != 0) {$arFilter["PROPERTY_P1"] = $_GET["P1"];}
+if ($_GET["P2"] && $_GET["P2"] != 0) {$arFilter["PROPERTY_P2"] = $_GET["P2"];}
+
+$pureURI = $_SERVER["REQUEST_URI"];
+if (substr_count($pureURI, "?")) {
+	$pos = strpos($pureURI, "?");
+	$pureURI = substr($pureURI, 0, $pos);
+}
+$arURI = explode("/", $pureURI);
+
+
+if (isset($_GET['TYPE']) && $_GET['TYPE'] != 0) {
+
+    // когда пользователь сам указывает параметры фильтра
+	$filter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE" => "Y", "SECTION_ID" => $_GET["TYPE"]);
+} elseif (isset($arResult["SECTION"]["PATH"][0]['ID']) && $arResult["SECTION"]["PATH"][0]['ID'] != 0) {
+
+	// когда пользователь заходит в конкретный раздел техники через меню
+	$filter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE" => "Y", "SECTION_ID"=>$arResult["SECTION"]["PATH"][0]['ID']);
+} else {
+
+	$filter = Array("IBLOCK_ID" => $arParams["IBLOCK_ID"], "ACTIVE" => "Y");
+}
+
+$q = CIBlockElement::GetList(
+    [], $filter, false, false, ["ID", "PROPERTY_P1", "PROPERTY_P2"]
+);
+
+while ($a = $q->GetNext()) {
+	if ($a["PROPERTY_P1_VALUE"]) {$arFilter["p1"][] = $a["PROPERTY_P1_VALUE"];}
+	if ($a["PROPERTY_P2_VALUE"]) {$arFilter["p2"][] = $a["PROPERTY_P2_VALUE"];}
+}
+
+$arFilter["P1"] = array_unique($arFilter["P1"]);
+sort($arFilter["P1"], SORT_NUMERIC);
+$arFilter["P2"] = array_unique($arFilter["P2"]);
+sort($arFilter["P2"], SORT_NUMERIC);
+
+$curpage = $APPLICATION->GetCurPage();
+$string = $APPLICATION->GetCurPageParam();
+$section = isset($arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"]) ? $arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"] : $arParams["IBLOCK_URL"];
 ?>
 
 <div class="container">
@@ -19,7 +67,14 @@ $this->setFrameMode(true);
     <h1>Каталог техники</h1>
 
     <div class="sub_cats row">
-        <div><a href="">40 тонн</a></div>
+
+		<?foreach ($arFilter["P1"] as $value): ?>
+        <div>
+            <a href="<?=$section.'?arrFilter_2_MIN='.$value.'&arrFilter_2_MAX='.$value.'&set_filter=Показать'?>"><?=$value?> тонн</a>
+        </div>
+		<?endforeach;?>
+
+        <!--<div><a href="">40 тонн</a></div>
         <div><a href="">50 тонн</a></div>
         <div><a href="">65 тонн</a></div>
         <div><a href="">68 тонн</a></div>
@@ -43,7 +98,8 @@ $this->setFrameMode(true);
         <div><a href="">350 тонн</a></div>
         <div><a href="">400 тонн</a></div>
         <div><a href="">500 тонн</a></div>
-        <div><a href="">750 тонн</a></div>
+        <div><a href="">750 тонн</a></div>-->
+
     </div>
 
 </div>
@@ -132,8 +188,9 @@ $APPLICATION->IncludeComponent(
 <!--START PUT-THE-TECHNIQUE-->
 <div class="put-the-technique">
     <div class="container">
+
         <div class="g-title">
-            <h2>Нужна помощь в подборе? </h2>
+            <h2>Нужна помощь в подборе?</h2>
         </div>
 
 		<?php
@@ -174,6 +231,7 @@ $APPLICATION->IncludeComponent(
         </div>
         <div class="row">
             <div class="contacts__info">
+
                 <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас
                     обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
                 <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
@@ -184,6 +242,7 @@ $APPLICATION->IncludeComponent(
                     </i>
                     <span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span>
                 </div>
+
                 <div class="contacts__row">
                     <div class="contacts__tel">
                         <i class="icon">
@@ -225,23 +284,6 @@ $APPLICATION->IncludeComponent(
 						'EVENT_MESSAGE_ID' => Array('7')
 					]
 				);?>
-
-                <!--<form action="">
-                    <input type="text" placeholder="Ваше имя">
-                    <div class="form__row">
-                        <input type="tel" placeholder="Ваш телефон*">
-                        <input type="email" placeholder="Ваша почта">
-                    </div>
-                    <textarea name="" placeholder="Оставьте ваш вопрос"></textarea>
-                    <label class="checkbox">
-                        <input type="checkbox" checked="checked">
-                        <div class="input"></div>
-                        <span>Я согласен с <a href=""> условиями обработки </a> и использования моих персональных данных</span>
-                    </label>
-                    <label class="btn btn--full">Оставить заявку
-                        <input type="submit">
-                    </label>
-                </form>-->
 
             </div>
         </div>

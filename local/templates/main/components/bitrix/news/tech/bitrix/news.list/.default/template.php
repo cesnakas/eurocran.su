@@ -27,7 +27,7 @@ $arURI = explode("/", $pureURI);
 
 if (isset($_GET['type']) && $_GET['type'] != 0) {
     // когда пользователь сам указывает параметры фильтра
-    $filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$_GET["type"]);
+    $filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$_GET["TYPE"]);
 } else if (isset($arResult["SECTION"]["PATH"][0]['ID']) && $arResult["SECTION"]["PATH"][0]['ID'] != 0) {
     // когда пользователь заходит в конкретный раздел техники через меню
     $filter = Array("IBLOCK_ID"=>$arParams["IBLOCK_ID"], "ACTIVE"=>"Y", "SECTION_ID"=>$arResult["SECTION"]["PATH"][0]['ID']);
@@ -38,14 +38,14 @@ if (isset($_GET['type']) && $_GET['type'] != 0) {
 $q = CIBlockElement::GetList(Array(), $filter, false, false, Array("ID", "PROPERTY_P1", "PROPERTY_P2"));
 $arFilter = Array();
 while ($a = $q->GetNext()) {
-	if ($a["PROPERTY_P1_VALUE"]) { $arFilter["p1"][] = $a["PROPERTY_P1_VALUE"]; }
-	if ($a["PROPERTY_P2_VALUE"]) { $arFilter["p2"][] = $a["PROPERTY_P2_VALUE"]; }
+	if ($a["PROPERTY_P1_VALUE"]) { $arFilter["P1"][] = $a["PROPERTY_P1_VALUE"]; }
+	if ($a["PROPERTY_P2_VALUE"]) { $arFilter["P2"][] = $a["PROPERTY_P2_VALUE"]; }
 }
 
-$arFilter["p1"] = array_unique($arFilter["p1"]);
-sort($arFilter["p1"], SORT_NUMERIC);
-$arFilter["p2"] = array_unique($arFilter["p2"]);
-sort($arFilter["p2"], SORT_NUMERIC);
+$arFilter["P1"] = array_unique($arFilter["P1"]);
+sort($arFilter["P1"], SORT_NUMERIC);
+$arFilter["P2"] = array_unique($arFilter["P2"]);
+sort($arFilter["P2"], SORT_NUMERIC);
 ?>
 
 <div class="filter clearfix">

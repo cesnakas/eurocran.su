@@ -20,7 +20,8 @@ $APPLICATION->IncludeComponent(
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
-		"DETAIL_PROPERTY_CODE" => ["PHOTO", ""],
+		"LIST_PROPERTY_CODE" => ["PARAMS", "P1", "P2", "P3", "TYPE", "NAMEWIDE", "PHOTO", ""],
+		"DETAIL_PROPERTY_CODE" => ["PHOTO", "P1", "P2"],
 		"USE_FILTER" => "Y",
 		"SET_STATUS_404" => "Y",
 		"SHOW_404" => "N"

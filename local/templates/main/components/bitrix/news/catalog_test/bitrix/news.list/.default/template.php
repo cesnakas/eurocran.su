@@ -17,15 +17,17 @@ $this->setFrameMode(true);
 <!--START CATS__CONTENT-->
 <div class="cats__content">
 
-    <div class="cats__filterbar">
+    <form class="cats__filterbar" action="<?=$pureURI?>" method="GET">
         <div class="cats__sort">
 
             <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/sorting.svg"/>
 
             <select name="">
-                <option value="">По умолчанию</option>
-                <option value="">По умолчанию</option>
-                <option value="">По умолчанию</option>
+                <option value="0">По умолчанию</option>
+                <option value="1" <?=$_GET["type"]==1?"selected":"";?>>Мобильные краны</option>
+                <option value="2" <?=$_GET["type"]==2?"selected":"";?>>Гусеничные краны</option>
+                <option value="3" <?=$_GET["type"]==3?"selected":"";?>>Низкорамный трал</option>
+                <option value="4" <?=$_GET["type"]==4?"selected":"";?>>Модульные платформы</option>
             </select>
 
         </div>
@@ -40,7 +42,7 @@ $this->setFrameMode(true);
             </div>
 
         </div>
-    </div>
+    </form>
 
     <div class="cats__items">
 		<?foreach($arResult["ITEMS"] as $arItem):?>
