@@ -107,8 +107,32 @@ $this->setFrameMode(true);
                             data-min="<?=$arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
                             data-max="<?=$arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
                             data-val="[<?=$arItem["VALUES"]["MIN"]["VALUE"]?>,<?=$arItem["VALUES"]["MAX"]["VALUE"]?>]"
-                        >
-                        </div>
+                        ></div>
+
+						<?php
+						$arJsParams = array(
+							"leftSlider" => 'left_slider_'.$key,
+							"rightSlider" => 'right_slider_'.$key,
+							"tracker" => "drag_tracker_".$key,
+							"trackerWrap" => "drag_track_".$key,
+							"minInputId" => $arItem["VALUES"]["MIN"]["CONTROL_ID"],
+							"maxInputId" => $arItem["VALUES"]["MAX"]["CONTROL_ID"],
+							"minPrice" => $arItem["VALUES"]["MIN"]["VALUE"],
+							"maxPrice" => $arItem["VALUES"]["MAX"]["VALUE"],
+							"curMinPrice" => $arItem["VALUES"]["MIN"]["HTML_VALUE"],
+							"curMaxPrice" => $arItem["VALUES"]["MAX"]["HTML_VALUE"],
+							"fltMinPrice" => intval($arItem["VALUES"]["MIN"]["FILTERED_VALUE"]) ? $arItem["VALUES"]["MIN"]["FILTERED_VALUE"] : $arItem["VALUES"]["MIN"]["VALUE"] ,
+							"fltMaxPrice" => intval($arItem["VALUES"]["MAX"]["FILTERED_VALUE"]) ? $arItem["VALUES"]["MAX"]["FILTERED_VALUE"] : $arItem["VALUES"]["MAX"]["VALUE"],
+							"precision" => $arItem["DECIMALS"]? $arItem["DECIMALS"]: 0,
+							"colorUnavailableActive" => 'colorUnavailableActive_'.$key,
+							"colorAvailableActive" => 'colorAvailableActive_'.$key,
+							"colorAvailableInactive" => 'colorAvailableInactive_'.$key,
+						);?>
+                        <script type="text/javascript">
+                            BX.ready(function() {
+                                window['trackBar<?=$key?>'] = new BX.Iblock.SmartFilter(<?=CUtil::PhpToJSObject($arJsParams)?>);
+                            });
+                        </script>
 
                     </div>
                     <?break?>
@@ -120,7 +144,12 @@ $this->setFrameMode(true);
 
                 <label class="btn btn--clear">
                     <span>Очистить фильтр</span>
-                    <input type="submit" value="Очистить фильтр">
+                    <input
+                        type="submit"
+                        id="del_filter"
+                        name="del_filter"
+                        value="Очистить фильтр"
+                    />
                 </label>
 
                 <label class="btn btn--dark">
