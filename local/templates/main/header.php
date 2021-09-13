@@ -16,6 +16,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
     $asset->addCss(SITE_TEMPLATE_PATH.'/dist/css/style.css');
     // js
     $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/jquery.min.js');
+    $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/jquery-ui.min.js');
     $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/slick.min.js');
     $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/magnific-popup.js');
     $asset->addJs(SITE_TEMPLATE_PATH.'/dist/js/jquery.animateNumber.min.js');

@@ -59,7 +59,6 @@ $this->setFrameMode(true);
                     ) continue;
 				?>
 
-                <div class="sidebar__body">
                     <strong><?=$arItem["NAME"]?>,&nbsp;<?=($arItem["ID"] == '2') ? 'т.' : 'м.'?></strong>
 					<?if ($arItem["FILTER_HINT"] <> ""):?>
                     <script type="text/javascript">
@@ -74,12 +73,10 @@ $this->setFrameMode(true);
                         });
                     </script>
 					<?endif?>
-                </div>
 
 					<?php
 					$arCur = current($arItem["VALUES"]);
-					switch ($arItem["DISPLAY_TYPE"]):
-                    case "A":
+                    if ($arItem["DISPLAY_TYPE"]):
                     ?>
                     <div class="ranges">
                         <div class="ranges__inputs">
@@ -104,9 +101,12 @@ $this->setFrameMode(true);
                         </div>
                         <div
                             class="slider-range"
-                            data-min="<?=$arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
-                            data-max="<?=$arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
-                            data-val="[<?=$arItem["VALUES"]["MIN"]["VALUE"]?>,<?=$arItem["VALUES"]["MAX"]["VALUE"]?>]"
+                            data-min="<?=$arItem['VALUES']["MIN"]["VALUE"]?>"
+                            data-max="<?=$arItem['VALUES']["MAX"]["VALUE"]?>"
+                            data-val="[
+                            <?=($arItem["VALUES"]["MIN"]["HTML_VALUE"]) ?? 0 ?>,
+                            <?=($arItem['VALUES']["MAX"]["HTML_VALUE"]) ?? $arItem['VALUES']["MAX"]["VALUE"] ?>
+                            ]"
                         ></div>
 
 						<?php
@@ -133,61 +133,10 @@ $this->setFrameMode(true);
                                 window['trackBar<?=$key?>'] = new BX.Iblock.SmartFilter(<?=CUtil::PhpToJSObject($arJsParams)?>);
                             });
                         </script>
-
                     </div>
-                    <?php
-                    break;
-                    case "B":
-                    ?>
-                        <input
-                            class="min-price"
-                            type="text"
-                            name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
-                            id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
-                            value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
-                            size="5"
-                            onkeyup="smartFilter.keyup(this)"
-                        />
-                        <input
-                            class="max-price"
-                            type="text"
-                            name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
-                            id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
-                            value="<?echo $arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
-                            size="5"
-                            onkeyup="smartFilter.keyup(this)"
-                        />
-                    <?php
-                    break;
-                    default:
-                    ?>
-
-                        <div>
-							<?foreach($arItem["VALUES"] as $val => $ar):?>
-                                <div class="checkbox">
-                                    <label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <?=$ar["DISABLED"] ? 'disabled': '' ?>" for="<?=$ar["CONTROL_ID"] ?>">
-                                        <span>
-                                            <input
-                                                type="checkbox"
-                                                value="<? echo $ar["HTML_VALUE"] ?>"
-                                                name="<? echo $ar["CONTROL_NAME"] ?>"
-                                                id="<? echo $ar["CONTROL_ID"] ?>"
-                                                <?=$ar["CHECKED"]? 'checked="checked"' : ''?>
-                                                onclick="smartFilter.click(this)"
-                                            />
-                                            <span class="bx-filter-param-text" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
-                                                if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
-                                                    ?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
-                                                endif;?></span>
-                                        </span>
-                                    </label>
-                                </div>
-							<?endforeach;?>
-                        </div>
 
                     <?php
-                    break;
-                    endswitch;
+                    endif;
                     ?>
 
                 <?endforeach;?>
