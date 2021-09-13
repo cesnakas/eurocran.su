@@ -79,7 +79,7 @@ $this->setFrameMode(true);
 					<?php
 					$arCur = current($arItem["VALUES"]);
 					switch ($arItem["DISPLAY_TYPE"]):
-						case "A":
+                    case "A":
                     ?>
                     <div class="ranges">
                         <div class="ranges__inputs">
@@ -135,8 +135,58 @@ $this->setFrameMode(true);
                         </script>
 
                     </div>
-                    <?break?>
                     <?php
+                    break;
+                    case "B":
+                    ?>
+                        <input
+                            class="min-price"
+                            type="text"
+                            name="<?echo $arItem["VALUES"]["MIN"]["CONTROL_NAME"]?>"
+                            id="<?echo $arItem["VALUES"]["MIN"]["CONTROL_ID"]?>"
+                            value="<?echo $arItem["VALUES"]["MIN"]["HTML_VALUE"]?>"
+                            size="5"
+                            onkeyup="smartFilter.keyup(this)"
+                        />
+                        <input
+                            class="max-price"
+                            type="text"
+                            name="<?echo $arItem["VALUES"]["MAX"]["CONTROL_NAME"]?>"
+                            id="<?echo $arItem["VALUES"]["MAX"]["CONTROL_ID"]?>"
+                            value="<?echo $arItem["VALUES"]["MAX"]["HTML_VALUE"]?>"
+                            size="5"
+                            onkeyup="smartFilter.keyup(this)"
+                        />
+                    <?php
+                    break;
+                    default:
+                    ?>
+
+                        <div>
+							<?foreach($arItem["VALUES"] as $val => $ar):?>
+                                <div class="checkbox">
+                                    <label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <?=$ar["DISABLED"] ? 'disabled': '' ?>" for="<?=$ar["CONTROL_ID"] ?>">
+                                        <span>
+                                            <input
+                                                type="checkbox"
+                                                value="<? echo $ar["HTML_VALUE"] ?>"
+                                                name="<? echo $ar["CONTROL_NAME"] ?>"
+                                                id="<? echo $ar["CONTROL_ID"] ?>"
+                                                <?=$ar["CHECKED"]? 'checked="checked"' : ''?>
+                                                onclick="smartFilter.click(this)"
+                                            />
+                                            <span class="bx-filter-param-text" title="<?=$ar["VALUE"];?>"><?=$ar["VALUE"];?><?
+                                                if ($arParams["DISPLAY_ELEMENT_COUNT"] !== "N" && isset($ar["ELEMENT_COUNT"])):
+                                                    ?>&nbsp;(<span data-role="count_<?=$ar["CONTROL_ID"]?>"><? echo $ar["ELEMENT_COUNT"]; ?></span>)<?
+                                                endif;?></span>
+                                        </span>
+                                    </label>
+                                </div>
+							<?endforeach;?>
+                        </div>
+
+                    <?php
+                    break;
                     endswitch;
                     ?>
 
