@@ -165,6 +165,71 @@ $this->setFrameMode(true);
         </div>
 
     </form>
+
+    <div class="sidebar__box">
+        <div class="sidebar__title">Парк техники</div>
+        <div class="sidebar__item">
+            <div class="sidebar__body">
+                <h3 class="active">Мобильные краны Liebherr LTM</h3>
+                <ul class="active">
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+                <h3>Гусеничные краны Liebherr LR</h3>
+                <ul>
+                    <li><a href="">LTM 1040 (40 т.)</a></li>
+                    <li><a href="">LTM 1050 (50 т.)</a></li>
+                    <li><a href="">LTM 1070 (70 т.)</a></li>
+                    <li><a href="">LTM 1090 (90 т.)</a></li>
+                    <li><a href="">LTM 1095 (95 т.)</a></li>
+                    <li><a href="">LTM 1120 (120 т.)</a></li>
+                    <li><a href="">LTM 1250 (250 т.)</a></li>
+                    <li><a href="">LTM 1300 (300 т.)</a></li>
+                    <li><a href="">LTM 1400 (400 т.)</a></li>
+                    <li><a href="">LTM 1500 (500 т.)</a></li>
+                    <li><a href="">LTM 1750 (750 т.)</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </aside>
 
 <script type="text/javascript">
