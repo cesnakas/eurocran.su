@@ -197,3 +197,113 @@ $APPLICATION->IncludeComponent(
 
     </div>
 </div>
+
+<!--START PUT-THE-TECHNIQUE-->
+<div class="put-the-technique">
+    <div class="container">
+
+        <div class="g-title">
+            <h2>Нужна помощь в подборе?</h2>
+        </div>
+
+		<?php
+		$APPLICATION->IncludeComponent(
+			'cesnakas:main.feedback',
+			'catalog.feedback',
+			[
+				'USE_CAPTCHA' => 'N',
+				'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+				'EMAIL_TO' => 'evro-k@yandex.ru',
+				'REQUIRED_FIELDS' => ['NAME', 'PHONE'],
+				'EVENT_MESSAGE_ID' => ['7'],
+			]
+		);?>
+
+    </div>
+</div>
+<!--END PUT-THE-TECHNIQUE-->
+
+<!--END PUT-THE-TECHNIQUE-->
+<div class="product-single__content">
+    <div class="container">
+		<?php
+		$APPLICATION->IncludeFile(
+			SITE_TEMPLATE_PATH.'/include/catalog/product-content.php',
+			[],
+			['SHOW_BORDER' => true, 'MODE' => 'html']
+		);?>
+    </div>
+</div>
+<!--END INFO-BLOCK-->
+
+<!--START CONTACTS-B-->
+<div class="contacts contacts--block">
+    <div class="container">
+        <div class="g-title">
+            <h2>Контакты</h2>
+        </div>
+        <div class="row">
+            <div class="contacts__info">
+
+                <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас
+                    обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
+                <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
+
+                <div class="contacts__loc">
+                    <i class="icon">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/location.svg"/>
+                    </i>
+                    <span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span>
+                </div>
+
+                <div class="contacts__row">
+                    <div class="contacts__tel">
+                        <i class="icon">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/phone.svg"/>
+                        </i>
+                        <span>
+                            <a href="tel:+74999299666">+7 (499)929-96-66</a>
+                            <a href="tel:+79853645518">+7 (985)364-55-18</a>
+                            <a href="tel:+79852262030">+7 (985)226-20-30</a>
+                        </span>
+                    </div>
+                    <div class="contacts__other">
+                        <div class="contacts__mail">
+                            <i class="icon">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/mail.svg"/>
+                            </i>
+                            <a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a>
+                        </div>
+                        <div class="contacts__schedule">
+                            <i class="icon">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/clock.svg"/>
+                            </i>
+                            <span>10:00 - 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__form">
+
+				<?php
+				$APPLICATION->IncludeComponent(
+					'cesnakas:main.feedback',
+					'.default',
+					[
+						'USE_CAPTCHA' => 'N',
+						'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+						'EMAIL_TO' => 'evro-k@yandex.ru',
+						'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
+						'EVENT_MESSAGE_ID' => Array('7')
+					]
+				);?>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--END CONTACTS-B-->
+
+<!--START MAP-->
+<div class="map"></div>
+<!--END MAP-->

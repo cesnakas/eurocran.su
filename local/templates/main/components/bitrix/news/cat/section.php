@@ -1,5 +1,5 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -30,7 +30,9 @@ $this->setFrameMode(true);
     </a>
 <?endif?>
 
-<?if($arParams["USE_SEARCH"]=="Y"):?>
+<div class="container">
+
+<?if($arParams["USE_SEARCH"] == "Y"):?>
     <?=GetMessage("SEARCH_LABEL")?>
     <?$APPLICATION->IncludeComponent(
 	    "bitrix:search.form",
@@ -43,10 +45,42 @@ $this->setFrameMode(true);
     <br />
 <?endif?>
 
+    <h1>Каталог техники</h1>
+
+	<?php
+	$filter = ["IBLOCK_ID" => $arParams["IBLOCK_ID"], "IBLOCK_SECTION_ID" => $arResult["SECTION"]["PATH"][0]["ID"], "ACTIVE" => "Y"];
+	$q = CIBlockElement::GetList(Array(), $filter, false, false, Array("ID", "PROPERTY_P1"));
+	$arrFilter = Array();
+	while ($a = $q->GetNext()) {
+		if ($a["PROPERTY_P1_VALUE"]) {$arrFilter["p1"][] = $a["PROPERTY_P1_VALUE"];}
+	}
+	$arrFilter["p1"] = array_unique($arrFilter["p1"]);
+	sort($arrFilter["p1"], SORT_NUMERIC);
+	?>
+    <div class="sub_cats row">
+		<?$curpage = $APPLICATION->GetCurPage();
+		$string = $APPLICATION->GetCurPageParam();
+		$section = isset($arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"]) ? $arResult["SECTION"]["PATH"][0]["SECTION_PAGE_URL"] : $arParams["IBLOCK_URL"];
+		?>
+		<?foreach ($arrFilter["p1"] as $value) {
+			//$min = min($arrFilter["p1"]);?>
+            <div>
+                <a <?if(strpos($string, 'arrFilter_2_MIN='.$value.'&'.'arrFilter_2_MAX='.$value) !== false) {echo "class='active'";}?> href="<?=SITE_DIR?>catalog/<?=$section.'?arrFilter_2_MIN='.$value.'&arrFilter_2_MAX='.$value.'&set_filter=Показать'?>">
+					<?=$value?> тонн
+                </a>
+            </div>
+		<? } ?>
+    </div><!-- /sub_cats -->
+
+</div>
+
+<div class="cats__main">
+    <div class="container">
+
 <?if($arParams["USE_FILTER"]=="Y"):?>
-<?$APPLICATION->IncludeComponent(
+    <?$APPLICATION->IncludeComponent(
 		"bitrix:catalog.smart.filter",
-		"", // "another",
+		"",
 		Array(
 			"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 			"CACHE_TIME" => $arParams["CACHE_TIME"],
@@ -71,10 +105,8 @@ $this->setFrameMode(true);
 			"TEMPLATE_THEME" => "yellow",
 			"XML_EXPORT" => "N"
 		),
-	$component
-);
-?>
-<br />
+	    $component
+    );?>
 <?endif?>
 
 <?$APPLICATION->IncludeComponent(
@@ -135,3 +167,116 @@ $this->setFrameMode(true);
 	),
 	$component
 );?>
+
+    </div>
+</div>
+
+<!--START PUT-THE-TECHNIQUE-->
+<div class="put-the-technique">
+    <div class="container">
+
+        <div class="g-title">
+            <h2>Нужна помощь в подборе?</h2>
+        </div>
+
+		<?php
+		$APPLICATION->IncludeComponent(
+			'cesnakas:main.feedback',
+			'catalog.feedback',
+			[
+				'USE_CAPTCHA' => 'N',
+				'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+				'EMAIL_TO' => 'evro-k@yandex.ru',
+				'REQUIRED_FIELDS' => ['NAME', 'PHONE'],
+				'EVENT_MESSAGE_ID' => ['7'],
+			]
+		);?>
+
+    </div>
+</div>
+<!--END PUT-THE-TECHNIQUE-->
+
+<!--END PUT-THE-TECHNIQUE-->
+<div class="product-single__content">
+    <div class="container">
+		<?php
+		$APPLICATION->IncludeFile(
+			SITE_TEMPLATE_PATH.'/include/catalog/product-content.php',
+			[],
+			['SHOW_BORDER' => true, 'MODE' => 'html']
+		);?>
+    </div>
+</div>
+<!--END INFO-BLOCK-->
+
+<!--START CONTACTS-B-->
+<div class="contacts contacts--block">
+    <div class="container">
+        <div class="g-title">
+            <h2>Контакты</h2>
+        </div>
+        <div class="row">
+            <div class="contacts__info">
+
+                <p>Ежедневно мы развиваемся и стараемся стать лучше для вас, поэтому всегда рады получить от вас
+                    обратную связь с пожеланиями и идеями по улучшению наших продуктов!</p>
+                <p>Если у вас остались вопросы или есть предложения как стать лучше пишите нам!</p>
+
+                <div class="contacts__loc">
+                    <i class="icon">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/location.svg"/>
+                    </i>
+                    <span> г. Москва, Россия, 117628,м. Бульвар Дмитрия Донского, ул. Куликовская, 12</span>
+                </div>
+
+                <div class="contacts__row">
+                    <div class="contacts__tel">
+                        <i class="icon">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/phone.svg"/>
+                        </i>
+                        <span>
+                            <a href="tel:+74999299666">+7 (499)929-96-66</a>
+                            <a href="tel:+79853645518">+7 (985)364-55-18</a>
+                            <a href="tel:+79852262030">+7 (985)226-20-30</a>
+                        </span>
+                    </div>
+                    <div class="contacts__other">
+                        <div class="contacts__mail">
+                            <i class="icon">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/mail.svg"/>
+                            </i>
+                            <a href="mailto:evro-k@yandex.ru">evro-k@yandex.ru</a>
+                        </div>
+                        <div class="contacts__schedule">
+                            <i class="icon">
+                                <img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/clock.svg"/>
+                            </i>
+                            <span>10:00 - 17:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts__form">
+
+				<?php
+				$APPLICATION->IncludeComponent(
+					'cesnakas:main.feedback',
+					'.default',
+					[
+						'USE_CAPTCHA' => 'N',
+						'OK_TEXT' => 'Спасибо, ваше сообщение принято.',
+						'EMAIL_TO' => 'evro-k@yandex.ru',
+						'REQUIRED_FIELDS' => Array('NAME','PHONE','EMAIL','MESSAGE'),
+						'EVENT_MESSAGE_ID' => Array('7')
+					]
+				);?>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--END CONTACTS-B-->
+
+<!--START MAP-->
+<div class="map"></div>
+<!--END MAP-->
