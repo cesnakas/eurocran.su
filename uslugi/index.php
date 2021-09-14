@@ -1,5 +1,7 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
+$APPLICATION->SetPageProperty("description", "Компания Еврокран предлагает аренду спецтехники выгодных условиях. Поможем Вам реализовать строительные и грузоподъемные задачи без значительных финансовых трат. Работаем по Москве и Московской области.");
+$APPLICATION->SetTitle("Услуги | eurocran.su");
 ?>
 
 	<?php
@@ -7,6 +9,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 		'bitrix:news',
 		'uslugi',
 		array(
+			"IBLOCK_TYPE" => "services",
+			"IBLOCK_ID" => "11",
 			"SEF_MODE" => "Y",
 			"SEF_FOLDER" => SITE_DIR."uslugi/",
 			"SEF_URL_TEMPLATES" => [
@@ -14,14 +18,19 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 				"section" => "#SECTION_CODE#/",
 				"detail" => "#ELEMENT_CODE#/",
 			],
+			"NEWS_COUNT" => "9",
+			"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 			"DISPLAY_DATE" => "N",
+			"SET_TITLE" => "N",
+			"SET_BROWSER_TITLE" => "N",
+			"SET_META_KEYWORDS" => "N",
+			"SET_META_DESCRIPTION" => "N",
+			"SET_LAST_MODIFIED" => "N",
+
 			"DISPLAY_NAME" => "Y",
 			"DISPLAY_PICTURE" => "Y",
 			"DISPLAY_PREVIEW_TEXT" => "Y",
 			"AJAX_MODE" => "N",
-			"IBLOCK_TYPE" => "services",
-			"IBLOCK_ID" => "11",
-			"NEWS_COUNT" => "20",
 			"SORT_BY1" => 'ID',
 			"SORT_ORDER1" => 'ASC',
 			"SORT_BY2" => "SORT",
@@ -40,12 +49,6 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 			"DETAIL_URL" => "#ELEMENT_CODE#/",
 			"PREVIEW_TRUNCATE_LEN" => "",
 			"ACTIVE_DATE_FORMAT" => "d.m.Y",
-			"SET_TITLE" => "N",
-			"SET_BROWSER_TITLE" => "N",
-			"SET_META_KEYWORDS" => "N",
-			"SET_META_DESCRIPTION" => "N",
-			"SET_LAST_MODIFIED" => "N",
-			"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 			"ADD_SECTIONS_CHAIN" => "N",
 			"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 			"PARENT_SECTION" => "",
@@ -73,7 +76,7 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 			"AJAX_OPTION_STYLE" => "Y",
 			"AJAX_OPTION_HISTORY" => "N",
 			"AJAX_OPTION_ADDITIONAL" => "",
-			"COMPONENT_TEMPLATE" => "services-home",
+			"COMPONENT_TEMPLATE" => "uslugi",
 			"STRICT_SECTION_CHECK" => "N",
 			"FILE_404" => ""
 		),
