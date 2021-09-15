@@ -54,7 +54,7 @@ $this->setFrameMode(true);
 
 					<p><strong>Стоимость аренды:</strong><strong>Договорная</strong></p>
 
-					<a class="btn btn--full" href="">Заказать</a>
+					<a class="btn btn--full open-modal" href="#submit-request">Заказать</a>
 
 				</div>
 			</div>
