@@ -190,7 +190,7 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
         </div>
         <!--END NAV-->
 
-        <?if(!CSite::InDir(SITE_DIR.'~index.php')):?>
+        <?if(!CSite::InDir(SITE_DIR.'index.php')):?>
         <!--START BREADCRUMB-->
         <div class="breadcrumb">
             <div class="container">
