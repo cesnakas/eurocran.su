@@ -1,12 +1,12 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /**
  * @global CMain $APPLICATION
  */
 
 global $APPLICATION;
 
-if(empty($arResult))
+if (empty($arResult))
 	return "";
 
 $strReturn = '';
