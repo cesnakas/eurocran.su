@@ -1,7 +1,10 @@
-<?
+<?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<?php
+$APPLICATION->IncludeComponent(
 	"bitrix:catalog.search", 
 	".default", 
 	array(
@@ -59,4 +62,8 @@ $APPLICATION->SetTitle("Поиск");
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?php
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>
