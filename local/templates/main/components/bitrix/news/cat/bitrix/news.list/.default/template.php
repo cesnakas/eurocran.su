@@ -24,22 +24,12 @@ $i = 1;
 
 			<img src="<?=SITE_TEMPLATE_PATH?>/dist/img/content/sorting.svg"/>
 
-			<?if (
-				isset($_GET["sort"]) && isset($_GET["method"]) && (
-					$_GET["sort"] == "name" ||
-					$_GET["sort"] == "catalog_PRICE_3" ||
-					$_GET["sort"] == "property_PRODUCT_TYPE" ||
-					$_GET["sort"] == "timestamp_x")){
-				$arParams["ELEMENT_SORT_FIELD"] = $_GET["sort"];
-				$arParams["ELEMENT_SORT_ORDER"] = $_GET["method"];
-			}?>
-
 			<select name="">
 				<option value="0">По умолчанию</option>
-				<option value="1" <?=$_GET["type"]==1?"selected":"";?>>Мобильные краны</option>
-				<option value="2" <?=$_GET["type"]==2?"selected":"";?>>Гусеничные краны</option>
-				<option value="3" <?=$_GET["type"]==3?"selected":"";?>>Низкорамный трал</option>
-				<option value="4" <?=$_GET["type"]==4?"selected":"";?>>Модульные платформы</option>
+				<option value="1" <?=$_GET["type"] == 1 ? "selected" : '';?>>Мобильные краны</option>
+				<option value="2" <?=$_GET["type"] == 2 ? "selected" : "";?>>Гусеничные краны</option>
+				<option value="3" <?=$_GET["type"] == 3 ? "selected" : "";?>>Низкорамный трал</option>
+				<option value="4" <?=$_GET["type"] == 4 ? "selected" : "";?>>Модульные платформы</option>
 			</select>
 
 		</div>
