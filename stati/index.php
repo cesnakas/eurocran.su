@@ -7,15 +7,17 @@ $APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"blog",
 	array(
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "stati", // "some_articles",
 		"SEF_MODE" => "Y",
-		"SEF_FOLDER" => SITE_DIR."stati/",
+		"SEF_FOLDER" => "/stati/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
 			"detail" => "#ELEMENT_CODE#/",
 		),
-		"IBLOCK_TYPE" => "some_articles",
-		"IBLOCK_ID" => "5",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "Y",
 		"NEWS_COUNT" => "15",
 		"LIST_FIELD_CODE" => [
 			0 => "",
@@ -55,8 +57,6 @@ $APPLICATION->IncludeComponent(
 		"CACHE_GROUPS" => "N",
 		"SET_TITLE" => "Y",
 		"SET_STATUS_404" => "Y",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"ADD_SECTIONS_CHAIN" => "Y",
 		"USE_PERMISSIONS" => "N",
 		"PREVIEW_TRUNCATE_LEN" => "100",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -90,8 +90,7 @@ $APPLICATION->IncludeComponent(
 		"STRICT_SECTION_CHECK" => "N",
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"PAGER_BASE_LINK_ENABLE" => "N",
-		"SHOW_404" => "N",
-		"MESSAGE_404" => "",
+		"SHOW_404" => "",
 	),
 	false
 );

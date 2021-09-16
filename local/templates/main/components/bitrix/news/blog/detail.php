@@ -1,5 +1,5 @@
 <?php
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)die();
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -70,11 +70,11 @@ $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"detail-slider",
 	[
-		"IBLOCK_TYPE" => "some_articles",
 		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "", // "some_articles",
 		"NEWS_COUNT" => "9",
 		"SEF_MODE" => "Y",
-		"SEF_FOLDER" => SITE_DIR."stati/",
+		"SEF_FOLDER" => "/stati/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",

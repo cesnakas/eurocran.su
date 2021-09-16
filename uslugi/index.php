@@ -9,10 +9,10 @@ $APPLICATION->SetTitle("Услуги | eurocran.su");
 		'bitrix:news',
 		'uslugi',
 		array(
-			"IBLOCK_TYPE" => "services",
 			"IBLOCK_ID" => "11",
+			"IBLOCK_TYPE" => "",
 			"SEF_MODE" => "Y",
-			"SEF_FOLDER" => SITE_DIR."uslugi/",
+			"SEF_FOLDER" => "/uslugi/",
 			"SEF_URL_TEMPLATES" => [
 				"news" => "",
 				"section" => "#SECTION_CODE#/",
